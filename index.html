@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>全球非澳洲锂矿供应梳理 · 非洲锂矿项目总览</title>
+<script>
+  // 根路径进入总览（保留 ?mine= 时交给详情页逻辑）
+  var q = new URLSearchParams(location.search);
+  location.replace(q.get('mine') ? 'goulamina.html' + location.search : 'overview.html' + location.search);
+</script>
+<noscript><meta http-equiv="refresh" content="0;url=overview.html"></noscript>
+</head>
+<body style="background:#0a0e1a;color:#e6edf9;font-family:system-ui,sans-serif;padding:40px">
+正在进入《非洲锂矿项目总览》… 若未自动跳转，请点击 <a href="overview.html" style="color:#4da3ff">这里</a>。
+</body>
+</html>

@@ -1,0 +1,75 @@
+{
+  "mine": "Goulamina",
+  "name_cn": "古拉米纳锂矿",
+  "country": "马里（Mali）",
+  "region": "Bougouni 西约 50 km，巴马科南约 150 km",
+  "lat": 11.3493,
+  "lng": -7.9635,
+  "coord_source": "UTM WGS84 29N 613100E/1254800N（Leo 2024-07 MRE 钻探表换算）；OSM 节点 11.3495,-7.9723",
+  "company": "赣锋锂业（002460.SZ / 01772.HK）",
+  "operator": "Lithium du Mali SA（LMSA）",
+  "ownership": {
+    "lmsa_level": { "ganfeng": "65%", "mali_government": "35%" },
+    "parent_level": "赣锋 100% 持有 Mali Lithium B.V.（2025-07-02 完成 40% 收购）",
+    "government_35pct_deal": "10% 免费 + 25% 作价约 200 亿西非法郎（≈US$32m），以未来股息抵偿（2024-05 新矿业法）"
+  },
+  "status": "一期已投产（2024-12-15），二期已完可研、逐步推进（无 FID/时间表）",
+  "mineral": "锂辉石（LCT 伟晶岩），SC6（6% Li₂O）",
+  "capacity": {
+    "stage1_concentrate_kt": 506,
+    "stage2_total_kt": 1000,
+    "stage2_old_kt": 831,
+    "ore_throughput_stage1_mtpa": 2.3,
+    "ore_throughput_stage2_mtpa": 4.0,
+    "recovery_pct": 80,
+    "cash_cost_usd_t": 312,
+    "capex_stage1_usd_m": 255,
+    "capex_stage2_usd_m": 70,
+    "mine_life_years": 23
+  },
+  "resource": {
+    "mii_mt": 299.32,
+    "mii_grade_pct": 1.33,
+    "mii_li2o_mt": 3.99,
+    "source": "赣锋 2025 年报",
+    "prev_mre_mt": 267.2,
+    "prev_mre_grade_pct": 1.38,
+    "prev_mre_source": "Leo 2024-07-01 ASX",
+    "reserve_mt": 52.0,
+    "reserve_grade_pct": 1.51,
+    "lce_mt_2025ar": 7.14,
+    "lce_mt_2026h1": 9.82
+  },
+  "production": {
+    "unit": "万吨（干基 SC6）",
+    "2025_full_year": 33.66,
+    "2025_utilisation_pct": 66.5,
+    "2026_jan_apr": 16.14,
+    "2026_h1": 23.38,
+    "2026_h1_annualised_utilisation_pct": 92.4,
+    "2026_full_year_estimate": 48.0,
+    "note": "无逐季披露；2026 全年为估计值"
+  },
+  "first_shipment": {
+    "loaded_date": "2025-06-24",
+    "volume_t": 30000,
+    "first_trucks_at_port": "2025-05-07",
+    "arrival_china": "2025-08 初",
+    "commercial_start_altius": "2025-08-08"
+  },
+  "logistics": {
+    "primary_port": "科特迪瓦阿比让港（≈1000 km，往返 6–7 天）",
+    "secondary_ports": ["San Pedro", "达喀尔"],
+    "port_agreement": "Leo 与 SEA-Invest 签 10 年协议（≥25 万吨/年）"
+  },
+  "infrastructure": {
+    "water": "Sélingué 大坝 → 29 km 管线（+ 尾矿回水）",
+    "power": "Vivo Power（柴油 + 光伏混合）+ 燃油库",
+    "tailings": "TSF 山谷型、下游筑坝（2024-03 完工，Land & Marine 设计）",
+    "mining_contractor": "Corica Mali（US$3.48 亿，18–20 Mt/y，6 个月预生产 + 5 年）",
+    "esia": "Digby Wells，2019-03 环境许可（马里首个授权锂矿）",
+    "tenement": "PE19/25（Torakoro）10,067.8 ha，2019-08-23 颁发，30 年（至 2049-08-22）"
+  },
+  "forecast_2027_kt": { "bear": 45.0, "base": 50.6, "bull": 70.0 },
+  "forecast_basis": "一期满产为中枢；悲观=利用率≈89%；乐观=一期满产+二期 2027H2 起步（纯上行假设）"
+}

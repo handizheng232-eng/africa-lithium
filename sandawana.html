@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sandawana 锂矿 ｜ 全球非澳洲锂矿供应梳理</title>
+<style>
+  :root { --bg:#0f1420; --panel:#171e2e; --panel2:#1d2638; --line:#2a3550; --text:#dbe4f3; --muted:#8b98b4; --acc:#4da3ff; --acc2:#ffb454; --up:#4cd97b; --down:#ff6b6b; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--text); font-family:"Segoe UI","Microsoft YaHei",sans-serif; line-height:1.65; }
+  .wrap { max-width:1320px; margin:0 auto; padding:26px 20px 60px; }
+  a { color:var(--acc); text-decoration:none; } a:hover { text-decoration:underline; }
+  header { border-bottom:1px solid var(--line); padding-bottom:16px; margin-bottom:22px; }
+  header h1 { font-size:23px; font-weight:700; }
+  header .sub { color:var(--muted); font-size:13px; margin-top:6px; }
+  .tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+  .tag { font-size:12px; padding:3px 10px; border-radius:20px; border:1px solid var(--line); color:var(--muted); }
+  .tag.hl { color:var(--acc); border-color:var(--acc); }
+  .mine-block { border:1px solid var(--line); border-radius:12px; overflow:hidden; margin-bottom:26px; }
+  .mine-head { background:var(--panel2); padding:14px 18px; display:flex; flex-wrap:wrap; gap:10px; align-items:baseline; }
+  .mine-head h2 { font-size:18px; } .mine-head .src { font-size:12px; color:var(--muted); margin-left:auto; }
+  .cat { padding:14px 18px; border-top:1px solid var(--line); }
+  .kv-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:10px; }
+  .kv { border:1px solid var(--line); border-radius:8px; background:var(--panel); padding:10px 12px; }
+  .kv .k { font-size:11.5px; color:var(--muted); margin-bottom:3px; }
+  .kv .v { font-size:14px; font-weight:600; line-height:1.45; } .kv .v small { font-weight:400; color:var(--muted); font-size:12px; }
+  .desc { font-size:13px; background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:10px 13px; margin-bottom:10px; line-height:1.7; }
+  .note { font-size:12.5px; color:var(--muted); margin:8px 0; line-height:1.6; } .note b { color:var(--acc2); }
+  table { border-collapse:collapse; width:100%; font-size:12.5px; }
+  th,td { padding:8px 12px; border:1px solid var(--line); text-align:left; vertical-align:top; }
+  th { background:var(--panel2); color:var(--muted); font-weight:600; white-space:nowrap; }
+  td.line { color:var(--acc); white-space:nowrap; font-weight:600; min-width:180px; }
+  .cv-ok { color:var(--up); font-weight:600; } .cv-warn { color:var(--acc2); font-weight:600; }
+  .cv-src { font-size:12px; color:var(--text); margin-bottom:4px; line-height:1.5; }
+  .cv-srcname { display:inline-block; background:var(--panel2); border:1px solid var(--line); border-radius:4px; padding:0 6px; margin-right:6px; font-size:11px; color:var(--acc); white-space:nowrap; }
+  .hl-box { background:linear-gradient(135deg,rgba(255,180,84,.10),rgba(255,107,107,.08)); border:1px solid rgba(255,180,84,.35); border-radius:8px; padding:12px 15px; margin-top:4px; }
+  .hl-box h4 { font-size:13.5px; color:var(--acc2); margin-bottom:8px; } .hl-box ul { margin:0; padding-left:18px; } .hl-box li { font-size:12.8px; margin-bottom:5px; }
+  .timeline { border-left:3px solid var(--line); margin-left:8px; padding-left:18px; }
+  .tl-item { position:relative; margin-bottom:12px; }
+  .tl-item::before { content:''; position:absolute; left:-25px; top:6px; width:10px; height:10px; border-radius:50%; background:var(--acc2); }
+  .tl-date { font-size:12.5px; color:var(--acc); font-weight:700; } .tl-txt { font-size:12.8px; margin-top:2px; line-height:1.55; } .tl-txt .s { color:var(--muted); font-size:11.5px; }
+  .sat-grid { display:grid; grid-template-columns:1fr; gap:14px; margin-top:12px; }
+  .sat-gm .img-wrap { min-height:320px; height:320px; } .sat-gm iframe { width:100%; height:100%; border:0; }
+  .sat-links { display:flex; gap:10px; flex-wrap:wrap; margin-top:12px; }
+  .sat-btn { display:inline-block; padding:8px 16px; border-radius:8px; font-size:12.5px; font-weight:700; color:#fff; background:linear-gradient(135deg,#2e6de0,#1b4fa0); border:1px solid rgba(255,255,255,0.12); }
+  .sat-btn:hover { filter:brightness(1.15); } .sat-btn + .sat-btn { background:linear-gradient(135deg,#0f9d58,#0b7a44); }
+  .src-list { font-size:12.5px; line-height:1.7; } .src-list li { margin-bottom:4px; } .src-list .u { color:var(--muted); font-size:11.5px; word-break:break-all; }
+  .coord-line { font-size:12.8px; background:rgba(77,163,255,.08); border:1px solid rgba(77,163,255,.28); border-radius:8px; padding:9px 13px; margin-bottom:12px; }
+  .coord-line b { color:var(--acc); font-family:Consolas,monospace; }
+  .img-wrap { border:1px solid var(--line); border-radius:10px; overflow:hidden; background:#0b0f18; }
+  .img-cap { font-size:12px; color:var(--muted); padding:8px 2px 2px; }
+  .sat-btn { color:#fff !important; text-decoration:none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Sandawana 锂矿（津巴布韦）</h1>
+    <div class="sub"><a href="overview.html">← 返回非洲锂矿总览</a> ｜ 全球非澳洲锂矿供应梳理 · 非洲 · 津巴布韦 Midlands 省 Mberengwa ｜ Kuvimba Mining House（国有）/ Mutapa Energy Minerals</div>
+    <div class="tags">
+      <span class="tag hl">建设中（选厂）</span>
+      <span class="tag">锂辉石 · SC6</span>
+      <span class="tag">露天</span>
+      <span class="tag">60 万吨/年精矿（规划）</span>
+      <span class="tag">BOT · 中国伙伴建运营</span>
+      <span class="tag">2027 初投运目标</span>
+    </div>
+  </header>
+
+  <div class="mine-block">
+    <div class="mine-head"><h2>矿山概览</h2><span class="src">最新：Mutapa 2026-02（2026-06 前开工）/ 津巴布韦独立报</span></div>
+    <div class="cat">
+      <div class="kv-grid">
+        <div class="kv"><div class="k">运营商 / 权益</div><div class="v">Kuvimba Mining House（国有）<small>· 2025 底重组为 Mutapa Energy Minerals</small></div></div>
+        <div class="kv"><div class="k">位置</div><div class="v">Mberengwa，Midlands 省<small>· 原 Rio Tinto 祖母绿矿（至 1993）</small></div></div>
+        <div class="kv"><div class="k">矿种 / 采矿</div><div class="v">锂辉石（SC6）<small>· 露天</small></div></div>
+        <div class="kv"><div class="k">精矿产能</div><div class="v">60 万吨/年<small>· 原矿处理 300 万吨/年</small></div></div>
+        <div class="kv"><div class="k">投资</div><div class="v">US$2.7 亿<small>· BOT 协议 US$3.1 亿</small></div></div>
+        <div class="kv"><div class="k">状态</div><div class="v">建设中 · 2027 Q1/Q2 调试<small>· 试产 8.8 万吨精矿（2026 YTD）</small></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mine-block">
+    <div class="mine-head"><h2>运行状况与超预期要点</h2></div>
+    <div class="cat">
+      <p class="desc"><b>现状（截至 2026-09-14）：</b>津巴布韦国有 Kuvimba 正推动 Sandawana 建成「津巴布韦最大锂精矿选厂」。原计划 2025 Q3 破土、2027 初投运；2026-02 重组后的 Mutapa Energy Minerals 称目标 2026-06 前开工。采用 BOT 模式（中国伙伴建设-运营 ≥5 年后移交），年产 60 万吨精矿（原矿处理 300 万吨/年）。试产已累计产出 8.8 万吨精矿（预算 9.1 万吨）。</p>
+      <div class="hl-box">
+        <h4>⚡ 关键要点</h4>
+        <ul>
+          <li><b>政策驱动：</b>津巴布韦 2027-01 起拟禁止精矿出口（价值附加政策），Sandawana 选厂是对接该政策 + 本地硫酸锂/碳酸锂厂的关键节点。</li>
+          <li><b>BOT 模式：</b>中国伙伴（未具名，Bloomberg 曾提华友钴业、青山控股）建设-运营 ≥5 年，后移交 Kuvimba——主权绑定但依赖中国资本与技术。</li>
+          <li><b>资源自称「第五大」：</b>Kuvimba 称 Sandawana 约 1 亿吨锂矿石、「全球第五大已知锂储量」——<b>该说法未经独立 JORC 核实，须谨慎</b>。</li>
+          <li><b>产能口径差异：</b>US$2.7 亿口径对应 60 万吨精矿；US$3.1 亿 BOT 协议对应 300 万吨/年原矿处理。部分媒体（African Leadership）误将「60 万吨」表述为原矿处理量，以 Reuters 精矿口径为准。</li>
+          <li><b>下游配套：</b>华友（Arcadia）、中矿（Bikita）硫酸锂厂预计 2027 上线，Sandawana 精矿可作本地原料。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="mine-block">
+    <div class="mine-head"><h2>产能核实</h2><span class="src">多来源交叉印证 · 核实时间 2026-09-14</span></div>
+    <div class="cat">
+      <table>
+        <thead><tr><th style="width:200px">项目</th><th style="width:230px">核实结果</th><th>多来源交叉印证</th></tr></thead>
+        <tbody>
+          <tr><td class="line">精矿产能</td><td class="cell cv-warn">60 万吨/年（规划）</td><td class="cell"><div class="cv-src"><span class="cv-srcname">Reuters/Mining Technology</span>「600,000t 精矿，BOT $310m，3Mt/yr 原矿」</div><div class="cv-src"><span class="cv-srcname">Excel 非洲列</span>60 万吨精矿选厂，US$2.7 亿，2027 初投运</div></td></tr>
+          <tr><td class="line">投资</td><td class="cell cv-ok">US$2.7 亿</td><td class="cell"><div class="cv-src"><span class="cv-srcname">Reuters/Metals Wire</span>US$270m；BOT 协议 US$310m</div></td></tr>
+          <tr><td class="line">投运时间</td><td class="cell cv-warn">2027 初（目标，未定）</td><td class="cell"><div class="cv-src"><span class="cv-srcname">Reuters/Ecofin</span>2027 初投产；Mutapa 2026-06 前开工</div></td></tr>
+          <tr><td class="line">试产</td><td class="cell cv-ok">8.8 万吨精矿（2026 YTD）</td><td class="cell"><div class="cv-src"><span class="cv-srcname">津巴布韦独立报</span>试处理产 88,000 吨（预算 91,000 吨）</div></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="mine-block">
+    <div class="mine-head"><h2>里程碑</h2></div>
+    <div class="cat">
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-date">2022</div><div class="tl-txt">Kuvimba 收购 Sandawana 露天矿权 <span class="s">[Metals Wire]</span></div></div>
+        <div class="tl-item"><div class="tl-date">2025-07-16</div><div class="tl-txt">CEO Barnard：Q3 2025 破土，2027 投产，60 万吨/年 <span class="s">[Ecofin/Reuters]</span></div></div>
+        <div class="tl-item"><div class="tl-date">2025 底</div><div class="tl-txt">Kuvimba 重组为 Mutapa Investment Fund 旗下五实体（含 Mutapa Energy Minerals） <span class="s">[Enviro Press]</span></div></div>
+        <div class="tl-item"><div class="tl-date">2026-02</div><div class="tl-txt">Mutapa：目标 2026-06 前开工选厂；试产 8.8 万吨精矿 <span class="s">[Enviro Press / 独立报]</span></div></div>
+        <div class="tl-item"><div class="tl-date">2027 Q1/Q2</div><div class="tl-txt">选厂调试目标（尚需 Cabinet 批准破土） <span class="s">[Mining Zimbabwe]</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mine-block">
+    <div class="mine-head"><h2>🛰️ 卫星影像与地图定位</h2><span class="src">坐标已精确定位</span></div>
+    <div class="cat">
+      <div class="coord-line">📍 矿区坐标 <b>-20.92997, 29.90906</b> ｜ 来源：OpenStreetMap「Sandawana Mine」(quarry, Mberengwa)</div>
+      <div class="sat-grid">
+        <div class="sat-gm"><div class="img-wrap"><iframe src="https://www.google.com/maps?q=-20.92997,29.90906&z=14&output=embed" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Sandawana 矿场 卫星影像"></iframe></div><div class="img-cap"><b>Sandawana 矿场</b> · Google Maps 卫星影像（z=14）</div></div>
+      </div>
+      <div class="sat-links">
+        <a class="sat-btn" href="https://yandex.com/maps/?ll=29.90906,-20.92997&z=14" target="_blank" rel="noopener">Yandex 卫星图</a>
+        <a class="sat-btn" href="https://www.google.com/maps?q=-20.92997,29.90906&z=14" target="_blank" rel="noopener">Google Maps</a>
+        <a class="sat-btn" href="https://www.openstreetmap.org/?mlat=-20.92997&mlon=29.90906#map=14/-20.92997/29.90906" target="_blank" rel="noopener">OpenStreetMap</a>
+        <a class="sat-btn" target="_blank" rel="noopener" href="https://www.google.com/maps?q=Mberengwa%20Zimbabwe&z=11">📍 Google Maps</a>
+      </div>
+      <div class="note">坐标来源：OpenStreetMap「Sandawana Mine」(quarry, Mberengwa) ｜ 底图为公开卫星/航拍影像，非本报拍摄；矿区范围以矿权证载明为准。</div>
+    </div>
+  </div>
+
+  <div class="mine-block">
+    <div class="mine-head"><h2>来源（Sources）</h2></div>
+    <div class="cat">
+      <ol class="src-list">
+        <li>Reuters / Mining Technology——US$310m BOT、3Mt/yr 原矿、60 万吨精矿、18 个月投产 <span class="u">https://www.mining-technology.com/news/kuvimba-310m-lithium</span></li>
+        <li>Metals Wire——US$270m、2027 初调试、SC6、2027-01 出口禁令背景 <span class="u">https://metals-wire.net/regions/asia/kuvimba-bets-270-million-on-new-lithium-concentrator-as-zimbabwe-pushes-local-processing</span></li>
+        <li>Ecofin / Zimbabwe Situation——Q3 2025 破土、2027 投产、60 万吨 <span class="u">https://www.zimbabwesituation.com/news/lithium-output-in-zimbabwe-could-rise-with-sandawana-mine-by-2027</span></li>
+        <li>Enviro Press（2026-02）——Mutapa 重组、2026-06 前开工 <span class="u">https://enviropresszim.com/mutapa-to-build-us270m-lithium-concentrate-plant-at-sandawana</span></li>
+        <li>津巴布韦独立报——试产 88,000 吨、Cabinet 批准待决、自称「第五大」 <span class="u">https://www.newsday.co.zw/theindependent/business-digest/article/200048758/kuvimba-hse-awaits-cabinet-approval-for-us270m-lithium-plant</span></li>
+        <li>Mining Zimbabwe——最大选厂、2027 Q1/Q2 调试 <span class="u">https://miningzimbabwe.com/kuvimbas-sandawana-mines-set-to-begin-construction-of-zimbabwes-largest-lithium-concentrator-plant</span></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="mine-block">
+    <div class="mine-head"><h2>口径与说明</h2></div>
+    <div class="cat">
+      <p class="note" style="margin:0">
+        · Sandawana 为<b>建设中项目</b>：60 万吨/年精矿为规划产能，尚未商业投产；供应梳理中按「2027+ 潜在供给」对待。<br>
+        · 「全球第五大锂储量」为 Kuvimba 单方口径，<b>未经独立 JORC 核实</b>，须谨慎。<br>
+        · 核心变量：Cabinet 破土批准、BOT 融资落地、2027-01 精矿出口禁令、锂价走势。<br>
+        · 坐标暂用 Mberengwa 区域近似，精确矿权坐标待补。<br>
+        · 数据来自 Reuters/Mining Technology/津巴布韦媒体，仅供研究参考，不构成投资建议。
+      </p>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

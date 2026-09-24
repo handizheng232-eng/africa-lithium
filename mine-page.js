@@ -3,7 +3,9 @@
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const md = s => esc(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
   const num = v => v == null ? 'N.D.' : Number(v).toLocaleString('zh-CN',{maximumFractionDigits:3});
-  const status = (txt, cls='planned') => `<span class="status ${cls}">${esc(txt)}</span>`;
+  const CLS=['operating','building','planned','stalled','warn','up','down','blue','ok','nd'];
+  const status = (txt, cls) => `<span class="status ${CLS.includes(cls)?cls:'planned'}">${esc(txt)}</span>`;
+  const safeUrl = u => { const s=String(u==null?'':u).trim(); if(/^(https?:\/\/|\/\/)/i.test(s)) return s; if(/^[a-z][a-z0-9+.-]*:/i.test(s)) return '#'; return s; };
   const sourceRows = srcs => (srcs || []).map(s => `<div class="cv-src"><span class="cv-srcname">${esc(s)}</span></div>`).join('');
 
   function tableRows(rows, mode='op') {
@@ -32,13 +34,50 @@
     return `<div class="timeline">${(items||[]).map(x=>`<div class="tl"><div class="date">${esc(x.date)}</div><div class="text">${md(x.text)}</div></div>`).join('')}</div>`;
   }
 
-  function smelting(cards) {
-    return (cards||[]).map(s => `<div class="smelt-card"><h4>${esc(s.name)} ${status(s.status,s.statusClass)}</h4><div class="smelt-meta"><span class="tag">产能：${esc(s.capacity==='N.D.'?'未披露':s.capacity)}</span><span class="tag">产品：${esc(s.product==='N.D.'?'尚未确定':s.product)}</span><span class="tag">时间：${esc(s.timing==='N.D.'?'未披露':s.timing)}</span><span class="tag">投资：${esc(s.capex==='N.D.'?'未披露':s.capex)}</span></div><div class="overview-grid smelt-track"><div class="kv"><div class="k">FID / 决策状态</div><div class="v">${esc(s.fid||'未披露')}</div></div><div class="kv"><div class="k">是否计入供应</div><div class="v">${esc(s.include||'不计入')}</div></div><div class="kv"><div class="k">最近核验</div><div class="v">${esc(s.asOf||'2026-09')}</div></div></div><p class="desc"><b>最新进展：</b>${md(s.progress)}</p><p class="desc"><b>研究判断 / 风险：</b>${md(s.risk)}</p><p class="desc"><b>下一观察点：</b>${md(s.next||'等待项目公司进一步披露')}</p><div class="note"><b>跟踪来源：</b>${(s.sources||[]).map(md).join('；')}。可点击来源见页末 Sources。</div></div>`).join('');
+  function kvGrid(rows){ return `<div class="overview-grid">${(rows||[]).map(r=>`<div class="kv"><div class="k">${esc(r.k)}</div><div class="v">${md(r.v)}</div></div>`).join('')}</div>`; }
+
+  function constrTable(rows){
+    if(!rows||!rows.length) return '<div class="note">施工节点：N.D.（未见公开里程碑披露）</div>';
+    return `<div class="table-wrap"><table><thead><tr><th>日期</th><th>里程碑 / 事件</th><th>来源</th></tr></thead><tbody>${rows.map(r=>`<tr><td class="line">${esc(r.date)}</td><td>${md(r.event)}</td><td class="src-cell">${r.url?`<a target="_blank" rel="noopener" href="${esc(safeUrl(r.url))}">${esc(r.src)}</a>`:esc(r.src)}</td></tr>`).join('')}</tbody></table></div>`;
   }
 
-  function navHtml(all,key){ return all.map(x=>`<a class="${x.key===key?'active':''}" href="${esc(x.file)}">${esc(x.label)}</a>`).join(''); }
+  function envBlock(e){
+    if(!e) return '';
+    return `<h5 class="sub-h">环评与环境 / 社会影响</h5><p class="desc"><b>环评状态：</b>${md(e.status)}</p><ul class="smelt-list">${(e.items||[]).map(x=>`<li>${md(x)}</li>`).join('')}</ul>${e.note?`<div class="note">${md(e.note)}</div>`:''}`;
+  }
 
-  function render(m, all) {
+  function econBlock(rows){ if(!rows||!rows.length) return ''; return `<h5 class="sub-h">经济性 / 投资与物流</h5>${kvGrid(rows)}`; }
+
+  function mediaBlock(list){
+    if(!list||!list.length) return '<div class="note">官方施工影像：公开渠道暂未获取到该项目的现场影像，后续补充。</div>';
+    return `<div class="media-grid">${list.map(x=>`<figure class="media-item"><img src="${esc(safeUrl(x.file))}" alt="${esc(x.cap)}" loading="lazy"><figcaption>${esc(x.cap)}<span class="media-src"><a target="_blank" rel="noopener" href="${esc(safeUrl(x.url))}">${esc(x.src)}</a></span></figcaption></figure>`).join('')}</div>`;
+  }
+
+  function socialBlock(list){
+    if(!list||!list.length) return '';
+    return `<h5 class="sub-h">公开信源与社交媒体线索</h5><ul class="smelt-list">${list.map(x=>`<li><a target="_blank" rel="noopener" href="${esc(safeUrl(x.url))}">${esc(x.label)}</a> ｜ ${esc(x.date)}${x.note?` ｜ ${esc(x.note)}`:''}</li>`).join('')}</ul><div class="note">社媒仅作为进度线索使用；设计产能、投资额与投产口径以公司公告、交易所披露、政府文件和环评为准。</div>`;
+  }
+
+  function zwPanel(m, Z){
+    if(!Z || !/津巴布韦/.test(m.country||'')) return '';
+    return `<div class="zw-panel"><h4>🇿🇼 津巴布韦硫酸锂产能格局 · 本国横向对照</h4>
+      <div class="table-wrap"><table><thead><tr><th>企业 / 矿山</th><th>设计产能</th><th>投资额</th><th>状态</th><th>目标投产</th></tr></thead><tbody>${Z.table.map(r=>`<tr><td class="line">${esc(r.mine)}</td><td>${esc(r.cap)}</td><td>${esc(r.capex)}</td><td>${esc(r.status)}</td><td>${esc(r.target)}</td></tr>`).join('')}</tbody></table></div>
+      <p class="desc"><b>合计：</b>${md(Z.total.text)}；${md(Z.total.lce)}。${md(Z.total.ref)}</p>
+      <h5 class="sub-h">硫酸锂 → LCE 换算口径（三套并列，不可混用）</h5>
+      <ul class="smelt-list">${Z.conversion.rows.map(r=>`<li>${esc(r.basis)}：<b>${esc(r.factor)}</b></li>`).join('')}</ul>
+      <h5 class="sub-h">本地增值政策与出口管制时间线</h5>
+      <ul class="smelt-list">${Z.policy.map(r=>`<li><b>${esc(r.k)}</b>：${md(r.v)}</li>`).join('')}</ul>
+      <div class="note">${md(Z.note)}政策整理至 ${esc(Z.asOf)}。</div></div>`;
+  }
+
+  function smelting(cards) {
+    return (cards||[]).map(s => `<div class="smelt-card"><h4>${esc(s.name)} ${status(s.status,s.statusClass)}</h4><div class="smelt-meta"><span class="tag">产能：${esc(s.capacity==='N.D.'?'未披露':s.capacity)}</span><span class="tag">产品：${esc(s.product==='N.D.'?'尚未确定':s.product)}</span><span class="tag">时间：${esc(s.timing==='N.D.'?'未披露':s.timing)}</span><span class="tag">投资：${esc(s.capex==='N.D.'?'未披露':s.capex)}</span></div><div class="overview-grid smelt-track"><div class="kv"><div class="k">FID / 决策状态</div><div class="v">${esc(s.fid||'未披露')}</div></div><div class="kv"><div class="k">是否计入供应</div><div class="v">${esc(s.include||'不计入')}</div></div><div class="kv"><div class="k">最近核验</div><div class="v">${esc(s.asOf||'2026-09')}</div></div></div><p class="desc"><b>最新进展：</b>${md(s.progress)}</p><p class="desc"><b>研究判断 / 风险：</b>${md(s.risk)}</p><p class="desc"><b>下一观察点：</b>${md(s.next||'等待项目公司进一步披露')}</p>${s.design?`<h5 class="sub-h">设计参数 · 工艺与厂址</h5>${kvGrid(s.design)}`:''}${s.construction?`<h5 class="sub-h">建设与进展时间线</h5>${constrTable(s.construction)}`:''}${envBlock(s.environment)}${econBlock(s.economics)}${s.media?`<h5 class="sub-h">官方施工与现场影像</h5>${mediaBlock(s.media)}`:''}${s.social?socialBlock(s.social):''}<div class="note"><b>跟踪来源：</b>${(s.sources||[]).map(md).join('；')}。可点击来源见页末 Sources。</div></div>`).join('');
+  }
+
+  function navHtml(all,key){ return all.map(x=>`<a class="${x.key===key?'active':''}" href="${esc(safeUrl(x.file))}">${esc(x.label)}</a>`).join(''); }
+
+  function render(m, D) {
+    const all = D.nav;
     document.title=`${m.name} ｜ 全球非澳洲锂矿供应梳理`;
     document.getElementById('app').innerHTML=`
       <header class="hero">
@@ -73,9 +112,9 @@
         <h3 style="margin:22px 0 10px">${m.coord.isArea ? '🗺️ 项目群区域范围（非矿址）' : '🛰️ 卫星影像与地图定位'}</h3><div class="coord">${m.coord.isArea ? '📌 区域参考中心（非矿址）' : '📍 矿区坐标'} <b>${Number(m.coord.lat).toFixed(5)}, ${Number(m.coord.lng).toFixed(5)}</b> ｜ ${esc(m.coord.source)}</div><div class="sat-grid"><iframe src="https://www.google.com/maps?q=${m.coord.lat},${m.coord.lng}&z=${m.coord.zoom||14}&output=embed" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="${esc(m.name)} ${m.coord.isArea ? '区域参考图' : '卫星视图'}"></iframe></div><div class="sat-links"><a class="sat-btn" target="_blank" rel="noopener" href="https://yandex.com/maps/?ll=${m.coord.lng},${m.coord.lat}&z=${m.coord.zoom||14}">Yandex ${m.coord.isArea ? '区域图' : '卫星图'}</a><a class="sat-btn" target="_blank" rel="noopener" href="https://www.google.com/maps?q=${m.coord.lat},${m.coord.lng}&z=${m.coord.zoom||14}">Google Maps</a><a class="sat-btn" target="_blank" rel="noopener" href="https://www.openstreetmap.org/?mlat=${m.coord.lat}&mlon=${m.coord.lng}#map=${m.coord.zoom||14}/${m.coord.lat}/${m.coord.lng}">OpenStreetMap</a></div><div class="note">${m.coord.isArea ? '本页为多州项目群，未披露的单项目矿址不得由此中心点替代；许可证编号也不等同于空间边界。' : '底图为公开卫星/航拍影像；矿区边界以许可证/矿权证为准。'}</div>
       </div></section>
 
-      <section class="mine-block" id="s8"><div class="mine-head"><h2>⑧ 配套冶炼 / 转化项目解析与跟踪</h2><span class="q">硫酸锂 / 锂盐 · 避免与精矿重复计量</span></div><div class="cat">${smelting(m.smelting)}</div></section>
+      <section class="mine-block" id="s8"><div class="mine-head"><h2>⑧ 配套冶炼 / 转化项目解析与跟踪</h2><span class="q">硫酸锂 / 锂盐 · 避免与精矿重复计量</span></div><div class="cat">${zwPanel(m,D.zimbabweSulphate)}${smelting(m.smelting)}</div></section>
 
-      <section class="mine-block"><div class="mine-head"><h2>来源（Sources）</h2><span class="src">旧页证据链完整保留</span></div><div class="cat"><ol class="sources">${(m.sources||[]).map(s=>`<li>${s.url?`<a target="_blank" rel="noopener" href="${esc(s.url)}">${esc(s.text)}</a>`:esc(s.text)}</li>`).join('')}</ol></div></section>
+      <section class="mine-block"><div class="mine-head"><h2>来源（Sources）</h2><span class="src">旧页证据链完整保留</span></div><div class="cat"><ol class="sources">${(m.sources||[]).map(s=>`<li>${s.url?`<a target="_blank" rel="noopener" href="${esc(safeUrl(s.url))}">${esc(s.text)}</a>`:esc(s.text)}</li>`).join('')}</ol></div></section>
       <section class="mine-block"><div class="mine-head"><h2>口径与说明</h2></div><div class="cat"><div class="note">· 历史数据按公司真实披露频率展示；没有季度数据时不进行年度均分。<br>· 产量、销量、品位、价格和成本口径不统一，跨矿比较须回到本页行标签。<br>· 设计产能、目标、试产、首发运和商业达产严格区分。<br>· 冶炼/转化项目单独跟踪，精矿与转化产品不可重复计入供应。<br>· 数据整理至 2026-09，仅供研究参考，不构成投资建议。</div></div></section>
       <div class="footer">全球非澳洲锂矿供应梳理 · ${esc(m.name)}</div>`;
     renderChart(m);
@@ -95,6 +134,6 @@
   }
 
   fetch('data/mines_v2.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(`data HTTP ${r.status}`);return r.json();}).then(d=>{
-    const m=d.mines[KEY]; if(!m) throw new Error(`unknown mine key: ${KEY}`); render(m,d.nav);
+    const m=d.mines[KEY]; if(!m) throw new Error(`unknown mine key: ${KEY}`); render(m,d);
   }).catch(err=>{document.getElementById('app').innerHTML=`<div class="mine-block"><div class="cat"><h2>页面数据加载失败</h2><p class="note">${esc(err.message)}。请通过 HTTP 服务访问，不要用 file:// 双击。</p></div></div>`;console.error(err);});
 })();

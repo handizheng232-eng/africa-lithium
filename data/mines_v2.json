@@ -239,7 +239,8 @@
           "fid": "未披露",
           "include": "不计入",
           "asOf": "2026-09",
-          "next": "二期 FID / 马里本地增值条款 / EPC 招标"
+          "next": "二期 FID / 马里本地增值条款 / EPC 招标",
+          "construction": []
         }
       ],
       "coord": {
@@ -549,7 +550,8 @@
           "fid": "不适用（未形成项目）",
           "include": "不计入",
           "asOf": "2026-09",
-          "next": "二期可研是否加入化学转化方案"
+          "next": "二期可研是否加入化学转化方案",
+          "construction": []
         }
       ],
       "coord": {
@@ -780,23 +782,135 @@
       ],
       "smelting": [
         {
-          "name": "Sabi Star 配套硫酸锂项目",
-          "status": "规划/承诺阶段",
+          "name": "Sabi Star 配套硫酸锂项目（Max Mind）",
+          "status": "董事会批准 · 前期筹备",
           "statusClass": "planned",
-          "capacity": "7.5 万吨/年（规划）",
+          "capacity": "7.5 万吨/年",
           "product": "硫酸锂",
-          "timing": "目标服务 2027 出口禁令；无已核实投产日",
-          "capex": "N.D.",
-          "progress": "公司拟在津巴布韦建设本地转化能力，页面尚无可核实 FID、施工进度或首产公告。",
-          "risk": "若未按期落地，2027 精矿出口受限；需跟踪环评、土建、设备与点火四个里程碑。",
+          "timing": "建设周期 19 个月；尚未开工，投产时点取决于审批与开工日期",
+          "capex": "约 US$2.44 亿（24,353 万美元，含建设期利息与流动资金）",
+          "progress": "2026-08-24 董事会审议通过；尚需境内境外投资审批备案及津方审批，尚未开工。",
+          "risk": "审批时点不确定；若未能于 2027-01 前形成本地产能，精矿外运依赖配额与豁免。",
           "sources": [
-            "盛新年报/公开规划",
-            "津巴布韦精矿出口政策"
+            "盛新锂能公告 2026-08-25",
+            "盛新锂能投资者关系管理信息 2026-09-11",
+            "中国中铁 2025-09",
+            "spikedmedia 2026-07-06"
           ],
-          "fid": "未披露",
+          "fid": "2026-08-24 董事会通过（7 票同意、0 反对）",
           "include": "不计入",
           "asOf": "2026-09",
-          "next": "环评、融资、土建开工、设备到场、点火"
+          "next": "境内外审批备案、土建开工、设备到场、19 个月建设期节点",
+          "design": [
+            {
+              "k": "实施主体",
+              "v": "Max Mind Investments (Zimbabwe) (Private) Limited（盛新锂能全资孙公司）"
+            },
+            {
+              "k": "建设地点",
+              "v": "津巴布韦马尼卡兰省布赫拉区（Sabi Star 锂钽矿区所在区）"
+            },
+            {
+              "k": "产能",
+              "v": "年产 7.5 万吨硫酸锂"
+            },
+            {
+              "k": "建设周期",
+              "v": "19 个月（以实际投资建设情况为准）"
+            },
+            {
+              "k": "原料",
+              "v": "Sabi Star 矿原矿生产规模 99 万吨/年，可产锂精矿约 29 万吨/年"
+            },
+            {
+              "k": "资金来源",
+              "v": "项目实施主体自有或自筹资金，或公司以增资、借款形式投入"
+            },
+            {
+              "k": "同期项目",
+              "v": "同批公告尼日利亚 7.5 万吨/年硫酸锂项目，总投资约 23,279 万美元，建设周期同为 19 个月，地点为夸拉州伊洛林"
+            }
+          ],
+          "construction": [
+            {
+              "date": "2023-05-07",
+              "event": "（前置产能）Sabi Star 锂矿投产；2023-08-31 津总统出席投产仪式",
+              "src": "盛新锂能官网",
+              "url": "https://en.cxlithium.com/news/115.html"
+            },
+            {
+              "date": "2025-09-10",
+              "event": "（公用工程）Sabi Star 矿区 15 MW 燃煤自备电厂通过竣工验收投运，设计供电 12 MW 自用、3 MW 上网；投资约 US$2,500 万",
+              "src": "中国中铁 CRECG 2025-09-10",
+              "url": "https://www.crecg.com/zgztywz/cs11/10210606/2025090511142767559/index.html"
+            },
+            {
+              "date": "2026-08-24",
+              "event": "盛新锂能第九届董事会第三次会议审议通过《关于在津巴布韦投资建设硫酸锂项目的议案》，同意全资孙公司投资建设年产 7.5 万吨硫酸锂项目",
+              "src": "盛新锂能公告 2026-08-25",
+              "url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=002240&id=12525435"
+            },
+            {
+              "date": "2026-09-11",
+              "event": "投资者关系活动确认推进津巴布韦硫酸锂项目",
+              "src": "盛新锂能投资者关系管理信息 2026-09-11",
+              "url": "https://q.stock.sohu.com/cn/news.html?textId=1225560711&tab=200&type=100&code=cn_002240&date=2026/0911"
+            }
+          ],
+          "environment": {
+            "status": "尚未开工，未见环评披露（N.D.）",
+            "items": [
+              "公告明确项目尚需按津巴布韦法律法规履行当地政府部门审批手续。",
+              "社会与环保争议（属矿区与既有选矿/运输环节，非硫酸锂厂本身）：Buhera 居民组织 2026-07-06 向议会环境委员会提交请愿，涉及水源污染、粉尘、工伤与搬迁；请愿称尾矿坝附近水样检出镉、铅、汞等参数关注项。",
+              "津环保罚款上限仅 US$5,000，社区批评违法成本过低；并指出《环境管理法》第 108 条限制查阅 EIA 报告。"
+            ],
+            "note": "上述争议针对矿区整体环境表现，不能等同于硫酸锂项目的环评结论；该硫酸锂项目环评状态为 N.D.。"
+          },
+          "economics": [
+            {
+              "k": "投资额",
+              "v": "约 24,353 万美元（含建设期利息和流动资金）"
+            },
+            {
+              "k": "单吨投资强度",
+              "v": "约 3,250 美元/吨硫酸锂（尼日利亚同规模项目约 3,100 美元/吨）"
+            },
+            {
+              "k": "经济性论证",
+              "v": "公司称旨在顺应资源国就地加工增值政策趋势、提高综合生产效率、享受海外税收优惠、降低全链条生产与物流成本"
+            },
+            {
+              "k": "换算口径",
+              "v": "7.5 万吨硫酸锂按公司同行工艺口径约合 3.75 万吨 LCE，按无水化学计量约 5.0 万吨、按一水合物约 4.3 万吨"
+            }
+          ],
+          "media": [],
+          "social": [
+            {
+              "label": "盛新锂能公告全文",
+              "url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=002240&id=12525435",
+              "date": "2026-08-25",
+              "note": "7.5 万吨、2.44 亿美元、19 个月"
+            },
+            {
+              "label": "议会环境委员会请愿听证",
+              "url": "https://spikedmedia.co.zw/do-not-drink-the-water-buhera-residents-take-lithium-mining-grievances-to-parliament/",
+              "date": "2026-07-06",
+              "note": "水源与粉尘投诉、EIA 查阅限制"
+            },
+            {
+              "label": "X：粉尘与社区影响报道",
+              "url": "https://x.com/OMasaraure/status/1959189694945558864",
+              "date": "2025-08",
+              "note": "矿区运输粉尘争议"
+            },
+            {
+              "label": "Facebook：中国驻津使馆正面报道",
+              "url": "https://x.com/ChineseZimbabwe/status/1970843449206214791",
+              "date": "2025-09",
+              "note": "社区农业帮扶口径"
+            }
+          ]
         }
       ],
       "coord": {
@@ -1003,23 +1117,137 @@
       ],
       "smelting": [
         {
-          "name": "Kamativi 硫酸锂项目",
-          "status": "规划/建设跟踪",
+          "name": "Kamativi 硫酸锂项目（KMC）",
+          "status": "在建 · 土建施工",
           "statusClass": "building",
-          "capacity": "7.5 万吨/年",
+          "capacity": "7.5 万吨/年（设计年处理锂精矿 35 万吨）",
           "product": "硫酸锂",
-          "timing": "目标 2027-07 投产",
-          "capex": "约 US$2 亿",
-          "progress": "公开信息称投入/推进本地硫酸锂项目；需以公司公告核实土建、设备安装、点火与首批合格品。",
-          "risk": "时间表与津巴布韦 2027-01 出口禁令高度相关；若延误，精矿外运受限。",
+          "timing": "计划 2027 年投运（公司口径）；当地政府与媒体口径为 2027 年 7 月投产",
+          "capex": "约 US$2 亿（含冶炼厂与硫酸厂）",
+          "progress": "土建与场地清理施工中；公司 COO 向议会表示设计已完成、设备已制造并在运输途中。",
+          "risk": "设备长途运输与现场安装为关键路径；2027 年 1 月精矿出口禁令下，若该厂延误则精矿外运受限。",
           "sources": [
-            "雅化公开规划",
-            "津巴布韦媒体/政策"
+            "雅化集团微信公众号 2026-07-06",
+            "Herald 2026-06-30",
+            "newZWire 2026-08",
+            "Business Insider Africa 2026-02-27",
+            "KMC LinkedIn"
           ],
-          "fid": "公开口径未明确",
+          "fid": "2026-02 已在深交所平台宣布开工",
           "include": "不计入已投产供给",
           "asOf": "2026-09",
-          "next": "公司正式公告、施工进度、点火与首批合格品"
+          "next": "设备到场、安装、单体调试、点火、首批合格品",
+          "design": [
+            {
+              "k": "实施主体",
+              "v": "Kamativi Mining Company (KMC)，雅化集团与津巴布韦方合资（雅化穿透权益约 54.4%）"
+            },
+            {
+              "k": "建设内容",
+              "v": "一座冶炼厂（smelter）+ 一座硫酸厂（sulphuric acid plant），并配套公辅设施"
+            },
+            {
+              "k": "产能",
+              "v": "硫酸锂 7.5 万吨/年；设计年处理锂精矿 35 万吨"
+            },
+            {
+              "k": "原料",
+              "v": "KMC 自有选矿能力：一期 30 万吨/年原矿 → 5 万吨/年精矿；二期 200 万吨/年原矿 → 30 万吨/年精矿；合计 230 万吨原矿 → 35 万吨精矿"
+            },
+            {
+              "k": "同期配套",
+              "v": "同步建设锡-铌-钽分离回收项目；锡钽铌回收系统预计 2026-09 投运"
+            },
+            {
+              "k": "资源约束",
+              "v": "公司称露天储量约可支撑 5 年开采，现有资源可延至约 10 年，之后转地下开采技术难度与成本上升"
+            }
+          ],
+          "construction": [
+            {
+              "date": "2026-02（月内）",
+              "event": "KMC 就硫酸锂项目及硫酸厂等配套设施开展利益相关方沟通",
+              "src": "KMC LinkedIn 官方帖",
+              "url": "https://www.linkedin.com/posts/kamativi-mining-company-kmc_kmc-engages-stakeholders-ahead-of-the-lithium-activity-7458493498833686529-F_RX"
+            },
+            {
+              "date": "2026-02-26",
+              "event": "雅化在深交所平台宣布硫酸锂厂开工建设，为津巴布韦第三个硫酸锂项目",
+              "src": "Business Insider Africa / Bloomberg 2026-02-27",
+              "url": "https://africa.businessinsider.com/local/markets/zimbabwes-processing-for-white-gold-deepens-with-another-sulphate-plant/rhczhhc"
+            },
+            {
+              "date": "2026-06-30",
+              "event": "公司已投入超 US$2 亿；总统特别顾问视察现场，场地清理与土建施工进行中；预计 2027 年 7 月投产",
+              "src": "Herald 2026-06-30",
+              "url": "https://www.heraldonline.co.zw/us200mln-beneficiation-plant-lifts-kamativi-lithium-ambitions"
+            },
+            {
+              "date": "2026-07-06",
+              "event": "雅化集团官微：KMC 全速推进硫酸锂深加工项目，总投资约 2 亿美元，涵盖冶炼厂和硫酸厂，设计年处理锂精矿 35 万吨、硫酸锂年产 7.5 万吨，计划 2027 年投运",
+              "src": "雅化集团微信公众号 2026-07-06",
+              "url": "https://news.qq.com/rain/a/20260706A09DGM00"
+            },
+            {
+              "date": "2026-08（月内）",
+              "event": "KMC 首席运营官向议会矿业委员会表示：设计已完成，设备已制造并在运输途中；同时提示并非所有矿山都有能力做深加工",
+              "src": "newZWire 2026-08",
+              "url": "https://newzwire.live/beneficiation-not-every-lithium-mine-can-do-it-kamativi-says"
+            }
+          ],
+          "environment": {
+            "status": "已开展利益相关方沟通；EIA 编号与日期 N.D.",
+            "items": [
+              "小区调研显示 Sandawana、Kamativi 一带土地利用变更与搬迁补偿是突出社会议题（BU GDP 中心 2026-03）。",
+              "公司公开表态称深加工须结合各矿规模与经济性，不宜一刀切。"
+            ],
+            "note": "公开渠道未见该厂 EIA 报告或证书编号。"
+          },
+          "economics": [
+            {
+              "k": "投资额",
+              "v": "约 US$2 亿（冶炼厂 + 硫酸厂）"
+            },
+            {
+              "k": "单吨投资强度",
+              "v": "约 2,700 美元/吨硫酸锂"
+            },
+            {
+              "k": "产品去向",
+              "v": "硫酸锂为中间品，可运回国内加工为碳酸锂/氢氧化锂，减少跨境货运体量"
+            },
+            {
+              "k": "换算口径",
+              "v": "7.5 万吨硫酸锂按公司工艺口径约合 3.75 万吨 LCE，按无水化学计量约 5.0 万吨、按一水合物约 4.3 万吨"
+            }
+          ],
+          "media": [],
+          "social": [
+            {
+              "label": "Herald：US$2 亿选冶项目",
+              "url": "https://www.heraldonline.co.zw/us200mln-beneficiation-plant-lifts-kamativi-lithium-ambitions",
+              "date": "2026-06-30",
+              "note": "土建施工、2027-07 投产目标"
+            },
+            {
+              "label": "雅化官微（腾讯新闻转载）",
+              "url": "https://news.qq.com/rain/a/20260706A09DGM00",
+              "date": "2026-07-06",
+              "note": "2 亿美元、35 万吨精矿处理、7.5 万吨硫酸锂"
+            },
+            {
+              "label": "newZWire：议会听证表态",
+              "url": "https://newzwire.live/beneficiation-not-every-lithium-mine-can-do-it-kamativi-says",
+              "date": "2026-08",
+              "note": "设计完成、设备在途"
+            },
+            {
+              "label": "Facebook：US$2 亿受益项目",
+              "url": "https://www.facebook.com/groups/2197915910673347/posts/2503565390108396",
+              "date": "2026",
+              "note": "7.5 万吨/年、2027-07 投产、处理 35 万吨精矿"
+            }
+          ]
         }
       ],
       "coord": {
@@ -1205,23 +1433,101 @@
       ],
       "smelting": [
         {
-          "name": "Zulu 本地冶炼/硫酸锂项目",
+          "name": "Zulu 本地冶炼 / 硫酸锂项目",
           "status": "无已披露项目",
           "statusClass": "stalled",
-          "capacity": "N.D.",
-          "product": "N.D.",
+          "capacity": "无项目",
+          "product": "—",
           "timing": "无时间表",
-          "capex": "N.D.",
-          "progress": "现有方案仍是精矿选厂，没有可核实的本地化学转化建设。",
-          "risk": "2027 精矿出口禁令下，若无豁免或第三方本地转化通道，即使选厂重启也可能无法出口。",
+          "capex": "—",
+          "progress": "项目方案止于精矿浮选，无任何可核实的本地化学转化建设；公司资源全部投入选厂重启与偿债。",
+          "risk": "2027-01 精矿出口禁令下，若无豁免或第三方本地转化通道，即使选厂复产也可能无法出口；公司另有约 US$4,600 万 Canmax 预付款负债。",
           "sources": [
-            "Premier 公告",
-            "津巴布韦出口政策"
+            "Premier RNS 2026-06-25",
+            "Kalkine 2026-07-28",
+            "Business Explainer 2026-02-18",
+            "newZWire"
           ],
           "fid": "不适用（无项目）",
           "include": "不计入",
           "asOf": "2026-09",
-          "next": "出口豁免或第三方本地转化安排"
+          "next": "出口豁免、第三方本地转化安排、Canmax 长期停售日延期结果",
+          "design": [
+            {
+              "k": "现状",
+              "v": "仅有锂钽浮选厂（鑫海/Thriving Engineering 供货），无硫酸锂或锂盐装置"
+            },
+            {
+              "k": "融资约束",
+              "v": "项目累计负债约 US$4,600 万（Canmax 预付款），年息 12%；Canmax 已持股约 13.38% 并有权取得锂销售毛收入的 25%–50%"
+            },
+            {
+              "k": "产能",
+              "v": "浮选设计处理能力 15–20 吨/小时；名义精矿能力约 5 万吨/年（设计值，非实际达产）"
+            },
+            {
+              "k": "为何无冶炼配套",
+              "v": "公司规模与财务状况不支持在津建设硫酸锂装置；行业人士亦指出并非所有矿山都具备深加工条件"
+            }
+          ],
+          "construction": [
+            {
+              "date": "2026-01-05",
+              "event": "与 Canmax 修订预付款与包销协议：Long Stop Date 延至 2026-06-30 或合格买方承接日",
+              "src": "Premier RNS / 报道",
+              "url": "https://bullszimbabwe.com/premier-to-inject-us134m-into-zim-lithium-project-reboot"
+            },
+            {
+              "date": "2026-02（月内）",
+              "event": "编制 2026-02 至 2026-07 共 6 个月 US$1,340 万临时预算，用于选厂完工、调试与法定支出；明确提出全部资金用于选厂与偿债，无冶炼配套",
+              "src": "Business Explainer 2026-02-18",
+              "url": "https://businessexplainer.co.za/deals/2026/02/18/premier-invests-13m-to-rescue-zulu-lithium"
+            },
+            {
+              "date": "2026-06（月内）",
+              "event": "鑫海浮选回路完成调试，内部化验品位超 5.0% Li₂O（峰值 5.58%），处理约 6,000 吨原矿后因矿料耗尽中止",
+              "src": "Premier RNS 2026-06-25",
+              "url": "https://investormeetcompany.com/companies/premier-african-minerals-limited/rns/4760528/view"
+            },
+            {
+              "date": "2026-07-28",
+              "event": "公司称在 Canmax 同意延长 Long Stop Date 前不会重启运营，30 天连续生产计划推迟",
+              "src": "Kalkine 2026",
+              "url": "https://kalkine.co.uk/news/mining/premier-african-minerals-ltd-prem-could-the-resources-cycle-put-this-stock-back-on-the-map"
+            }
+          ],
+          "environment": {
+            "status": "无冶炼项目，不适用",
+            "items": [
+              "硫酸锂配套为空白，无环评需求。"
+            ],
+            "note": "不将 Canmax 的包销/债权关系误读为本地冶炼配套。"
+          },
+          "economics": [
+            {
+              "k": "硫酸锂经济性",
+              "v": "N.D.（无项目）"
+            },
+            {
+              "k": "公司偿付能力",
+              "v": "依赖股东、债权人及合作方支持方能持续经营"
+            }
+          ],
+          "media": [],
+          "social": [
+            {
+              "label": "Kalkine：重启取决于 Canmax 决定",
+              "url": "https://kalkine.co.uk/news/mining/premier-african-minerals-ltd-prem-could-the-resources-cycle-put-this-stock-back-on-the-map",
+              "date": "2026-07-28",
+              "note": "无冶炼配套"
+            },
+            {
+              "label": "Business Explainer：US$1,340 万仅用于选厂",
+              "url": "https://businessexplainer.co.za/deals/2026/02/18/premier-invests-13m-to-rescue-zulu-lithium",
+              "date": "2026-02-18",
+              "note": "资金用途明确不含冶炼"
+            }
+          ]
         }
       ],
       "coord": {
@@ -1464,23 +1770,147 @@
       ],
       "smelting": [
         {
-          "name": "Bikita 硫酸锂厂",
-          "status": "在建/推进",
+          "name": "Bikita 硫酸锂厂（Masvingo Lithium Technology）",
+          "status": "在建 · 已全面开工",
           "statusClass": "building",
-          "capacity": "10 万吨/年（一期 6 万吨）",
+          "capacity": "10 万吨/年（公司定增口径，未分期）；当地媒体称分期：一期 6 万吨 + 二期 6.5 万吨",
           "product": "硫酸锂",
-          "timing": "一期目标 2027Q2",
-          "capex": "US$4–5 亿（公开口径差异）",
-          "progress": "为满足津巴布韦 2027 精矿出口限制而建；需跟踪土建、设备、点火、首批合格品。",
-          "risk": "投资额与最终分期规模存在 4 亿/5 亿、6 万/10 万吨不同口径；以公司后续公告为准。",
+          "timing": "建设期 15 个月；公司计划 2027 年中建成投产；当地媒体称一期 2027Q2",
+          "capex": "约 US$2.88 亿（28,824.75 万美元，公司定增口径）；当地媒体称 US$5 亿（对应一期 6 万吨 + 二期 6.5 万吨）",
+          "progress": "2026-08 取得 EMA 环评证书，由前期准备全面转入工程建设；土建与安装承包商已进场。",
+          "risk": "产能与投资额存在公司口径 10 万吨/2.88 亿美元 与 当地媒体口径 一期 6 万吨+二期 6.5 万吨/5 亿美元 两套数字，尚未见公司公告确认后者。",
           "sources": [
-            "中矿年报/公告",
-            "津巴布韦政策与媒体"
+            "中矿资源 2026 年度定增预案（2026-05-19）",
+            "中矿资源 2025 年年度报告",
+            "SMM 2026-08-12",
+            "Herald 2026-07-19",
+            "ChemNet",
+            "Oxpeckers 2024-05"
           ],
           "fid": "项目推进中；正式 FID 日期未披露",
           "include": "不计入已投产供给",
           "asOf": "2026-09",
-          "next": "一期土建、设备安装、点火、2027Q2 目标"
+          "next": "土建与设备安装进度、单体调试、点火、首批合格品",
+          "design": [
+            {
+              "k": "实施主体",
+              "v": "Masvingo Lithium Technology (Private) Limited（中矿资源全资子公司）"
+            },
+            {
+              "k": "建设地点",
+              "v": "津巴布韦 Masvingo 省，首都哈拉雷西南约 325 km（依托 Bikita 矿山，采选冶一体化）"
+            },
+            {
+              "k": "建设内容",
+              "v": "硫酸锂生产装置及配套辅助设施"
+            },
+            {
+              "k": "产能（公司口径）",
+              "v": "年产 10 万吨硫酸锂，为非洲单体规模最大的硫酸锂装置"
+            },
+            {
+              "k": "原料保障",
+              "v": "Bikita 矿山 200 万吨/年锂辉石选矿线 + 200 万吨/年透锂长石选矿线，分别年产约 30 万吨锂辉石精矿与 30 万吨化学级透锂长石精矿"
+            },
+            {
+              "k": "原料品位放宽",
+              "v": "就地加工使锂精矿入选品位要求可由 5.5% 降至约 3.0%，中低品位矿石得以利用"
+            },
+            {
+              "k": "技术经济口径",
+              "v": "公司披露：每生产 1 吨碳酸锂约需 8 吨锂精矿或 2 吨硫酸锂"
+            }
+          ],
+          "construction": [
+            {
+              "date": "2024-09-30",
+              "event": "Bikita 宣布计划 3–5 年内建设 US$5 亿锂炼厂，为该项目最早公开口径",
+              "src": "MINING.COM / Bloomberg 2024-09-30",
+              "url": "https://www.mining.com/web/sinomine-says-it-will-build-lithium-sulfate-plant-in-zimbabwe"
+            },
+            {
+              "date": "2026-05-19",
+              "event": "中矿资源定增预案披露：募资不超过 52 亿元，其中 16 亿元投向津巴布韦年产 10 万吨硫酸锂项目，建设期 15 个月",
+              "src": "中矿资源 2026 年度向特定对象发行 A 股股票预案",
+              "url": "https://static.cninfo.com.cn/finalpage/2026-05-20/1225316386.PDF"
+            },
+            {
+              "date": "2026-07-19",
+              "event": "Bikita 助理总经理称可行性研究已完成、用地已确定、US$5 亿资金已落实；一期 6 万吨 2027Q2 完成，二期 6.5 万吨 2028 年初投产，合计 12.5 万吨",
+              "src": "Herald 2026-07-19",
+              "url": "http://heraldonline.co.zw/bikita-minerals-secures-us500m-for-lithium-sulphate-plant-2"
+            },
+            {
+              "date": "2026-08-12",
+              "event": "津巴布韦马辛戈锂业科技取得 EMA 签发 EIA 证书，项目由前期准备全面转入工程建设实施阶段；土建分包中铁九局、安装分包山东大地进场",
+              "src": "中矿资源公告 / SMM 2026-08-12",
+              "url": "https://news.metal.com/newscontent/104056332-zimbabwe-project-of-cmoc-to-produce-100000-tons-of-lithium-sulfate-per-year-fully-launches-construction"
+            }
+          ],
+          "environment": {
+            "status": "EIA 证书已取得（2026-08）",
+            "items": [
+              "EMA 审查重点：水资源利用、尾矿处置、生态保护、污染物排放；EIA 证书是大型冶炼项目开工的强制前置条件。",
+              "2023 年：尾矿/水库泄漏，EMA 处以 US$5,000 罚款并责令一个月内清理，企业加装预处理装置与应急蓄水池，尾水回用。",
+              "2024-04-29/30：EMA 环境审计开出三张罚单并下达环境整改令。",
+              "2026 年：Bikita 社区组织 BILD 向 EMA 请愿，要求公开泥浆坝项目相关合规记录与环评报告。",
+              "津巴布韦环境罚款上限仅 US$5,000（Level 14），社区批评违法成本过低。"
+            ],
+            "note": "该厂 EIA 报告全文未公开；津《环境管理法》第 108 条限制公众查阅 EIA 报告。"
+          },
+          "economics": [
+            {
+              "k": "投资额",
+              "v": "公司定增口径 28,824.75 万美元（约 19.66 亿元）；拟使用募集资金 16 亿元。当地媒体另称 US$5 亿"
+            },
+            {
+              "k": "单吨投资强度",
+              "v": "按公司口径约 2,880 美元/吨硫酸锂"
+            },
+            {
+              "k": "历史累计投资",
+              "v": "中矿自 2022 年收购 Bikita 以来已投入约 US$3.83 亿用于扩产；另有 US$7,000 万以上用于混合选矿装置（锂辉石/铯/透锂长石）"
+            },
+            {
+              "k": "融资进展",
+              "v": "2026-05 启动 52 亿元定增（含津巴布韦项目、赞比亚 Kitumba 铜矿等项目）"
+            },
+            {
+              "k": "经济效益",
+              "v": "公司称经可行性论证项目具良好经济效益，达产后带来持续利润增量；就地加工可减少物料运输总量、显著降低物流成本"
+            },
+            {
+              "k": "换算口径",
+              "v": "10 万吨硫酸锂按公司工艺口径约合 5 万吨 LCE，按无水化学计量约 6.7 万吨、按一水合物约 5.8 万吨"
+            }
+          ],
+          "media": [],
+          "social": [
+            {
+              "label": "SMM：项目全面开工",
+              "url": "https://news.metal.com/newscontent/104056332-zimbabwe-project-of-cmoc-to-produce-100000-tons-of-lithium-sulfate-per-year-fully-launches-construction",
+              "date": "2026-08-12",
+              "note": "EIA 获批、承包商进场、2027 年中投产"
+            },
+            {
+              "label": "Herald：US$5 亿资金落实、分期投产",
+              "url": "http://heraldonline.co.zw/bikita-minerals-secures-us500m-for-lithium-sulphate-plant-2",
+              "date": "2026-07-19",
+              "note": "一期 6 万吨、二期 6.5 万吨"
+            },
+            {
+              "label": "Oxpeckers：环保与水权调查",
+              "url": "https://oxpeckers.org/2024/05/zimbabwe-lithium-liability/",
+              "date": "2024-05",
+              "note": "Matezva 水库泄漏罚款与整改"
+            },
+            {
+              "label": "ZiMining：社区请愿要求公开合规记录",
+              "url": "https://www.zimining.co.zw/zimbabwe-lithium-mine-water-concerns-prompt-regulator-review/",
+              "date": "2026",
+              "note": "BILD 就泥浆坝项目请愿 EMA"
+            }
+          ]
         }
       ],
       "coord": {
@@ -1537,7 +1967,7 @@
       "company": "华友钴业 / Prospect Lithium Zimbabwe",
       "country": "津巴布韦",
       "grade": "资源 1.06% Li₂O；双产品精矿",
-      "status": "采选稳态 + 硫酸锂试产",
+      "status": "采选稳态 + 硫酸锂投产爬坡",
       "statusClass": "operating",
       "latest": "2026H1（冶炼节点）",
       "previous": "2025全年",
@@ -1566,13 +1996,13 @@
         {
           "name": "选矿优化/供硫酸锂厂",
           "current": "无新增精矿线 FID；重心为内部转化",
-          "previous": "2025 末硫酸锂厂建成",
+          "previous": "2025-10-01 硫酸锂厂烘炉点火并转入局部调试",
           "compare": "采选扩张不是当前主线"
         }
       ],
       "overall": {
         "current": "2026-04 硫酸锂首次出口，年中运行率约 60%；采选端单矿精矿实际未单列。",
-        "previous": "2025 硫酸锂厂建成并进入试产；Arcadia 选厂运营效率提升。",
+        "previous": "2025-10 硫酸锂厂烘炉点火并转入局部调试；Arcadia 选厂运营效率提升。",
         "future": "2027 基准按精矿 52.7 万吨设计产能；更多产品将内部转化为硫酸锂。",
         "highlights": [
           "52.7 万吨是华友官方设计口径，Excel 原值正确",
@@ -1702,23 +2132,207 @@
       ],
       "smelting": [
         {
-          "name": "Arcadia 5 万吨硫酸锂厂",
-          "status": "已建成/爬坡",
+          "name": "Arcadia 硫酸锂厂（华景科技 ATZ）",
+          "status": "已投产 · 爬坡中",
           "statusClass": "operating",
-          "capacity": "5 万吨/年",
-          "product": "硫酸锂",
-          "timing": "2026Q1 试产；2026-04 首次出口",
-          "capex": "约 US$4 亿",
-          "progress": "2026-04-27 完成非洲首批硫酸锂出口；年中运行率约 60%，尚未满产。",
-          "risk": "需要跟踪月度产量、良品率、能耗与出口节奏；精矿产量与硫酸锂产量不可重复计入供给。",
+          "capacity": "5 万吨/年（官方）；总经理称配置到位后可超 6 万吨",
+          "product": "硫酸锂（电池级中间品）",
+          "timing": "2025-10-01 烘炉点火 → 2026Q1 试产（公司指引） → 2026-04-25 首批发运 → 2026-07-20 工业投产",
+          "capex": "约 US$2 亿（华友官方）；媒体多报 US$4 亿",
+          "progress": "津巴布韦唯一商业化运行的硫酸锂厂；截至 2026-07 末运行率约 60%；碳酸锂产线已完成约 90%。",
+          "risk": "爬坡慢于铭牌产能；锂盐与精矿不可重复计入供应；水与电力配套为约束。",
           "sources": [
-            "华友 2025 年报/官网",
-            "Reuters 2025-10 / 2026 进展"
+            "华友钴业官网（点火/建设/发运/认证）",
+            "Reuters 2025-10-17",
+            "Mining Zimbabwe（部长勘察）",
+            "Capmad 2026-07",
+            "华友 2025 年报"
           ],
           "fid": "已执行",
           "include": "按实际硫酸锂产量计入；不得与精矿重复",
           "asOf": "2026-09",
-          "next": "月度产量、运行率、良品率与出口节奏"
+          "next": "月度产量、运行率、碳酸锂产线投料与产品合格率",
+          "design": [
+            {
+              "k": "实施主体",
+              "v": "华景科技（Arcadia Technology Zimbabwe, ATZ），华友钴业全资"
+            },
+            {
+              "k": "建设地点",
+              "v": "华友自有 Arcadia 锂矿区内，紧邻 PLZ 锂精矿选矿厂（Goromonzi，哈拉雷以东约 30 km）"
+            },
+            {
+              "k": "产品与产能",
+              "v": "硫酸锂 5 万吨/年；三条单相产线（津政府称为「非洲最大的三线单相硫酸锂装置」）"
+            },
+            {
+              "k": "工艺路线",
+              "v": "火法转型窑焙烧 + 湿法浸出、浓缩；转型窑 Φ5.6 m × 110 m，分 11 段运输"
+            },
+            {
+              "k": "原料",
+              "v": "PLZ 自有 Arcadia 锂辉石/透锂长石精矿，选冶一体化就近供料"
+            },
+            {
+              "k": "公用工程",
+              "v": "外购电力 + 自备发电；锂加工为高耗水环节，需季度水管理报告"
+            }
+          ],
+          "construction": [
+            {
+              "date": "2025-06-24",
+              "event": "转型窑首吊；设备经国内海运 → 南非德班港清关 → 津巴边境二次通关 → 1700 km 陆运进厂",
+              "src": "华友钴业官网 2025-11-11",
+              "url": "https://www.huayou.com/news/corporate-news/577.html"
+            },
+            {
+              "date": "2025-10-01",
+              "event": "火法产线转型窑烘炉顺利点火，项目由工程建设转入局部调试",
+              "src": "华友钴业官网 2025-10-01",
+              "url": "https://www.huayou.com/news/corporate-news/553"
+            },
+            {
+              "date": "2026Q1（公司指引）",
+              "event": "公司指引：2026 年一季度开始首次生产（前瞻口径，非实际试产公告）",
+              "src": "Reuters 2025-10-17",
+              "url": "https://www.reuters.com/world/africa/huayou-start-zimbabwe-lithium-sulphate-production-early-2026-2025-10-17"
+            },
+            {
+              "date": "2026-04-25",
+              "event": "首批硫酸锂产品发运仪式，华友成为首家在津巴布韦实现硫酸锂本地化生产的中资企业",
+              "src": "华友钴业官网 2026-04-26",
+              "url": "https://www.huayou.com/news/corporate-news/702.html"
+            },
+            {
+              "date": "2026-05（月内）",
+              "event": "省级部门确认 Goromonzi 硫酸锂厂已建成并投产，官方投产典礼待定",
+              "src": "Capmad 2026-07-21",
+              "url": "https://www.capmad.com/post/arcadia-commissions-zimbabwes-first-lithium-sulphate-plant-in-a-400-million-usd-investment"
+            },
+            {
+              "date": "2026-07（月内勘察）",
+              "event": "矿业部长勘察：装置铭牌 5 万吨/年，当前运行率约 60%；碳酸锂厂已完成约 90%",
+              "src": "Mining Zimbabwe",
+              "url": "https://miningzimbabwe.com/zimbabwe-commends-plzs-lithium-sulphate-plant-minister-urges-full-compliance-with-government-commitments/"
+            },
+            {
+              "date": "2026-07-20",
+              "event": "正式宣布工业投产（industrial commissioning）",
+              "src": "Capmad 2026-07-21",
+              "url": "https://www.capmad.com/post/arcadia-commissions-zimbabwes-first-lithium-sulphate-plant-in-a-400-million-usd-investment"
+            },
+            {
+              "date": "2026-09-13",
+              "event": "华景科技通过 BSI ISO 37301 合规管理体系认证，为非洲首家获此认证的硫酸锂生产企业",
+              "src": "华友钴业官网 2026-09-13",
+              "url": "https://www.huayou.com/news/corporate-news/751"
+            }
+          ],
+          "environment": {
+            "status": "已办理环评并投产",
+            "items": [
+              "锂加工为高耗水环节；津巴布韦 11 项出口条件要求披露劳工、安全与环境合规并提交月度进度报告。",
+              "政府要求生产企业设立自有化验室；PLZ 曾被要求加快化验室建设、技能转移与本地高管配置。",
+              "硫酸锂为锂盐产品，不在精矿/原矿出口禁令范围内，可合规外销。"
+            ],
+            "note": "公开渠道未见该厂 EIA 报告全文（津《环境管理法》第 108 条限制公众查阅 EIA 报告，社区仅能取得 EIA 证书）。"
+          },
+          "economics": [
+            {
+              "k": "投资额",
+              "v": "华友官方口径约 US$2 亿（另有报道 US$4 亿，含选厂或整体基地投资，口径不一）"
+            },
+            {
+              "k": "运行负荷",
+              "v": "约 60%（2026-07 末，部长勘察口径）"
+            },
+            {
+              "k": "津巴布韦硫酸锂出口",
+              "v": "2026-04 首单约 US$1,260 万；2026-06 单月约 US$5,000 万；2026H1 合计约 US$6,270 万"
+            },
+            {
+              "k": "行业收入展望",
+              "v": "津锂生产商协会：硫酸锂收入 2026 年约 US$10 亿，2030 年可达 US$32 亿；2030 年硫酸锂产量预计约 34.4 万吨"
+            },
+            {
+              "k": "下一环节",
+              "v": "公司目标 2026 年底产出粗制碳酸锂，硫酸锂与碳酸锂产出比目标约 50:50"
+            },
+            {
+              "k": "换算口径",
+              "v": "硫酸锂 ≠ LCE：1 吨硫酸锂按公司工艺口径约合 0.5 吨 LCE（每 1 吨碳酸锂耗约 2 吨硫酸锂），按无水化学计量约 0.672 吨、按一水合物约 0.577 吨"
+            }
+          ],
+          "media": [
+            {
+              "file": "assets/img/smelting/arcadia_ceremony_ignition.jpeg",
+              "cap": "火法产线转型窑烘炉点火仪式现场（窑体两侧）",
+              "src": "华友钴业官网 2025-10-01",
+              "url": "https://www.huayou.com/news/corporate-news/553"
+            },
+            {
+              "file": "assets/img/smelting/arcadia_ceremony_ignition_group.jpeg",
+              "cap": "点火仪式参建单位与员工合影",
+              "src": "华友钴业官网 2025-10-01",
+              "url": "https://www.huayou.com/news/corporate-news/553"
+            },
+            {
+              "file": "assets/img/smelting/arcadia_site_clearing.jpeg",
+              "cap": "建设期场地平整与开荒作业（航拍；企业官网 2025-11-11 发布）",
+              "src": "华友钴业官网 2025-11-11",
+              "url": "https://www.huayou.com/news/corporate-news/577.html"
+            },
+            {
+              "file": "assets/img/smelting/arcadia_kiln_install.jpeg",
+              "cap": "Φ5.6 m × 110 m 转型窑窑体就位",
+              "src": "华友钴业官网 2025-11-11",
+              "url": "https://www.huayou.com/news/corporate-news/577.html"
+            },
+            {
+              "file": "assets/img/smelting/arcadia_transport_road.jpeg",
+              "cap": "回转窑筒体分 11 段运抵，陆路超限运输途中",
+              "src": "华友钴业官网 2025-11-11",
+              "url": "https://www.huayou.com/news/corporate-news/577.html"
+            },
+            {
+              "file": "assets/img/smelting/arcadia_site_night.jpeg",
+              "cap": "夜间施工现场航拍（建设高峰期）",
+              "src": "华友钴业官网 2025-11-11",
+              "url": "https://www.huayou.com/news/corporate-news/577.html"
+            },
+            {
+              "file": "assets/img/smelting/arcadia_ceremony_shipment.jpeg",
+              "cap": "2026-04-25 首批硫酸锂产品发运仪式",
+              "src": "华友钴业官网 2026-04-26",
+              "url": "https://www.huayou.com/news/corporate-news/702.html"
+            }
+          ],
+          "social": [
+            {
+              "label": "华友津巴布韦官方 X（PLZ & ATZ）",
+              "url": "https://x.com/LithiumPlz",
+              "date": "持续更新",
+              "note": "首批硫酸锂出口、基地动态"
+            },
+            {
+              "label": "newZWire 首批发运报道",
+              "url": "https://x.com/newswireZW/status/2048815737158930663",
+              "date": "2026-04",
+              "note": "非洲首批硫酸锂发运"
+            },
+            {
+              "label": "ZBC News 投产报道",
+              "url": "https://www.facebook.com/zbcnews/posts/1334667515373787",
+              "date": "2026-07",
+              "note": "华友 US$4 亿硫酸锂装置"
+            },
+            {
+              "label": "Reuters 2025-10-17",
+              "url": "https://www.reuters.com/world/africa/huayou-start-zimbabwe-lithium-sulphate-production-early-2026-2025-10-17",
+              "date": "2025-10-17",
+              "note": "Q1 2026 投产、产能超 5 万吨、或超 6 万吨"
+            }
+          ]
         }
       ],
       "coord": {
@@ -1737,12 +2351,12 @@
           "text": "试产 / 正式投产"
         },
         {
-          "date": "2025",
-          "text": "5 万吨硫酸锂厂建成试产"
+          "date": "2025-10-01",
+          "text": "硫酸锂厂烘炉点火，由工程建设转入局部调试"
         },
         {
-          "date": "2026-04-27",
-          "text": "首批硫酸锂出口"
+          "date": "2026-04-25",
+          "text": "首批硫酸锂产品发运；2026-07-20 宣布工业投产"
         }
       ],
       "key": "arcadia",
@@ -1950,7 +2564,8 @@
           "fid": "未披露",
           "include": "不计入",
           "asOf": "2026-09",
-          "next": "独立环评/FID、EPC、土建、设备与点火"
+          "next": "独立环评/FID、EPC、土建、设备与点火",
+          "construction": []
         }
       ],
       "coord": {
@@ -2191,7 +2806,8 @@
           "fid": "不适用（DFS 无转化厂）",
           "include": "不计入",
           "asOf": "2026-09",
-          "next": "采矿租约/华友收购后是否新增本地转化"
+          "next": "采矿租约/华友收购后是否新增本地转化",
+          "construction": []
         }
       ],
       "coord": {
@@ -2417,22 +3033,116 @@
       ],
       "smelting": [
         {
-          "name": "Sandawana 二期锂化工/硫酸锂",
-          "status": "概念/规划",
+          "name": "Sandawana 二期锂化工 / 硫酸锂",
+          "status": "尚未立项 · 一期为选矿厂",
           "statusClass": "planned",
-          "capacity": "N.D.",
-          "product": "锂硫酸盐或锂盐",
-          "timing": "选矿厂之后；无已核实日期",
-          "capex": "N.D.",
-          "progress": "公司提出第二阶段本地化学转化，但没有可核实 FID、规模或施工进度。",
-          "risk": "不应把“二期增值”当作已建硫酸锂厂；需跟踪 Cabinet、合作方、环评与融资。",
+          "capacity": "N.D.（硫酸锂规模未定）",
+          "product": "拟为硫酸锂或锂盐",
+          "timing": "一期选矿厂目标 2027-11 投运；硫酸锂无时间表",
+          "capex": "N.D.（一期选矿厂口径 US$2.7–3 亿）",
+          "progress": "公司层面仅表示「硫酸锂还需要一些时间」，正在寻找合作方并评估可行性，尚未见立项、规模、环评或 EPC。",
+          "risk": "2027-01 精矿出口禁令下，若二期锂化工未落地，一期精矿出口须依赖配额或豁免；不应把「二期增值」当作已建硫酸锂厂。",
           "sources": [
-            "Kuvimba/Reuters 报道"
+            "EnviroPress Zim 2026-02-18",
+            "Herald / Zimbabwe Situation 2026-09",
+            "MINING.COM",
+            "BU GDP 中心 2026-03"
           ],
           "fid": "未披露",
           "include": "不计入",
           "asOf": "2026-09",
-          "next": "Cabinet 批准、合作方、环评、融资与规模"
+          "next": "Cabinet 批准、合作方落地、硫酸锂项目规模与环评、一期选矿厂开工与投产",
+          "design": [
+            {
+              "k": "实施主体",
+              "v": "Mutapa Energy Resources / Mutapa Energy Minerals（原 Kuvimba Mining House 拆分后的国有平台）"
+            },
+            {
+              "k": "一期（非硫酸锂）",
+              "v": "锂精矿选矿厂：最新口径投资 US$3 亿、计划 2027-11 投运、2026 年 9 月底开工；早期口径为 US$2.7 亿、年处理原矿 60 万吨，以 BOT 方式与华友钴业、青山控股合作"
+            },
+            {
+              "k": "原矿处理",
+              "v": "另有报道称公司计划建设年处理 300 万吨原矿的装置；已累计开采约 200 万吨矿石"
+            },
+            {
+              "k": "资源",
+              "v": "已确认约 1 亿吨含锂矿石资源；国有 Mutapa 平台目标披露 9,000 万吨锂资源"
+            },
+            {
+              "k": "硫酸锂环节",
+              "v": "公司 CEO：硫酸锂对电池制造关键，但「我们还需要一些时间」，正在寻找伙伴并评估设立硫酸厂可行性；规模、投资、时间表均为 N.D."
+            }
+          ],
+          "construction": [
+            {
+              "date": "2026（年内）",
+              "event": "报道称 Mutapa 已开采 200 万吨矿石，正建设年处理 300 万吨原矿装置；Sinomine、雅化在建设硫酸锂装置，华友已投产",
+              "src": "MINING.COM",
+              "url": "http://mining.com/web/zimbabwe-taps-chinese-firms-for-300-million-lithium-project"
+            },
+            {
+              "date": "2026-02-18",
+              "event": "Mutapa Energy Minerals 宣布最迟 2026 年 6 月开工 US$2.7 亿选矿厂，年处理原矿 60 万吨，BOT 模式与华友钴业、青山控股合作；CEO 称硫酸锂还需时间",
+              "src": "EnviroPress Zim 2026-02-18",
+              "url": "http://enviropresszim.com/mutapa-to-build-us270m-lithium-concentrate-plant-at-sandawana"
+            },
+            {
+              "date": "2026-09（月内）",
+              "event": "Mutapa Energy Resources 将于 2027-11 投运 US$3 亿选矿厂，预计下月（2026-09 月底）开工；已投入道路、电力与供水基础设施",
+              "src": "Herald（经 Zimbabwe Situation 转载）",
+              "url": "http://zimbabwesituation.com/news/mutapa-to-build-us300m-lithium-plant-at-sandawana"
+            }
+          ],
+          "environment": {
+            "status": "硫酸锂项目环评 N.D.",
+            "items": [
+              "社区与调研反映该区域土地利用变更与搬迁补偿为突出议题；Mberengwa 至 Mandihongola 运矿道路损毁被多次提及。",
+              "津巴布韦大型冶炼项目开工须先取得 EMA 环评证书；硫酸锂项目尚未进入该程序。"
+            ],
+            "note": "不应以一期选矿厂的投资与工期替代硫酸锂项目的进度判断。"
+          },
+          "economics": [
+            {
+              "k": "一期投资",
+              "v": "US$3 亿（最新口径）／US$2.7 亿（2026-02 口径）"
+            },
+            {
+              "k": "收入目标",
+              "v": "Sandawana 2026 年目标收入 US$1 亿–1.4 亿美元"
+            },
+            {
+              "k": "硫酸锂经济性",
+              "v": "N.D.——未披露投资额、单耗或产品方案"
+            }
+          ],
+          "media": [],
+          "social": [
+            {
+              "label": "EnviroPress：US$2.7 亿选矿厂 + 硫酸锂表态",
+              "url": "http://enviropresszim.com/mutapa-to-build-us270m-lithium-concentrate-plant-at-sandawana",
+              "date": "2026-02-18",
+              "note": "「硫酸锂还需要一些时间」"
+            },
+            {
+              "label": "Herald/Zimbabwe Situation：US$3 亿、2027-11 投运",
+              "url": "http://zimbabwesituation.com/news/mutapa-to-build-us300m-lithium-plant-at-sandawana",
+              "date": "2026-09",
+              "note": "一期选矿厂口径更新"
+            },
+            {
+              "label": "Facebook：Kuvimba 启动锂加工厂筹建",
+              "url": "https://www.facebook.com/100087137086836/posts/830350339879528",
+              "date": "2023",
+              "note": "早期筹建口径"
+            },
+            {
+              "label": "Instagram：$3 亿融资与扩产",
+              "url": "https://www.instagram.com/p/DbVP7jdlni8",
+              "date": "2026",
+              "note": "国有平台融资进展"
+            }
+          ]
         }
       ],
       "coord": {
@@ -2490,7 +3200,7 @@
     },
     "nigeria": {
       "name": "尼日利亚锂矿项目群（合并页）",
-      "company": "天华新能 / 苏州中材 / 赣锋 / El-Tahdam / Basin 等",
+      "company": "天华新能 / 苏州中材 / 赣锋 / El-Tahdam / Basin 、盛新锂能（伊洛林硫酸锂）等",
       "country": "尼日利亚",
       "grade": "披露零散（约 1.98–2.0% 的个别项目）",
       "status": "长尾供给：投产/扩张/未建混合",
@@ -2503,7 +3213,7 @@
       "resource": "无统一 JORC/NI43-101 资源口径",
       "capacity": "混合口径：精矿、原矿处理量、折 LCE 均有",
       "product": "锂精矿/原矿/潜在锂盐（口径混杂）",
-      "location": "Kebbi / Nasarawa / Kaduna 多州",
+      "location": "Kebbi / Nasarawa / Kaduna 多州（含新增夸拉州伊洛林硫酸锂项目）",
       "existing": [
         {
           "name": "Avatar Ogapa（赣锋）",
@@ -2646,28 +3356,81 @@
       "smelting": [
         {
           "name": "尼日利亚本地锂盐/硫酸锂配套",
-          "status": "披露不足",
+          "status": "矿山层面披露不足；下游已有 1 个已公告硫酸锂项目",
           "statusClass": "planned",
-          "capacity": "N.D.",
-          "product": "N.D.",
-          "timing": "N.D.",
-          "capex": "N.D.",
-          "progress": "各项目未形成可核实的统一冶炼产能表；部分“折 LCE”是理论折算而非冶炼厂产能。",
-          "risk": "不得把矿石/精矿折算量误写为已建碳酸锂或硫酸锂工厂。",
+          "capacity": "硫酸锂 7.5 万吨/年（盛新·伊洛林）；矿山/精矿产能仍 N.D.",
+          "product": "硫酸锂（盛新项目）；其余项目 N.D.",
+          "timing": "盛新项目尚未开工、建设周期 19 个月；其余项目 N.D.",
+          "capex": "盛新项目约 US$2.33 亿（23,279 万美元）；其余项目 N.D.",
+          "progress": "盛新锂能 2026-08-24 董事会批准通过全资孙公司 Chengxin Lithium (Nigeria) International 在夸拉州伊洛林（Ilorin）建设年产 7.5 万吨硫酸锂项目；其余尼日利亚项目仍未形成可核实的统一冶炼产能表。",
+          "risk": "不得把矿石/精矿折算量误写为已建碳酸锂或硫酸锂工厂；盛新项目亦仍需境内外审批，尚未开工。",
           "sources": [
-            "项目公司/尼日利亚媒体"
+            "盛新锂能公告 2026-08-25",
+            "盛新锂能投资者关系管理信息 2026-09-11",
+            "尼日利亚当地媒体与项目公司"
           ],
-          "fid": "未披露",
-          "include": "不计入",
+          "fid": "盛新项目 2026-08-24 董事会通过；其余未披露",
+          "include": "不计入已投产供给",
           "asOf": "2026-09",
-          "next": "逐项目核实工厂名称、产品、规模、许可与投产"
+          "next": "盛新项目境内外审批与开工；逐项目核实其余工厂名称、产品、规模、许可与投产",
+          "design": [
+            {
+              "k": "已公告项目",
+              "v": "盛新锂能 · 夸拉州伊洛林（Ilorin）年产 7.5 万吨硫酸锂，投资约 23,279 万美元，建设期 19 个月，实施主体 Chengxin Lithium (Nigeria) International Co., Ltd"
+            },
+            {
+              "k": "与津巴布韦同批",
+              "v": "该公告与津巴布韦 7.5 万吨项目同批通过（2026-08-24 董事会），两项目合计约 4.76 亿美元"
+            },
+            {
+              "k": "其余矿山",
+              "v": "天华新能（Kebbi 州）、苏州中材、赣锋（Ogapa）、El-Tahdam、Basin 等精矿/原矿项目口径混杂，未见硫酸锂装置披露"
+            }
+          ],
+          "construction": [
+            {
+              "date": "2026-08-24",
+              "event": "盛新锂能董事会通过尼日利亚年产 7.5 万吨硫酸锂项目议案，2026-08-25 公告",
+              "src": "盛新锂能公告 2026-08-25",
+              "url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=002240&id=12525435"
+            }
+          ],
+          "environment": {
+            "status": "盛新项目尚需尼日利亚法规审批，环评未披露（N.D.）",
+            "items": [
+              "公告列明尚需履行境内对境外投资审批备案及尼日利亚当地政府审批手续。"
+            ],
+            "note": "其余尼日利亚项目环境与许可信息不足。"
+          },
+          "economics": [
+            {
+              "k": "投资额",
+              "v": "盛新项目约 23,279 万美元（含建设期利息和流动资金）"
+            },
+            {
+              "k": "单吨投资强度",
+              "v": "约 3,100 美元/吨硫酸锂（与津巴布韦同规模项目 3,250 美元/吨可比）"
+            },
+            {
+              "k": "换算口径",
+              "v": "7.5 万吨硫酸锂按公司工艺口径约合 3.75 万吨 LCE，按无水化学计量约 5.0 万吨、按一水合物约 4.3 万吨"
+            }
+          ],
+          "social": [
+            {
+              "label": "盛新锂能公告（津巴布韦 + 尼日利亚）",
+              "url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=002240&id=12525435",
+              "date": "2026-08-25",
+              "note": "两地各 7.5 万吨硫酸锂"
+            }
+          ]
         }
       ],
       "coord": {
         "lat": 9.082,
         "lng": 8.6753,
         "zoom": 5,
-        "source": "尼日利亚项目群横跨 Kebbi / Nasarawa / Kaduna；此点仅为全国区域参考中心，不是任何矿址或矿权边界",
+        "source": "项目群横跨 Kebbi / Nasarawa / Kaduna，并新增 Kwara（伊洛林）下游硫酸锂项目；此点仅为全国区域参考中心，不是任何矿址或矿权边界",
         "isArea": true
       },
       "timeline": [
@@ -2705,5 +3468,105 @@
         }
       ]
     }
+  },
+  "zimbabweSulphate": {
+    "asOf": "2026-09",
+    "policy": [
+      {
+        "k": "2022-12-16",
+        "v": "《SI 213 of 2022》禁止未加工锂原矿出口"
+      },
+      {
+        "k": "2025-06-10",
+        "v": "政府宣布自 2027 年 1 月起禁止锂精矿出口，设 2025–2027 过渡期"
+      },
+      {
+        "k": "2026-02-25",
+        "v": "矿业部宣布即日起暂停所有原矿与锂精矿出口（含在途），原定 2027 年的禁令提前落地"
+      },
+      {
+        "k": "2026-04-07",
+        "v": "矿业部向矿业商会发出 11 项条件：含 2027-01-01 前建成硫酸锂厂的书面承诺与时间表、月度进展报告、劳工/安全/环境合规、各矿 3 个月内设立化验室等"
+      },
+      {
+        "k": "2026-04",
+        "v": "改为配额制「软性解除」，六家大型生产者获出口配额：Bikita、Sabi Star、Kamativi、Arcadia、Gwanda、Sandawana"
+      },
+      {
+        "k": "税负与期限",
+        "v": "锂精矿出口税由 10% 上调至 16%，持续至 2027-01 禁令生效"
+      },
+      {
+        "k": "2026-04 至今",
+        "v": "配额制属过渡安排：2027-01-01 全面禁止精矿出口的法定期限仍然有效；政府多次重申不延期（2026-08 再次确认），生产商协会申请延至 2027 年中未获同意。配额仅决定过渡期内「谁能出口、出口多少」。"
+      }
+    ],
+    "conversion": {
+      "note": "硫酸锂不是 LCE。换算存在口径分歧，须并列呈现。",
+      "rows": [
+        {
+          "basis": "公司工艺口径（中矿资源：1 吨碳酸锂耗约 2 吨硫酸锂）",
+          "factor": "1 吨 Li₂SO₄ ≈ 0.50 吨 LCE"
+        },
+        {
+          "basis": "无水硫酸锂化学计量（M 109.94）",
+          "factor": "1 吨 Li₂SO₄ ≈ 0.672 吨 LCE"
+        },
+        {
+          "basis": "一水硫酸锂化学计量（M 127.96）",
+          "factor": "1 吨 Li₂SO₄ ≈ 0.577 吨 LCE"
+        }
+      ]
+    },
+    "table": [
+      {
+        "mine": "Arcadia（华友·PLZ/ATZ）",
+        "cap": "5 万吨/年（称可超 6 万吨）",
+        "capex": "约 2 亿美元（媒体 4 亿）",
+        "status": "已投产·爬坡（约 60%）",
+        "target": "2026Q1 试产（公司指引） · 2026-04-25 首批发运 · 2026-07-20 工业投产"
+      },
+      {
+        "mine": "Bikita（中矿资源）",
+        "cap": "10 万吨/年（公司口径，未分期）；媒体称一期 6 万吨",
+        "capex": "2.88 亿美元（公司口径）；媒体称 5 亿",
+        "status": "在建·2026-08 全面开工",
+        "target": "2027 年中（一期 2027Q2）"
+      },
+      {
+        "mine": "Kamativi（雅化·KMC）",
+        "cap": "7.5 万吨/年",
+        "capex": "约 2 亿美元",
+        "status": "在建·土建",
+        "target": "公司口径 2027 年投运；地方政府与媒体为 2027-07"
+      },
+      {
+        "mine": "Sabi Star（盛新·Max Mind）",
+        "cap": "7.5 万吨/年",
+        "capex": "2.44 亿美元",
+        "status": "董事会批准·前期筹备",
+        "target": "建设期 19 个月，未开工"
+      },
+      {
+        "mine": "Sandawana（Mutapa 国有）",
+        "cap": "N.D.",
+        "capex": "N.D.",
+        "status": "尚未立项（一期为选矿厂）",
+        "target": "N.D."
+      },
+      {
+        "mine": "Zulu（Premier）",
+        "cap": "无项目",
+        "capex": "—",
+        "status": "无已披露项目",
+        "target": "—"
+      }
+    ],
+    "total": {
+      "text": "已公布硫酸锂设计产能合计约 30 万吨/年（Arcadia 5 + Bikita 10 + Kamativi 7.5 + Sabi Star 7.5）",
+      "lce": "按公司工艺口径约 15.0 万吨 LCE；按无水化学计量约 20.2 万吨；按一水合物约 17.3 万吨",
+      "ref": "津锂生产商协会预计 2030 年硫酸锂产量约 34.4 万吨／行业收入 US$32 亿"
+    },
+    "note": "硫酸锂为中间品，不能与精矿产量重复计入供应；本表仅统计津巴布韦一国，未含赞比亚、马里等下游规划。"
   }
 }

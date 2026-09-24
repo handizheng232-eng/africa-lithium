@@ -1874,7 +1874,7 @@
               "url": "https://static.cninfo.com.cn/finalpage/2026-04-10/1225089390.PDF"
             },
             {
-              "date": "2026-05-14",
+              "date": "2026-05（月内）",
               "event": "Bikita 官方 X 称 US$4 亿、preliminary works underway（前期工程口径）",
               "src": "Bikita Minerals 官方 X 2026-05-14（未获取单帖直链）",
               "url": ""
@@ -2259,7 +2259,7 @@
               "url": "https://www.huayou.com/news/corporate-news/577.html"
             },
             {
-              "date": "2025-06-30",
+              "date": "2025-06-30（半年报期末）",
               "event": "公司半年报：项目进入设备安装阶段，预计年底建设完成",
               "src": "华友 2025 半年报",
               "url": "https://static.cninfo.com.cn/finalpage/2025-08-18/1224501101.PDF"
@@ -2277,8 +2277,8 @@
               "url": "https://x.com/InfoMinZW/status/2078134120073379927?lang=en"
             },
             {
-              "date": "2026Q1（公司指引）",
-              "event": "公司年报确认「年产 5 万吨硫酸锂项目于今年一季度建成试产」",
+              "date": "2026Q1（公司年报确认）",
+              "event": "公司 2025 年报确认「年产 5 万吨硫酸锂项目于今年一季度建成试产」",
               "src": "华友 2025 年报",
               "url": "https://static.cninfo.com.cn/finalpage/2026-04-08/1225083106.PDF"
             },
@@ -2289,7 +2289,7 @@
               "url": "https://www.huayou.com/news/corporate-news/702.html"
             },
             {
-              "date": "2026-06-30",
+              "date": "2026-06-30（半年报期末）",
               "event": "半年报：首批产品已运抵国内并加工为电池级碳酸锂——印证硫酸锂仍为中间品",
               "src": "华友 2026 半年报（新浪财经镜像）",
               "url": "http://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=603799&id=12503130"
@@ -2307,7 +2307,7 @@
               "url": "https://www.capmad.com/post/arcadia-commissions-zimbabwes-first-lithium-sulphate-plant-in-a-400-million-usd-investment"
             },
             {
-              "date": "2026-08-20",
+              "date": "2026-08（月内）",
               "event": "PLZ 商业经理称装置已 fully operational、产出稳定，但未披露月产量或累计产量",
               "src": "Mining Zimbabwe（议会考察）",
               "url": "https://miningzimbabwe.com/parly-hails-arcadia-as-the-model-for-zimbabwes-lithium-beneficiation"
@@ -3635,7 +3635,7 @@
         "cap": "10 万吨/年（公司口径，未分期）；媒体称一期 6 万吨",
         "capex": "2.88 亿美元（公司法定口径）；地方上位计划称 4–5 亿",
         "status": "在建·2026-08 全面开工",
-        "target": "2027 年中（一期 2027Q2）"
+        "target": "公司口径 2027 年中（建设期 15 个月）；媒体称一期 2027Q2"
       },
       {
         "mine": "Kamativi（雅化·KMC）",

@@ -5,7 +5,10 @@
   const num = v => v == null ? 'N.D.' : Number(v).toLocaleString('zh-CN',{maximumFractionDigits:3});
   const CLS=['operating','building','planned','stalled','warn','up','down','blue','ok','nd'];
   const status = (txt, cls) => `<span class="status ${CLS.includes(cls)?cls:'planned'}">${esc(txt)}</span>`;
-  const safeUrl = u => { const s=String(u==null?'':u).trim(); if(/^(https?:\/\/|\/\/)/i.test(s)) return s; if(/^[a-z][a-z0-9+.-]*:/i.test(s)) return '#'; return s; };
+  const safeUrl = u => { const s = String(u == null ? '' : u).replace(/[\u0000-\u001f\u007f]/g, '').trim();
+    if (/^https?:\/\//i.test(s) || /^\/\//.test(s)) return s;
+    if (/^[a-z][a-z0-9+.-]*:/i.test(s)) return '#';
+    return /^[A-Za-z0-9._~\-\/%#?=&+,@()]*$/.test(s) ? s : '#'; };
   const sourceRows = srcs => (srcs || []).map(s => `<div class="cv-src"><span class="cv-srcname">${esc(s)}</span></div>`).join('');
 
   function tableRows(rows, mode='op') {

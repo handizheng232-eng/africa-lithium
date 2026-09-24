@@ -1,47 +1,55 @@
 {
-  "note": "由 data/mines_v2.json 生成，勿手工编辑",
-  "captions": {
-    "arcadia_ceremony_ignition.jpeg": {
+  "generated_from": "data/mines_v2.json",
+  "count": 7,
+  "items": [
+    {
+      "mine": "arcadia",
+      "file": "assets/img/smelting/arcadia_ceremony_ignition.jpeg",
       "cap": "火法产线转型窑烘炉点火仪式现场（窑体两侧）",
       "src": "华友钴业官网 2025-10-01",
-      "url": "https://www.huayou.com/news/corporate-news/553",
-      "mine": "arcadia"
+      "url": "https://www.huayou.com/news/corporate-news/553"
     },
-    "arcadia_ceremony_ignition_group.jpeg": {
+    {
+      "mine": "arcadia",
+      "file": "assets/img/smelting/arcadia_ceremony_ignition_group.jpeg",
       "cap": "点火仪式参建单位与员工合影",
       "src": "华友钴业官网 2025-10-01",
-      "url": "https://www.huayou.com/news/corporate-news/553",
-      "mine": "arcadia"
+      "url": "https://www.huayou.com/news/corporate-news/553"
     },
-    "arcadia_site_clearing.jpeg": {
+    {
+      "mine": "arcadia",
+      "file": "assets/img/smelting/arcadia_site_clearing.jpeg",
       "cap": "建设期场地平整与开荒作业（航拍；企业官网 2025-11-11 发布）",
       "src": "华友钴业官网 2025-11-11",
-      "url": "https://www.huayou.com/news/corporate-news/577.html",
-      "mine": "arcadia"
+      "url": "https://www.huayou.com/news/corporate-news/577.html"
     },
-    "arcadia_kiln_install.jpeg": {
+    {
+      "mine": "arcadia",
+      "file": "assets/img/smelting/arcadia_kiln_install.jpeg",
       "cap": "Φ5.6 m × 110 m 转型窑窑体就位",
       "src": "华友钴业官网 2025-11-11",
-      "url": "https://www.huayou.com/news/corporate-news/577.html",
-      "mine": "arcadia"
+      "url": "https://www.huayou.com/news/corporate-news/577.html"
     },
-    "arcadia_transport_road.jpeg": {
+    {
+      "mine": "arcadia",
+      "file": "assets/img/smelting/arcadia_transport_road.jpeg",
       "cap": "回转窑筒体分 11 段运抵，陆路超限运输途中",
       "src": "华友钴业官网 2025-11-11",
-      "url": "https://www.huayou.com/news/corporate-news/577.html",
-      "mine": "arcadia"
+      "url": "https://www.huayou.com/news/corporate-news/577.html"
     },
-    "arcadia_site_night.jpeg": {
+    {
+      "mine": "arcadia",
+      "file": "assets/img/smelting/arcadia_site_night.jpeg",
       "cap": "夜间施工现场航拍（建设高峰期）",
       "src": "华友钴业官网 2025-11-11",
-      "url": "https://www.huayou.com/news/corporate-news/577.html",
-      "mine": "arcadia"
+      "url": "https://www.huayou.com/news/corporate-news/577.html"
     },
-    "arcadia_ceremony_shipment.jpeg": {
+    {
+      "mine": "arcadia",
+      "file": "assets/img/smelting/arcadia_ceremony_shipment.jpeg",
       "cap": "2026-04-25 首批硫酸锂产品发运仪式",
       "src": "华友钴业官网 2026-04-26",
-      "url": "https://www.huayou.com/news/corporate-news/702.html",
-      "mine": "arcadia"
+      "url": "https://www.huayou.com/news/corporate-news/702.html"
     }
-  }
+  ]
 }

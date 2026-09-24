@@ -21,6 +21,34 @@
 | `ewoyaa.html` | Ewoyaa 锂矿（加纳 · Atlantic Lithium / 华友拟收购） |
 | `nigeria.html` | 尼日利亚 5 小矿（合并，披露薄弱） |
 
+## 详情页统一架构
+
+每个矿山分页面均参照 Wodgina 页面，统一为：
+
+1. 已有产线运行状况（最新披露期 vs 上一可比期）
+2. 在建 / 规划中产线运行状况（严格区分可研、FID、开工、投产）
+3. 整体运行状况与超预期要点
+4. 历史数据（按真实披露频率，不制造季度数据）
+5. 2027 年产量三情景预测
+6. 选矿产能多来源核实
+7. 原矿产能、资源 / 储量与卫星定位核实
+8. 配套冶炼 / 转化项目（硫酸锂 / 锂盐）解析与跟踪
+
+共享数据与渲染文件：
+
+- `data/mines_v2.json`：11 页结构化研究数据与来源；
+- `mine-page.js` / `mine-page.css`：统一渲染与视觉模板；
+- `build_mine_pages.py`：生成 11 个详情页入口壳。
+
+更新数据后运行：
+
+```bash
+python build_mine_pages.py
+python -m http.server 8765
+```
+
+再访问 `http://localhost:8765/overview.html`；不要用 `file://`，否则 JSON 和地图 iframe 会被浏览器拦截。
+
 ## 数据口径
 
 - **年度口径**：非洲矿山披露粒度多为年度/半年度（仅 Bougouni 为季度 RNS），故总览为年度表。

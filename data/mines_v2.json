@@ -1,0 +1,2709 @@
+{
+  "updated": "2026-09",
+  "nav": [
+    {
+      "key": "Overview",
+      "label": "总览",
+      "file": "overview.html"
+    },
+    {
+      "key": "goulamina",
+      "label": "1 Goulamina",
+      "file": "goulamina.html"
+    },
+    {
+      "key": "bougouni",
+      "label": "2 Bougouni",
+      "file": "bougouni.html"
+    },
+    {
+      "key": "sabistar",
+      "label": "3 Sabi Star",
+      "file": "sabistar.html"
+    },
+    {
+      "key": "kamativi",
+      "label": "4 Kamativi",
+      "file": "kamativi.html"
+    },
+    {
+      "key": "zulu",
+      "label": "5 Zulu",
+      "file": "zulu.html"
+    },
+    {
+      "key": "bikita",
+      "label": "6 Bikita",
+      "file": "bikita.html"
+    },
+    {
+      "key": "arcadia",
+      "label": "7 Arcadia",
+      "file": "arcadia.html"
+    },
+    {
+      "key": "manono",
+      "label": "8 Manono",
+      "file": "manono.html"
+    },
+    {
+      "key": "ewoyaa",
+      "label": "9 Ewoyaa",
+      "file": "ewoyaa.html"
+    },
+    {
+      "key": "sandawana",
+      "label": "10 Sandawana",
+      "file": "sandawana.html"
+    },
+    {
+      "key": "nigeria",
+      "label": "11 尼日利亚群矿",
+      "file": "nigeria.html"
+    }
+  ],
+  "mines": {
+    "goulamina": {
+      "name": "Goulamina（古拉米纳锂矿）",
+      "company": "赣锋锂业 65% / 马里政府 35%",
+      "country": "马里",
+      "grade": "SC6（6% Li₂O）",
+      "status": "投产爬坡",
+      "statusClass": "operating",
+      "latest": "2026H1",
+      "previous": "2025全年（无H2单列）",
+      "report": "赣锋锂业 2026 半年报 / 2025 年报 / Leo Lithium 项目公告",
+      "official": "https://www.ganfenglithium.com/",
+      "equity": "赣锋 65% / 马里政府 35%（10% free carry + 25% 作价）",
+      "resource": "2.9932 亿吨 @1.33% Li₂O（赣锋口径）",
+      "capacity": "一期 50.6 万吨/年 SC6；二期总产能扩至 100 万吨/年（未 FID）",
+      "product": "SC6 锂辉石精矿",
+      "location": "马里南部 Bougouni 区域，距巴马科约 150 km",
+      "existing": [
+        {
+          "name": "一期 2.3 Mtpa 选矿厂 → 50.6 万吨/年 SC6",
+          "current": "2026H1 产 23.38 万吨；年化 46.76 万吨，名义利用率约 92.4%",
+          "previous": "2025 全年产 33.66 万吨；首个完整爬坡年",
+          "compare": "年化产量较 2025 实际高约 39%；一期接近稳态，超预期点在爬坡速度"
+        }
+      ],
+      "planned": [
+        {
+          "name": "二期扩建：总原矿 4.0 Mtpa、总精矿约 100 万吨/年",
+          "current": "可研完成，逐步推动；无 FID、无开工与投产日期",
+          "previous": "2025 年报仅披露规划/研究状态",
+          "compare": "进度未跨越 FID，2027 基准不计二期；只计乐观情景"
+        }
+      ],
+      "overall": {
+        "current": "2026H1 一期产量 23.38 万吨，年化接近 50.6 万吨铭牌；项目已从投产切换到稳态爬坡。",
+        "previous": "2025 全年产 33.66 万吨；2025-06 首批装船，商业发运起步。",
+        "future": "2027 基准按一期满产 50.6 万吨；二期只有可研，无 FID，不能当确定供给。",
+        "highlights": [
+          "2026H1 年化利用率约 92.4%，较首年显著提升",
+          "一期产品即 SC6，不做二次品位折算",
+          "二期从原 DFS 总产能 83.1 万吨上调至最新 100 万吨，但时间表仍空白",
+          "约 1000 km 陆运至阿比让港，物流与马里安全局势是下行风险"
+        ]
+      },
+      "history": [
+        {
+          "period": "2023",
+          "production": 0,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "未投产",
+          "est": false
+        },
+        {
+          "period": "2024",
+          "production": null,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "2024-12-15 投产，年度商业产量未披露",
+          "est": false
+        },
+        {
+          "period": "2025",
+          "production": 33.66,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "赣锋年报，干基精矿实际",
+          "est": false
+        },
+        {
+          "period": "2026H1",
+          "production": 23.38,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "赣锋半年报实际",
+          "est": false
+        },
+        {
+          "period": "2026E",
+          "production": 46.8,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "H1×2 年化估算",
+          "est": true
+        }
+      ],
+      "historyUnit": "万吨 SC6（干基）",
+      "forecast": {
+        "bear": 45.0,
+        "base": 50.6,
+        "bull": 70.0,
+        "unit": "万吨 SC6",
+        "basis": "基准=一期 50.6 万吨铭牌满产；悲观计入物流/安全扰动；乐观计入二期部分贡献。",
+        "assumptions": [
+          "二期无 FID，基准不计入",
+          "100% 资产口径",
+          "日历年"
+        ]
+      },
+      "beneficiation": [
+        {
+          "item": "一期选矿厂",
+          "adopted": "50.6 万吨/年 SC6",
+          "verified": "✓ 官方确认：2.3 Mtpa 原矿、80% 回收率、50.6 万吨 SC6",
+          "status": "ok",
+          "sources": [
+            "Leo/Firefinch DFS Update 2021",
+            "赣锋年报"
+          ]
+        },
+        {
+          "item": "二期扩建",
+          "adopted": "总产能 100 万吨/年",
+          "verified": "⚠ 最新公司规划，已完可研但无 FID",
+          "status": "warn",
+          "sources": [
+            "赣锋 2025/2026 披露",
+            "原 DFS 为 83.1 万吨，最新规划上调"
+          ]
+        }
+      ],
+      "mining": [
+        {
+          "item": "露天矿 + ROM 供矿",
+          "adopted": "一期 2.3 Mtpa / 二期总 4.0 Mtpa",
+          "verified": "✓ 一期建成运行；二期规划",
+          "status": "ok",
+          "sources": [
+            "DFS Update 2021",
+            "Leo 2024Q1 建设更新"
+          ]
+        },
+        {
+          "item": "资源/储量",
+          "adopted": "资源 2.9932 亿吨 @1.33%；储量 5200 万吨 @1.51%",
+          "verified": "✓ 不同日期口径并列",
+          "status": "ok",
+          "sources": [
+            "赣锋 2025 年报",
+            "DFS 2021"
+          ]
+        },
+        {
+          "item": "尾矿库/供水",
+          "adopted": "TSF 建成；Sélingué 大坝 29 km 管线",
+          "verified": "✓ 已建成并服务一期",
+          "status": "ok",
+          "sources": [
+            "Leo 2024Q1",
+            "Digby Wells / Lycopodium"
+          ]
+        }
+      ],
+      "smelting": [
+        {
+          "name": "马里本地锂盐/硫酸锂转化",
+          "status": "未披露/未 FID",
+          "statusClass": "planned",
+          "capacity": "N.D.",
+          "product": "锂盐或硫酸锂（未定）",
+          "timing": "无公开投产时间",
+          "capex": "N.D.",
+          "progress": "当前商业链条仍为 SC6 精矿经阿比让港出口至中国；已披露配套主要是光储、供水、港口与采矿服务，而非本地化学转化。",
+          "risk": "若马里强化本地增值要求，可能改变二期方案；当前不可计入供给。",
+          "sources": [
+            "赣锋年报/半年报",
+            "LMSA 官网",
+            "DFS Update 2021"
+          ],
+          "fid": "未披露",
+          "include": "不计入",
+          "asOf": "2026-09",
+          "next": "二期 FID / 马里本地增值条款 / EPC 招标"
+        }
+      ],
+      "coord": {
+        "lat": 11.3493,
+        "lng": -7.9635,
+        "zoom": 14,
+        "source": "Leo 2024-07 MRE 钻探坐标 UTM WGS84 29N 换算；OSM 矿区多边形交叉印证"
+      },
+      "timeline": [
+        {
+          "date": "2024-12-15",
+          "text": "一期投产仪式"
+        },
+        {
+          "date": "2025-06-24",
+          "text": "首批精矿从西非港口启运中国"
+        },
+        {
+          "date": "2026H1",
+          "text": "产量 23.38 万吨，年化接近铭牌"
+        },
+        {
+          "date": "待定",
+          "text": "二期需 FID 后方能进入建设周期"
+        }
+      ],
+      "key": "goulamina",
+      "page": "goulamina.html",
+      "sources": [
+        {
+          "text": "赣锋锂业 2025 年年度报告（HKEX，2026-04-30）——产量 33.66 万吨、资源 299.32 Mt、65% 权益、40% 收购 https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0430/2026043002396.pdf",
+          "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0430/2026043002396.pdf"
+        },
+        {
+          "text": "赣锋锂业 2026 年半年度报告摘要（巨潮资讯，2026-08-29）——H1 产量 23.38 万吨、资源 982 万吨 LCE、二期可研完成 http://static.cninfo.com.cn/finalpage/2026-08-29/1225528828.PDF",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-08-29/1225528828.PDF"
+        },
+        {
+          "text": "赣锋锂业投资者关系活动记录表（2026-06-08）——1–4 月产量 16.14 万吨 http://static.cninfo.com.cn/finalpage/2026-06-08/1225358686.PDF",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-06-08/1225358686.PDF"
+        },
+        {
+          "text": "Leo Lithium 2024Q1 季报（ASX:LLL，2024-04）——建设 80%+、TSF 完工、Corica、电厂/水/营地、社区 https://api.investi.com.au/api/announcements/lll/bd398963-b17.pdf",
+          "url": "https://api.investi.com.au/api/announcements/lll/bd398963-b17.pdf"
+        },
+        {
+          "text": "Leo Lithium Goulamina 资源量升级至 267.2 Mt（ASX，2024-07-01）——含钻探坐标表 https://announcements.asx.com.au/asxpdf/20240701/pdf/0653qh4p85r8bz.pdf",
+          "url": "https://announcements.asx.com.au/asxpdf/20240701/pdf/0653qh4p85r8bz.pdf"
+        },
+        {
+          "text": "Firefinch Goulamina DFS Update（2021-12-06）——506/831 ktpa、US$255m、83% IRR、80% 回收率、US$312/t https://minedocs.com/22/Goulamina-FS-12062021.pdf",
+          "url": "https://minedocs.com/22/Goulamina-FS-12062021.pdf"
+        },
+        {
+          "text": "Firefinch Goulamina DFS（2020-10-20）——436 ktpa、US$194m、US$281/t https://minedocs.com/21/Goulamina-PFS-10202020.pdf",
+          "url": "https://minedocs.com/21/Goulamina-PFS-10202020.pdf"
+        },
+        {
+          "text": "Reuters（2024-05-17）——马里政府权益 20%→35% https://www.reuters.com/markets/commodities/mali-signs-agreement-with-chinas-ganfeng-operate-goulamina-lithium-mine-2024-05-17",
+          "url": "https://www.reuters.com/markets/commodities/mali-signs-agreement-with-chinas-ganfeng-operate-goulamina-lithium-mine-2024-05-17"
+        },
+        {
+          "text": "SMM（2024-12-18）——35% 交易细节（10% 免费 + 25% 作价 200 亿西非法郎） https://news.metal.com/newscontent/103094602-ganfeng-lithiums-goulamina-lithium-spodumene-project-phase-i-in-mali-goes-into-operation",
+          "url": "https://news.metal.com/newscontent/103094602-ganfeng-lithiums-goulamina-lithium-spodumene-project-phase-i-in-mali-goes-into-operation"
+        },
+        {
+          "text": "Gasgoo（2025-06-29）——首批 6-24 装船、3 万吨、8 月初抵华 https://autonews.gasgoo.com/articles/news/ganfeng-lithium-ships-first-batch-of-lithium-concentrate-from-malis-goulamina-project-to-china-70037949",
+          "url": "https://autonews.gasgoo.com/articles/news/ganfeng-lithium-ships-first-batch-of-lithium-concentrate-from-malis-goulamina-project-to-china-70037949"
+        },
+        {
+          "text": "LMSA 官网（Lithium du Mali SA）——500,000 t/年、65/35、20+ 年寿命、社区 https://lithiumdumali.ml/en/",
+          "url": "https://lithiumdumali.ml/en/"
+        },
+        {
+          "text": "Lycopodium 案例页——EPCM、DFS 2019 + 2021 Update https://www.lycopodium.com/case-studies/goulamina-lithium-project/",
+          "url": "https://www.lycopodium.com/case-studies/goulamina-lithium-project/"
+        },
+        {
+          "text": "Digby Wells ESIA 概述——环境许可 2019-03 https://www.digbywells.com/wp-content/uploads/2019/12/Mali_Lithium.pdf",
+          "url": "https://www.digbywells.com/wp-content/uploads/2019/12/Mali_Lithium.pdf"
+        },
+        {
+          "text": "Mysteel（2026-01-30）——物流 6–7 天、成本拆分、马里 2026 供应 60–80 万吨 https://www.mysteel.net/analysis/5112006-key-lithium-mining-projects-in-mali-goulamina-and-bougouni",
+          "url": "https://www.mysteel.net/analysis/5112006-key-lithium-mining-projects-in-mali-goulamina-and-bougouni"
+        },
+        {
+          "text": "SMM（Corica 合同）——US$3.48 亿露天采矿合同 https://news.metal.com/newscontent/104056443-smm-analysis-corica-awarded-us348-million-open-pit-mining-services-contract-at-goulamina-lithium-project-mali",
+          "url": "https://news.metal.com/newscontent/104056443-smm-analysis-corica-awarded-us348-million-open-pit-mining-services-contract-at-goulamina-lithium-project-mali"
+        },
+        {
+          "text": "Africa Briefing（2026-08）——中非发展基金 1 亿美元转股、西非锂格局 https://africabriefing.com/west-africa-lithium-push-tests-value-capture/",
+          "url": "https://africabriefing.com/west-africa-lithium-push-tests-value-capture/"
+        },
+        {
+          "text": "Argus Media（2025-07-04）——赣锋全控 Mali Lithium、7.14 Mt LCE https://www.argusmedia.com/en/news-and-insights/latest-market-news/2706905-china-s-ganfeng-takes-full-control-of-mali-lithium",
+          "url": "https://www.argusmedia.com/en/news-and-insights/latest-market-news/2706905-china-s-ganfeng-takes-full-control-of-mali-lithium"
+        },
+        {
+          "text": "Lithium Royalty Corp（Business Wire，2025-12-22）——1.5% 权益 A$4000 万 https://secure.businesswire.com/news/home/20251222164769/en/",
+          "url": "https://secure.businesswire.com/news/home/20251222164769/en/"
+        },
+        {
+          "text": "Mining Data Online——2025 年产量 337 kt、矿山寿命至 2045 https://miningdataonline.com/property/4570/Goulamina-Mine.aspx",
+          "url": "https://miningdataonline.com/property/4570/Goulamina-Mine.aspx"
+        },
+        {
+          "text": "Capmad（2026-08-27）——2026 年探矿许可续期、LMSA 65/35、俄罗斯 Uranium One 入局 https://www.capmad.com/post/in-mali-government-renews-lithium-permits-as-russia-and-new-investors-move-in-behind-ganfeng",
+          "url": "https://www.capmad.com/post/in-mali-government-renews-lithium-permits-as-russia-and-new-investors-move-in-behind-ganfeng"
+        }
+      ]
+    },
+    "bougouni": {
+      "name": "Bougouni（布谷尼锂矿）",
+      "company": "Kodal / 海南矿业；LMLB 65%、马里政府 35%",
+      "country": "马里",
+      "grade": "SC5.5（实际 5.28–5.34% Li₂O）",
+      "status": "一期投产",
+      "statusClass": "operating",
+      "latest": "2026Q2",
+      "previous": "2026Q1",
+      "report": "Kodal Minerals RNS 2026-07-17 / 2026-04-14",
+      "official": "https://kodalminerals.com/operations/bougouni-lithium-project/",
+      "equity": "Kodal 49% / 海南矿业 51%（KMUK）；LMLB 中马里政府 35%",
+      "resource": "31.9 Mt @1.06% Li₂O（2023 JORC）",
+      "capacity": "一期 12.5 万吨/年 DMS；二期约 23 万吨/年浮选（可研中）",
+      "product": "SC5.5 锂辉石精矿",
+      "location": "马里 Bougouni 区域，巴马科以南约 180 km",
+      "existing": [
+        {
+          "name": "一期 Ngoualana DMS（1 Mtpa 原矿 → 12.5 万吨/年）",
+          "current": "26Q2 产 2.6174 万吨 @5.34%；ROM 29.7583 万吨，综合回收率 46.1%",
+          "previous": "26Q1 产 2.6981 万吨 @5.28%；ROM 31.406 万吨，综合回收率 49%",
+          "compare": "产量环比 -3.0%；5 月破碎回路检修/故障，6 月显著改善"
+        }
+      ],
+      "planned": [
+        {
+          "name": "二期浮选（Boumou + Sogola-Baoulé）约 23 万吨/年",
+          "current": "可研更新预计 2026 年底；尚无 FID/开工",
+          "previous": "上一期仍为研究与资源扩张阶段",
+          "compare": "进度符合研究期特征；2027 基准不计二期产量"
+        }
+      ],
+      "overall": {
+        "current": "26Q2 产量 26,174 dmt，较 Q1 略降；主要受 5 月破碎回路维护和故障影响，6 月修复后改善。",
+        "previous": "26Q1 产 26,981 t，3 月单月 >10,900 t 创纪录；出口与回款启动。",
+        "future": "2027 基准按一期 12.5 万吨/年稳态；二期需可研、FID 后再纳入。",
+        "highlights": [
+          "Q2 产量仅环比 -3%，故障扰动后恢复快",
+          "累计出口超过 6.9 万吨，第三/第四船闭合出口链条",
+          "首笔 US$13m 项目贷款开始偿还，现金回流得到验证",
+          "Kodal–海南治理/仲裁仍是非生产端风险"
+        ]
+      },
+      "history": [
+        {
+          "period": "2023",
+          "production": 0,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "未建设",
+          "est": false
+        },
+        {
+          "period": "2024",
+          "production": 0,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "年中开工建设",
+          "est": false
+        },
+        {
+          "period": "2025",
+          "production": 1.6,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "首船/累计出口倒推，估算",
+          "est": true
+        },
+        {
+          "period": "2026Q1",
+          "production": 2.6981,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "Kodal RNS 实际",
+          "est": false
+        },
+        {
+          "period": "2026Q2",
+          "production": 2.6174,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "Kodal RNS 实际",
+          "est": false
+        },
+        {
+          "period": "2026H1",
+          "production": 5.3195,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "Q1+Q2 实际",
+          "est": false
+        },
+        {
+          "period": "2026E",
+          "production": 10.6,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "H1×2 年化",
+          "est": true
+        }
+      ],
+      "historyUnit": "万吨 dmt（SC5.5 左右）",
+      "forecast": {
+        "bear": 10.0,
+        "base": 12.5,
+        "bull": 20.0,
+        "unit": "万吨精矿",
+        "basis": "基准=一期 DMS 名义产能；悲观计入设备/回收率扰动；乐观计入一期超产及二期少量贡献。",
+        "assumptions": [
+          "二期可研 2026 年底才完成",
+          "产品约 SC5.3–5.5，不折算 SC6",
+          "100% 项目口径"
+        ]
+      },
+      "beneficiation": [
+        {
+          "item": "一期 DMS",
+          "adopted": "12.5 万吨/年",
+          "verified": "✓ 建成并运行；2026H1 产 5.32 万吨",
+          "status": "ok",
+          "sources": [
+            "Kodal 2026Q1/Q2 RNS"
+          ]
+        },
+        {
+          "item": "二期浮选",
+          "adopted": "约 23 万吨/年",
+          "verified": "⚠ 可研中、无 FID",
+          "status": "warn",
+          "sources": [
+            "Kodal 项目页",
+            "可研更新预计 2026 年底"
+          ]
+        },
+        {
+          "item": "回收率",
+          "adopted": "DMS 59.5%；综合 46.1%（26Q2）",
+          "verified": "✓ 季报实际",
+          "status": "ok",
+          "sources": [
+            "Kodal 2026Q2 RNS"
+          ]
+        }
+      ],
+      "mining": [
+        {
+          "item": "Ngoualana 露天矿",
+          "adopted": "一期供矿",
+          "verified": "✓ 26Q2 采矿 223.27 万吨，其中矿石 31.21 万吨 @1.13%",
+          "status": "ok",
+          "sources": [
+            "Kodal 2026Q2 RNS"
+          ]
+        },
+        {
+          "item": "剥采比",
+          "adopted": "Q2 6.15 / YTD 6.19",
+          "verified": "✓ 实际披露",
+          "status": "ok",
+          "sources": [
+            "Kodal 2026Q2 RNS"
+          ]
+        },
+        {
+          "item": "Boumou / Sogola-Baoulé",
+          "adopted": "二期供矿",
+          "verified": "⚠ 资源已定义，待二期开发",
+          "status": "warn",
+          "sources": [
+            "Kodal 2023 MRE"
+          ]
+        }
+      ],
+      "smelting": [
+        {
+          "name": "马里本地化学转化项目",
+          "status": "无已批准项目",
+          "statusClass": "planned",
+          "capacity": "N.D.",
+          "product": "锂盐/硫酸锂",
+          "timing": "无时间表",
+          "capex": "N.D.",
+          "progress": "一期精矿按 4 年 take-or-pay 包销给海南，经 San Pedro 港运往中国；二期也是选矿扩建，不是冶炼厂。",
+          "risk": "马里政府的本地增值政策可能推动远期转化，但当前没有可核实 FID。",
+          "sources": [
+            "Kodal 项目页/RNS",
+            "海南矿业公告"
+          ],
+          "fid": "不适用（未形成项目）",
+          "include": "不计入",
+          "asOf": "2026-09",
+          "next": "二期可研是否加入化学转化方案"
+        }
+      ],
+      "coord": {
+        "lat": 11.35056,
+        "lng": -7.495,
+        "zoom": 13,
+        "source": "Mindat「Ngouanala pegmatite」11°21′2″N, 7°29′42″W"
+      },
+      "timeline": [
+        {
+          "date": "2024H2",
+          "text": "一期 DMS 开工建设"
+        },
+        {
+          "date": "2025Q1",
+          "text": "首产 SC5.5 左右精矿"
+        },
+        {
+          "date": "2025-11",
+          "text": "首船离开 San Pedro"
+        },
+        {
+          "date": "2026H1",
+          "text": "产 5.3195 万吨，累计出口 >6.9 万吨"
+        },
+        {
+          "date": "2026年底（目标）",
+          "text": "二期浮选可研更新"
+        }
+      ],
+      "key": "bougouni",
+      "page": "bougouni.html",
+      "sources": [
+        {
+          "text": "Kodal Bougouni 季度更新 Q2 2026（RNS，2026-07-17）——产量 26,174 DMT、H1 53,195、第四批装运 https://www.investegate.co.uk/announcement/rns/kodal-minerals--kod/bougouni-lithium-project-quarterly-update-/9673561",
+          "url": "https://www.investegate.co.uk/announcement/rns/kodal-minerals--kod/bougouni-lithium-project-quarterly-update-/9673561"
+        },
+        {
+          "text": "Kodal Bougouni 季度更新 Q1 2026（RNS，2026-04-14）——产量 26,981、3 月纪录、二期可研 2026 年底 https://www.investegate.co.uk/announcement/rns/kodal-minerals--kod/bougouni-lithium-project-quarterly-update/9518713",
+          "url": "https://www.investegate.co.uk/announcement/rns/kodal-minerals--kod/bougouni-lithium-project-quarterly-update/9518713"
+        },
+        {
+          "text": "Kodal 官网项目页——资源 31.9Mt、三采区明细、350km² https://kodalminerals.com/operations/bougouni-lithium-project/",
+          "url": "https://kodalminerals.com/operations/bougouni-lithium-project/"
+        },
+        {
+          "text": "Mining Weekly Bougouni 更新（2026-04-17）——一期 1Mtpa DMS ≥125kt、二期 2Mtpa 浮选 230kt https://www.miningweekly.com/article/bougouni-lithium-project-mali-update-2026-04-17",
+          "url": "https://www.miningweekly.com/article/bougouni-lithium-project-mali-update-2026-04-17"
+        },
+        {
+          "text": "Kodal「Bougouni now in the home straight」——170km、一期寿命 4–5 年、DMS 回收 71% https://kodalminerals.com/bougouni-now-in-the-home-straight/",
+          "url": "https://kodalminerals.com/bougouni-now-in-the-home-straight/"
+        },
+        {
+          "text": "Metal Pilot——股权结构、4 年 take-or-pay、DMS+浮选 https://metalpilot.com/project/kod/bougouni-lithium",
+          "url": "https://metalpilot.com/project/kod/bougouni-lithium"
+        },
+        {
+          "text": "Capmad（Mali 首批装运）——首批 28,950 吨、政府 35% + 5% 本地投资者 https://capmad.com/post/mali-shipment-of-first-lithium-from-bougouni-mine",
+          "url": "https://capmad.com/post/mali-shipment-of-first-lithium-from-bougouni-mine"
+        },
+        {
+          "text": "Africa Briefing（西非锂格局 2026-08）——Bougouni H1 53,195、第四批 7-11 https://africabriefing.com/west-africa-lithium-push-tests-value-capture/",
+          "url": "https://africabriefing.com/west-africa-lithium-push-tests-value-capture/"
+        },
+        {
+          "text": "Kalkine（Bougouni Q2 详细）——第三批 20,400 吨、价 US$2,304/t https://kalkinemedia.com/uk/news/announcements/kodal-minerals-reports-robust-spodumene-exports-and-initial-us13-million-loan-repayment-from-bougouni-lithium-project",
+          "url": "https://kalkinemedia.com/uk/news/announcements/kodal-minerals-reports-robust-spodumene-exports-and-initial-us13-million-loan-repayment-from-bougouni-lithium-project"
+        },
+        {
+          "text": "Kodal X（@KodalMinerals）——装运/生产进展社媒 https://x.com/KodalMinerals",
+          "url": "https://x.com/KodalMinerals"
+        }
+      ]
+    },
+    "sabistar": {
+      "name": "Sabi Star（萨比星锂钽矿）",
+      "company": "盛新锂能 51% / Max Mind",
+      "country": "津巴布韦",
+      "grade": "原矿 1.98% Li₂O；精矿品位未统一披露",
+      "status": "稳态运行",
+      "statusClass": "operating",
+      "latest": "2025全年",
+      "previous": "2024全年",
+      "report": "盛新锂能 2025 年报 / 2026-03 券商整理",
+      "official": "https://www.cxlithium.com/",
+      "equity": "盛新锂能经 Max Mind 持 51%",
+      "resource": "5 个在产矿权 Li₂O 资源量 8.85 万吨，平均品位 1.98%",
+      "capacity": "原矿 99–100 万吨/年 → 精矿约 29–30 万吨/年",
+      "product": "锂精矿 + 钽铌副产品",
+      "location": "津巴布韦 Buhera，Manicaland",
+      "existing": [
+        {
+          "name": "Sabi Star 采选厂（99–100 万吨原矿/年）",
+          "current": "2025 公司锂精矿总产量 29.98 万吨（含少量国内业隆沟，单矿未拆分）",
+          "previous": "2024 单矿精确产量 N.D.；项目已进入稳定运行",
+          "compare": "2025 公司总量接近萨比星 30 万吨铭牌，但不能等同为单矿实际"
+        }
+      ],
+      "planned": [
+        {
+          "name": "在产矿权增储/其余 35 个矿权勘探",
+          "current": "持续勘探；无第二条精矿产线 FID",
+          "previous": "前期 5 个矿权先投产，其余处勘探",
+          "compare": "增长主要来自资源扩展而非已批准选厂扩线"
+        }
+      ],
+      "overall": {
+        "current": "2025 公司锂精矿总产量 29.98 万吨，同比 +4.82%；萨比星为主要来源，但公司未拆分单矿。",
+        "previous": "2024 单矿产量未公开；项目 2023 投产后完成爬坡。",
+        "future": "2027 基准按 30 万吨精矿铭牌；出口禁令要求本地转化项目落地。",
+        "highlights": [
+          "原矿品位 1.98%，为当地在产矿山高品位项目",
+          "2025 公司精矿总产量接近 30 万吨铭牌，但口径含业隆沟",
+          "产品主要回供盛新国内锂盐基地，经贝拉港出口",
+          "2027 精矿出口禁令使 7.5 万吨硫酸锂规划成为关键变量"
+        ]
+      },
+      "history": [
+        {
+          "period": "2022",
+          "production": 0,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "建设期",
+          "est": false
+        },
+        {
+          "period": "2023",
+          "production": null,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "2023-05 投产，单矿产量未披露",
+          "est": false
+        },
+        {
+          "period": "2024",
+          "production": null,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "单矿产量 N.D.",
+          "est": false
+        },
+        {
+          "period": "2025",
+          "production": 29.98,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "盛新公司锂精矿总量，含业隆沟；非严格单矿",
+          "est": true
+        },
+        {
+          "period": "2026E",
+          "production": 30,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "按铭牌推算",
+          "est": true
+        }
+      ],
+      "historyUnit": "万吨锂精矿（2025 为公司口径）",
+      "forecast": {
+        "bear": 25,
+        "base": 30,
+        "bull": 30,
+        "unit": "万吨锂精矿",
+        "basis": "基准=设计产能 30 万吨；悲观计入出口限制和品位/设备扰动；乐观不超铭牌。",
+        "assumptions": [
+          "单矿实际产量未拆分",
+          "出口禁令执行方式",
+          "硫酸锂项目进度"
+        ]
+      },
+      "beneficiation": [
+        {
+          "item": "采选厂",
+          "adopted": "30 万吨/年精矿",
+          "verified": "✓ 设计宣示 100 万吨原矿 → 30 万吨精矿；实际口径 99 → 29",
+          "status": "ok",
+          "sources": [
+            "盛新公告/年报",
+            "Excel 非洲列"
+          ]
+        },
+        {
+          "item": "精矿品位",
+          "adopted": "N.D.",
+          "verified": "⚠ 官方未统一披露稳定精矿品位",
+          "status": "warn",
+          "sources": [
+            "不做 SC6 折算"
+          ]
+        }
+      ],
+      "mining": [
+        {
+          "item": "5 个在产矿权",
+          "adopted": "原矿 99–100 万吨/年",
+          "verified": "✓ 已投产",
+          "status": "ok",
+          "sources": [
+            "盛新年报"
+          ]
+        },
+        {
+          "item": "资源品位",
+          "adopted": "Li₂O 资源量 8.85 万吨 @1.98%",
+          "verified": "✓ 公司口径",
+          "status": "ok",
+          "sources": [
+            "盛新 2025 年报"
+          ]
+        },
+        {
+          "item": "其余 35 个矿权",
+          "adopted": "勘探",
+          "verified": "⚠ 资源转储量与开发计划未披露",
+          "status": "warn",
+          "sources": [
+            "盛新年报"
+          ]
+        }
+      ],
+      "smelting": [
+        {
+          "name": "Sabi Star 配套硫酸锂项目",
+          "status": "规划/承诺阶段",
+          "statusClass": "planned",
+          "capacity": "7.5 万吨/年（规划）",
+          "product": "硫酸锂",
+          "timing": "目标服务 2027 出口禁令；无已核实投产日",
+          "capex": "N.D.",
+          "progress": "公司拟在津巴布韦建设本地转化能力，页面尚无可核实 FID、施工进度或首产公告。",
+          "risk": "若未按期落地，2027 精矿出口受限；需跟踪环评、土建、设备与点火四个里程碑。",
+          "sources": [
+            "盛新年报/公开规划",
+            "津巴布韦精矿出口政策"
+          ],
+          "fid": "未披露",
+          "include": "不计入",
+          "asOf": "2026-09",
+          "next": "环评、融资、土建开工、设备到场、点火"
+        }
+      ],
+      "coord": {
+        "lat": -19.19828,
+        "lng": 31.96575,
+        "zoom": 14,
+        "source": "OpenStreetMap「Sabi Star Mine」矿区多边形"
+      },
+      "timeline": [
+        {
+          "date": "2021-11",
+          "text": "盛新以 US$7650 万收购 Max Mind 51%"
+        },
+        {
+          "date": "2023-05-07",
+          "text": "采选项目投产"
+        },
+        {
+          "date": "2025",
+          "text": "公司锂精矿总产量 29.98 万吨"
+        },
+        {
+          "date": "2027前",
+          "text": "本地硫酸锂能力需对接出口禁令"
+        }
+      ],
+      "key": "sabistar",
+      "page": "sabistar.html",
+      "sources": [
+        {
+          "text": "盛新锂能 2021-11-03 公告（7650 万美元收购 Max Mind 51%）",
+          "url": ""
+        },
+        {
+          "text": "人民网《盛新锂能跨界转型有多大胜算？》（2021-11-08） http://paper.people.com.cn/zgnyb/",
+          "url": "http://paper.people.com.cn/zgnyb/"
+        },
+        {
+          "text": "《永安期货-锂矿项目梳理》Excel「非洲」列（Sabi Star 行，含产能/品位/物流明细）",
+          "url": ""
+        },
+        {
+          "text": "盛新锂能 2025 半年报（巨潮资讯，2025-08-23） http://static.cninfo.com.cn/finalpage/2025-08-23/1224558311.PDF",
+          "url": "http://static.cninfo.com.cn/finalpage/2025-08-23/1224558311.PDF"
+        }
+      ]
+    },
+    "kamativi": {
+      "name": "Kamativi（卡玛蒂维多金属锂矿）",
+      "company": "雅化集团 / 普得科技 / KMC",
+      "country": "津巴布韦",
+      "grade": "1.25% Li₂O",
+      "status": "一期投产、二期爬坡",
+      "statusClass": "operating",
+      "latest": "2025预期/2026目标",
+      "previous": "2024投产年",
+      "report": "雅化集团 2025 半年报 / 2024 项目公告",
+      "official": "https://www.scyahua.com/",
+      "equity": "普得科技持 KMC 68%；雅化持普得 80%，穿透有效权益约 54.4%",
+      "resource": "24.2 Mt @1.25% ≈ 75 万吨 LCE",
+      "capacity": "一期 5 + 二期 30 = 35 万吨/年精矿",
+      "product": "锂精矿 + 锡钽铌铍副产品",
+      "location": "津巴布韦 Matabeleland North，Hwange District",
+      "existing": [
+        {
+          "name": "一期：30 万吨原矿 → 5 万吨精矿",
+          "current": "2025 与二期合并运行，单线实际 N.D.",
+          "previous": "2024-04-12 正式投产",
+          "compare": "一期已从试产转入商业运行"
+        },
+        {
+          "name": "二期：200 万吨原矿 → 30 万吨精矿",
+          "current": "2025 目标全项目产 28 万吨；2026 目标 35 万吨",
+          "previous": "2024-11-14 启动生产",
+          "compare": "二期投产快于最初长期规划，但 2025 实际闭合数待年报"
+        }
+      ],
+      "planned": [
+        {
+          "name": "采选优化/增储",
+          "current": "2026 目标达到 35 万吨精矿铭牌；无第三期 FID",
+          "previous": "2025 仍处一二期综合爬坡",
+          "compare": "增量来自二期达产，而非新增第三条线"
+        }
+      ],
+      "overall": {
+        "current": "公司披露 2025 预计 28 万吨、2026 达 35 万吨；这是目标/预期，并非已审计单矿实际。",
+        "previous": "2024 一期 4 月投产、二期 11 月启动，属于集中建设投产年。",
+        "future": "2027 基准按 35 万吨精矿稳态；硫酸锂 7.5 万吨项目决定出口禁令后的产品形态。",
+        "highlights": [
+          "一、二期在 2024 年内先后投产，建设节奏快",
+          "资源 24.2 Mt @1.25%，约 75 万吨 LCE",
+          "权益已核实：KMC 68%，雅化穿透约 54.4%，不是简单的 60% 或 68% 雅化权益",
+          "US$2 亿硫酸锂项目若按期落地，将从精矿出口转向中间品"
+        ]
+      },
+      "history": [
+        {
+          "period": "2023",
+          "production": null,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "一期 2023-10 试产但商业产量未披露",
+          "est": false
+        },
+        {
+          "period": "2024",
+          "production": null,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "一期/二期投产年，全年实际 N.D.",
+          "est": false
+        },
+        {
+          "period": "2025E",
+          "production": 28,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "公司预计值",
+          "est": true
+        },
+        {
+          "period": "2026E",
+          "production": 35,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "公司达产目标",
+          "est": true
+        }
+      ],
+      "historyUnit": "万吨锂精矿",
+      "forecast": {
+        "bear": 28,
+        "base": 35,
+        "bull": 35,
+        "unit": "万吨锂精矿",
+        "basis": "基准=一二期合计 35 万吨铭牌；悲观=二期利用率/出口政策扰动。",
+        "assumptions": [
+          "2025/2026 是公司目标而非历史实际",
+          "KMC 权益不影响 100% 资产口径"
+        ]
+      },
+      "beneficiation": [
+        {
+          "item": "一期选厂",
+          "adopted": "5 万吨/年精矿",
+          "verified": "✓ 2024-04 正式投产",
+          "status": "ok",
+          "sources": [
+            "雅化公告/证券时报"
+          ]
+        },
+        {
+          "item": "二期选厂",
+          "adopted": "30 万吨/年精矿",
+          "verified": "✓ 2024-11 启动生产，达产仍需验证",
+          "status": "ok",
+          "sources": [
+            "雅化项目公告"
+          ]
+        },
+        {
+          "item": "合计",
+          "adopted": "35 万吨/年",
+          "verified": "✓ 设计产能；2026 达产目标",
+          "status": "ok",
+          "sources": [
+            "雅化半年报"
+          ]
+        }
+      ],
+      "mining": [
+        {
+          "item": "主矿体",
+          "adopted": "24.2 Mt @1.25%",
+          "verified": "✓ 2024-05 更新资源",
+          "status": "ok",
+          "sources": [
+            "公司/Mining Zimbabwe"
+          ]
+        },
+        {
+          "item": "一期采矿",
+          "adopted": "30 万吨原矿/年",
+          "verified": "✓ 建成",
+          "status": "ok",
+          "sources": [
+            "项目公告"
+          ]
+        },
+        {
+          "item": "二期采矿",
+          "adopted": "200 万吨原矿/年",
+          "verified": "✓ 已启动，稳态待核",
+          "status": "ok",
+          "sources": [
+            "项目公告"
+          ]
+        }
+      ],
+      "smelting": [
+        {
+          "name": "Kamativi 硫酸锂项目",
+          "status": "规划/建设跟踪",
+          "statusClass": "building",
+          "capacity": "7.5 万吨/年",
+          "product": "硫酸锂",
+          "timing": "目标 2027-07 投产",
+          "capex": "约 US$2 亿",
+          "progress": "公开信息称投入/推进本地硫酸锂项目；需以公司公告核实土建、设备安装、点火与首批合格品。",
+          "risk": "时间表与津巴布韦 2027-01 出口禁令高度相关；若延误，精矿外运受限。",
+          "sources": [
+            "雅化公开规划",
+            "津巴布韦媒体/政策"
+          ],
+          "fid": "公开口径未明确",
+          "include": "不计入已投产供给",
+          "asOf": "2026-09",
+          "next": "公司正式公告、施工进度、点火与首批合格品"
+        }
+      ],
+      "coord": {
+        "lat": -18.32423,
+        "lng": 27.05264,
+        "zoom": 14,
+        "source": "OSM「Tin & Lithium Mine」；Wikipedia/Mindat 坐标交叉验证"
+      },
+      "timeline": [
+        {
+          "date": "2022-07",
+          "text": "雅化收购普得 70.59%，间接持 KMC 60%"
+        },
+        {
+          "date": "2024-04-12",
+          "text": "一期正式投产"
+        },
+        {
+          "date": "2024-11-14",
+          "text": "二期启动生产；雅化增持普得至 80%，普得持 KMC 68%"
+        },
+        {
+          "date": "2027-07（目标）",
+          "text": "7.5 万吨/年硫酸锂项目投产目标"
+        }
+      ],
+      "key": "kamativi",
+      "page": "kamativi.html",
+      "sources": [
+        {
+          "text": "雅化集团 2022-07-28 公告（9290.47 万美元收购普得科技 70.59%） file.finance.sina.com.cn/.../8388593.PDF",
+          "url": ""
+        },
+        {
+          "text": "证券时报（2024-04-16）——卡玛蒂维一期正式投产、年处理 30 万吨 https://www.stcn.com/article/detail/1178047.html",
+          "url": "https://www.stcn.com/article/detail/1178047.html"
+        },
+        {
+          "text": "《永安期货-锂矿项目梳理》Excel「非洲」列（Kamativi 一/二期行）",
+          "url": ""
+        },
+        {
+          "text": "雅化集团 2025 半年报（巨潮资讯）",
+          "url": ""
+        }
+      ]
+    },
+    "zulu": {
+      "name": "Zulu（祖鲁锂钽矿）",
+      "company": "Premier African Minerals / 天华新能 Canmax",
+      "country": "津巴布韦",
+      "grade": "资源 0.43% Li₂O（低品位）",
+      "status": "停产/重启拉锯",
+      "statusClass": "stalled",
+      "latest": "2026-09",
+      "previous": "2026-07",
+      "report": "Premier African Minerals 2026 公告",
+      "official": "https://premierafricanminerals.com/zimbabwe/zulu-project",
+      "equity": "Premier 控股；天华新能 13.38% 股权 + 包销/预付款",
+      "resource": "24.75 Mt @0.43% Li₂O + 42.2 g/t Ta₂O₅",
+      "capacity": "名义 5 万吨/年精矿；浮选 120–140 tph",
+      "product": "锂辉石精矿 + 钽",
+      "location": "津巴布韦 Fort Rixon，Matabeleland South",
+      "existing": [
+        {
+          "name": "Xinhai 浮选厂（名义 5 万吨/年）",
+          "current": "2026-09 仍处优化/融资与重启准备，未稳态生产",
+          "previous": "2026-07 计划重启但未实施，等待 Canmax 延长长止日",
+          "compare": "没有可确认商业产量；应按停产而非爬坡处理"
+        }
+      ],
+      "planned": [
+        {
+          "name": "选厂优化与重新调试",
+          "current": "目标 2026-10 底全面调试；需新增融资",
+          "previous": "此前 July 2026 重启计划未执行",
+          "compare": "时间表反复后移，融资与 Canmax 协议是关键路径"
+        }
+      ],
+      "overall": {
+        "current": "项目仍未实现稳定商业生产；公司推动再融资和选厂优化。",
+        "previous": "2026-07 计划重启未执行，原因是 Canmax 协议延长尚未闭合。",
+        "future": "2027 基准仅给 2 万吨爬坡，确定性低；若包销/债务/出口许可不闭合，可能继续为零。",
+        "highlights": [
+          "名义产能不等于实际供给，历史交付违约是核心事实",
+          "欠 Canmax 约 US$4600 万，融资与包销绑定",
+          "资源平均品位仅 0.43% Li₂O，成本与回收率压力高",
+          "津巴布韦精矿出口禁令下尚无本地冶炼豁免或项目"
+        ]
+      },
+      "history": [
+        {
+          "period": "2023",
+          "production": 0,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "试产失败/未形成商业交付",
+          "est": false
+        },
+        {
+          "period": "2024",
+          "production": 0,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "停产优化",
+          "est": false
+        },
+        {
+          "period": "2025",
+          "production": 0,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "停产/融资",
+          "est": false
+        },
+        {
+          "period": "2026E",
+          "production": 0,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "截至 9 月未重启商业生产",
+          "est": true
+        }
+      ],
+      "historyUnit": "万吨精矿",
+      "forecast": {
+        "bear": 0,
+        "base": 2,
+        "bull": 5,
+        "unit": "万吨精矿",
+        "basis": "悲观=继续停产；基准=2027 内重启并低负荷爬坡；乐观=达到名义 5 万吨。",
+        "assumptions": [
+          "Canmax 协议延长",
+          "融资到位",
+          "出口许可/本地加工要求",
+          "选厂技术稳定",
+          "悲观/乐观为本站新增研究情景，非公司指引"
+        ]
+      },
+      "beneficiation": [
+        {
+          "item": "浮选厂",
+          "adopted": "5 万吨/年精矿",
+          "verified": "⚠ 名义产能；未实现稳态商业产量",
+          "status": "warn",
+          "sources": [
+            "Premier 公告"
+          ]
+        },
+        {
+          "item": "处理能力",
+          "adopted": "120 tph 名义、计划 140 tph",
+          "verified": "⚠ 口径矛盾/优化中",
+          "status": "warn",
+          "sources": [
+            "Premier 运营更新"
+          ]
+        }
+      ],
+      "mining": [
+        {
+          "item": "Zulu 露天矿",
+          "adopted": "14 个矿权、3.5 km²",
+          "verified": "⚠ 已开发但商业供矿中断",
+          "status": "warn",
+          "sources": [
+            "Premier 项目页"
+          ]
+        },
+        {
+          "item": "资源量",
+          "adopted": "24.75 Mt @0.43%",
+          "verified": "✓ 2024 资源更新；品位偏低",
+          "status": "ok",
+          "sources": [
+            "Premier 2024 公告"
+          ]
+        }
+      ],
+      "smelting": [
+        {
+          "name": "Zulu 本地冶炼/硫酸锂项目",
+          "status": "无已披露项目",
+          "statusClass": "stalled",
+          "capacity": "N.D.",
+          "product": "N.D.",
+          "timing": "无时间表",
+          "capex": "N.D.",
+          "progress": "现有方案仍是精矿选厂，没有可核实的本地化学转化建设。",
+          "risk": "2027 精矿出口禁令下，若无豁免或第三方本地转化通道，即使选厂重启也可能无法出口。",
+          "sources": [
+            "Premier 公告",
+            "津巴布韦出口政策"
+          ],
+          "fid": "不适用（无项目）",
+          "include": "不计入",
+          "asOf": "2026-09",
+          "next": "出口豁免或第三方本地转化安排"
+        }
+      ],
+      "coord": {
+        "lat": -20.04238,
+        "lng": 29.39167,
+        "zoom": 14,
+        "source": "OpenStreetMap「Zulu Mine」矿区多边形"
+      },
+      "timeline": [
+        {
+          "date": "2023",
+          "text": "未完成对 Canmax 的精矿交付，触发债务/违约"
+        },
+        {
+          "date": "2026-06-30",
+          "text": "Canmax 延长后的长止日；后续仍谈延长"
+        },
+        {
+          "date": "2026-07",
+          "text": "计划重启未实施"
+        },
+        {
+          "date": "2026-10（目标）",
+          "text": "选厂全面调试目标，兑现待观察"
+        }
+      ],
+      "key": "zulu",
+      "page": "zulu.html",
+      "sources": [
+        {
+          "text": "Mining Zimbabwe（2026-09）——拟授权 726 亿新股、2026-10 底调试目标、2000 吨/月 https://miningzimbabwe.com/premier-seeks-approval-for-up-to-72-6-billion-new-shares-as-zulu-funding-needs-mount/",
+          "url": "https://miningzimbabwe.com/premier-seeks-approval-for-up-to-72-6-billion-new-shares-as-zulu-funding-needs-mount/"
+        },
+        {
+          "text": "Europe Says / Mining Weekly（2026-07-28）——重启推迟、Canmax 长止日谈判 https://europesays.com/africa/367332",
+          "url": "https://europesays.com/africa/367332"
+        },
+        {
+          "text": "Business Explainer（2026-02-18）——US$1340 万重启、US$4600 万违约 https://businessexplainer.co.za/deals/2026/02/18/premier-invests-13m-to-rescue-zulu-lithium",
+          "url": "https://businessexplainer.co.za/deals/2026/02/18/premier-invests-13m-to-rescue-zulu-lithium"
+        },
+        {
+          "text": "Quartr / Premier 公司演示——24.75Mt@0.43%、50,000 tpa、120 tph https://quartr.com/events/premier-african-minerals-prem-corporate-presentation_FTObffjc",
+          "url": "https://quartr.com/events/premier-african-minerals-prem-corporate-presentation_FTObffjc"
+        },
+        {
+          "text": "Wedoany（2026）——首批精矿产出但无销售收入、出口禁令 https://en.wedoany.com/shortnews/254150.html",
+          "url": "https://en.wedoany.com/shortnews/254150.html"
+        },
+        {
+          "text": "Premier 官网 Zulu 项目页 https://premierafricanminerals.com/zimbabwe/zulu-project",
+          "url": "https://premierafricanminerals.com/zimbabwe/zulu-project"
+        }
+      ]
+    },
+    "bikita": {
+      "name": "Bikita（比基塔锂矿）",
+      "company": "中矿资源 100%",
+      "country": "津巴布韦",
+      "grade": "资源 1.03% Li₂O；精矿 5.5%/4.3%",
+      "status": "稳态运行",
+      "statusClass": "operating",
+      "latest": "2025Q3/前三季度",
+      "previous": "2025H1",
+      "report": "中矿资源 2024 年报 / 2025 三季报相关披露",
+      "official": "https://www.sinomine.cn/",
+      "equity": "中矿资源全资（2022 年 US$1.8 亿收购）",
+      "resource": "1.13 亿吨 @1.03% = 288.47 万吨 LCE",
+      "capacity": "30 万吨锂辉石精矿 + 30 万吨透锂长石精矿/年",
+      "product": "锂辉石精矿 Li₂O 5.5% + 透锂长石精矿 Li₂O 4.3%",
+      "location": "津巴布韦 Masvingo 省 Bikita",
+      "existing": [
+        {
+          "name": "锂辉石线：200 万吨原矿 → 30 万吨精矿",
+          "current": "2025Q3 产 8.1 万吨；前三季度合计 25.6 万吨",
+          "previous": "2025H1 推算 17.5 万吨（前三季度减 Q3），半年均季 8.75 万吨",
+          "compare": "Q3 较 H1 季均约 -7%；仍接近 30 万吨年化铭牌"
+        },
+        {
+          "name": "透锂长石线：200 万吨原矿 → 30 万吨精矿",
+          "current": "2025 分产品实际 N.D.",
+          "previous": "上一期分产品实际 N.D.",
+          "compare": "官方未披露逐季透锂长石产量，不与锂辉石 25.6 万吨混加"
+        }
+      ],
+      "planned": [
+        {
+          "name": "采选优化/硫酸锂配套前的供料改造",
+          "current": "采选本体无新增第三条线 FID；现有双线稳定运行",
+          "previous": "2023-11 已达设计产能与产品质量",
+          "compare": "采选增量有限，战略重心转向本地硫酸锂加工"
+        }
+      ],
+      "overall": {
+        "current": "2025Q3 锂辉石精矿 8.1 万吨，前三季度 25.6 万吨；锂辉石线接近铭牌。透锂长石逐季量未披露。",
+        "previous": "2025H1 锂辉石约 17.5 万吨（倒推），季均约 8.75 万吨。",
+        "future": "2027 基准按 60 万吨混合精矿设计产能；产品结构受硫酸锂厂投产和出口禁令影响。",
+        "highlights": [
+          "资源增至 1.13 亿吨 @1.03%，较收购时大幅扩张",
+          "锂辉石前三季度 25.6 万吨，年化超过 30 万吨铭牌的节奏",
+          "透锂长石线缺乏逐季披露，不能用锂辉石数据替代",
+          "10 万吨硫酸锂（一期 6 万吨）是 2027 后产品形态核心"
+        ]
+      },
+      "history": [
+        {
+          "period": "2022",
+          "production": null,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "收购交割，原有透锂长石业务口径不完整",
+          "est": false
+        },
+        {
+          "period": "2023",
+          "production": null,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "7 月试产、11 月达产；全年分产品 N.D.",
+          "est": false
+        },
+        {
+          "period": "2024",
+          "production": null,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "全年分产品产量 N.D.",
+          "est": false
+        },
+        {
+          "period": "2025H1",
+          "production": 17.5,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "锂辉石：前三季度 25.6 - Q3 8.1 倒推",
+          "est": false
+        },
+        {
+          "period": "2025Q3",
+          "production": 8.1,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "锂辉石精矿实际",
+          "est": false
+        },
+        {
+          "period": "2025 9M",
+          "production": 25.6,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "锂辉石精矿实际",
+          "est": false
+        },
+        {
+          "period": "2026E",
+          "production": 60,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "两类精矿合计铭牌，估算",
+          "est": true
+        }
+      ],
+      "historyUnit": "万吨；历史实际主要为锂辉石，2026E 为混合产品",
+      "forecast": {
+        "bear": 45,
+        "base": 60,
+        "bull": 60,
+        "unit": "万吨混合精矿",
+        "basis": "基准=两条线各 30 万吨铭牌；悲观计入出口限制/转化项目延误。",
+        "assumptions": [
+          "锂辉石与透锂长石不可视为同品位产品",
+          "2025 实际仅锂辉石口径",
+          "硫酸锂厂投产后部分精矿内部转化"
+        ]
+      },
+      "beneficiation": [
+        {
+          "item": "锂辉石浮选线",
+          "adopted": "200 万吨原矿 → 30 万吨精矿 @5.5%",
+          "verified": "✓ 2023-11 达产",
+          "status": "ok",
+          "sources": [
+            "中矿公告"
+          ]
+        },
+        {
+          "item": "透锂长石重选线",
+          "adopted": "200 万吨原矿 → 30 万吨化学级 @4.3%（另技术级产品）",
+          "verified": "✓ 设计产能；逐季实际 N.D.",
+          "status": "ok",
+          "sources": [
+            "中矿年报"
+          ]
+        },
+        {
+          "item": "双线合计",
+          "adopted": "60 万吨/年混合精矿",
+          "verified": "✓ 设计，不可直接当 SC6",
+          "status": "ok",
+          "sources": [
+            "中矿年报"
+          ]
+        }
+      ],
+      "mining": [
+        {
+          "item": "Bikita 露天矿",
+          "adopted": "双线原矿 400 万吨/年",
+          "verified": "✓ 采选配套建成",
+          "status": "ok",
+          "sources": [
+            "中矿年报"
+          ]
+        },
+        {
+          "item": "资源量",
+          "adopted": "1.13 亿吨 @1.03% = 288.47 万吨 LCE",
+          "verified": "✓ 2024 年报口径",
+          "status": "ok",
+          "sources": [
+            "中矿 2024 年报"
+          ]
+        },
+        {
+          "item": "增储",
+          "adopted": "收购时 2941 万吨 @1.17% → 1.13 亿吨 @1.03%",
+          "verified": "✓ 三次增储，日期不同非矛盾",
+          "status": "ok",
+          "sources": [
+            "中矿历年公告"
+          ]
+        }
+      ],
+      "smelting": [
+        {
+          "name": "Bikita 硫酸锂厂",
+          "status": "在建/推进",
+          "statusClass": "building",
+          "capacity": "10 万吨/年（一期 6 万吨）",
+          "product": "硫酸锂",
+          "timing": "一期目标 2027Q2",
+          "capex": "US$4–5 亿（公开口径差异）",
+          "progress": "为满足津巴布韦 2027 精矿出口限制而建；需跟踪土建、设备、点火、首批合格品。",
+          "risk": "投资额与最终分期规模存在 4 亿/5 亿、6 万/10 万吨不同口径；以公司后续公告为准。",
+          "sources": [
+            "中矿年报/公告",
+            "津巴布韦政策与媒体"
+          ],
+          "fid": "项目推进中；正式 FID 日期未披露",
+          "include": "不计入已投产供给",
+          "asOf": "2026-09",
+          "next": "一期土建、设备安装、点火、2027Q2 目标"
+        }
+      ],
+      "coord": {
+        "lat": -19.96387,
+        "lng": 31.42703,
+        "zoom": 14,
+        "source": "OpenStreetMap「Bikita Minerals Mine」矿区多边形"
+      },
+      "timeline": [
+        {
+          "date": "2022-04",
+          "text": "中矿完成 US$1.8 亿收购"
+        },
+        {
+          "date": "2023-07",
+          "text": "两项扩建投料试产"
+        },
+        {
+          "date": "2023-11-09",
+          "text": "两条线达到设计产能与产品质量"
+        },
+        {
+          "date": "2027Q2（目标）",
+          "text": "硫酸锂一期投产目标"
+        }
+      ],
+      "key": "bikita",
+      "page": "bikita.html",
+      "sources": [
+        {
+          "text": "中矿资源集团收购津巴布韦 Bikita 锂矿权（公司官网） https://www.sinomine.cn/xwdti/239.html",
+          "url": "https://www.sinomine.cn/xwdti/239.html"
+        },
+        {
+          "text": "中矿资源 2023-11-09 达产公告（巨潮资讯）",
+          "url": ""
+        },
+        {
+          "text": "Bikita Minerals 官网产品页 https://bikitaminerals.com/products/",
+          "url": "https://bikitaminerals.com/products/"
+        },
+        {
+          "text": "《永安期货-锂矿项目梳理》Excel「非洲」列（Bikita 行，含产能/物流/成本明细）",
+          "url": ""
+        },
+        {
+          "text": "津巴布韦媒体 Mining Zimbabwe / SAIIA（Bikita 产量与增储）",
+          "url": ""
+        }
+      ]
+    },
+    "arcadia": {
+      "name": "Arcadia（阿卡迪亚锂矿）",
+      "company": "华友钴业 / Prospect Lithium Zimbabwe",
+      "country": "津巴布韦",
+      "grade": "资源 1.06% Li₂O；双产品精矿",
+      "status": "采选稳态 + 硫酸锂试产",
+      "statusClass": "operating",
+      "latest": "2026H1（冶炼节点）",
+      "previous": "2025全年",
+      "report": "华友钴业 2025 年报 / 2026 运营披露",
+      "official": "https://www.huayou.com/",
+      "equity": "华友已收购 PLZ 100%（87% Prospect + 13% 当地股东）",
+      "resource": "7270 万吨 @1.06% = 190 万吨 LCE；补充勘探后 245 万吨 LCE",
+      "capacity": "23 万吨透锂长石 + 29.7 万吨锂辉石 = 52.7 万吨/年",
+      "product": "透锂长石精矿 + 锂辉石精矿；硫酸锂",
+      "location": "津巴布韦 Goromonzi，距 Harare 约 38–40 km",
+      "existing": [
+        {
+          "name": "Arcadia 选厂：450 万吨原矿/年（投产报道）",
+          "current": "2026H1 选矿稳定运行，单矿精矿产量 N.D.；硫酸锂项目消耗精矿",
+          "previous": "2025 精矿单矿实际 N.D.；公司称运营效率提升",
+          "compare": "缺乏最新分矿产量，不能用设计 52.7 万吨充当实际"
+        },
+        {
+          "name": "产品组合：23 万吨透锂长石 + 29.7 万吨锂辉石",
+          "current": "2026 分产品产量 N.D.",
+          "previous": "2024 发货约 40 万吨（媒体/公司口径）",
+          "compare": "官方设计合计 52.7 万吨；“约 40 万吨”是实际/媒体约数而非产能"
+        }
+      ],
+      "planned": [
+        {
+          "name": "选矿优化/供硫酸锂厂",
+          "current": "无新增精矿线 FID；重心为内部转化",
+          "previous": "2025 末硫酸锂厂建成",
+          "compare": "采选扩张不是当前主线"
+        }
+      ],
+      "overall": {
+        "current": "2026-04 硫酸锂首次出口，年中运行率约 60%；采选端单矿精矿实际未单列。",
+        "previous": "2025 硫酸锂厂建成并进入试产；Arcadia 选厂运营效率提升。",
+        "future": "2027 基准按精矿 52.7 万吨设计产能；更多产品将内部转化为硫酸锂。",
+        "highlights": [
+          "52.7 万吨是华友官方设计口径，Excel 原值正确",
+          "资源 JORC 7270 万吨 @1.06% = 190 万吨 LCE；1.11% 是此前误写",
+          "2026-04 实现非洲硫酸锂首次出口，产品形态已改变",
+          "5 万吨硫酸锂厂运行率与达产进度是最重要跟踪指标"
+        ]
+      },
+      "history": [
+        {
+          "period": "2022",
+          "production": 0,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "建设期",
+          "est": false
+        },
+        {
+          "period": "2023",
+          "production": 10,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "3 月试产、7 月正式投产；产量推算",
+          "est": true
+        },
+        {
+          "period": "2024",
+          "production": 40,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "约 40 万吨发货/产量口径",
+          "est": true
+        },
+        {
+          "period": "2025",
+          "production": null,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "单矿实际 N.D.",
+          "est": false
+        },
+        {
+          "period": "2026E",
+          "production": 45,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "按稳定运行保守估算，非公司指引",
+          "est": true
+        }
+      ],
+      "historyUnit": "万吨混合精矿（口径混杂）",
+      "forecast": {
+        "bear": 40,
+        "base": 52.7,
+        "bull": 52.7,
+        "unit": "万吨混合精矿",
+        "basis": "基准=华友官方设计 52.7 万吨；悲观=选厂/内部转化爬坡限制。",
+        "assumptions": [
+          "2024 约40万吨为实际/媒体口径",
+          "2025 单矿实际未披露",
+          "透锂长石与锂辉石不可视为同一品位"
+        ]
+      },
+      "beneficiation": [
+        {
+          "item": "Arcadia 选厂",
+          "adopted": "23 万吨透锂长石 + 29.7 万吨锂辉石",
+          "verified": "✓ 华友官方设计合计 52.7 万吨",
+          "status": "ok",
+          "sources": [
+            "华友 2022 公告/券商引述"
+          ]
+        },
+        {
+          "item": "媒体投产口径",
+          "adopted": "约 40 万吨/年",
+          "verified": "✓ 属约数/实际运行量，不是精确设计产能",
+          "status": "ok",
+          "sources": [
+            "Reuters/DW 2023"
+          ]
+        },
+        {
+          "item": "原矿处理",
+          "adopted": "450 万吨/年；早期可研 240 万吨/年",
+          "verified": "⚠ 不同时点优化口径",
+          "status": "warn",
+          "sources": [
+            "投产报道",
+            "华友 2021-12 可研"
+          ]
+        }
+      ],
+      "mining": [
+        {
+          "item": "Arcadia 露天矿",
+          "adopted": "选厂供矿 4.5 Mtpa（投产口径）",
+          "verified": "✓ 已建成运行",
+          "status": "ok",
+          "sources": [
+            "Reuters/华友"
+          ]
+        },
+        {
+          "item": "资源量",
+          "adopted": "72.7 Mt @1.06% = 190 万吨 LCE",
+          "verified": "✓ JORC；储量 42.3 Mt @1.19% = 124 万吨 LCE",
+          "status": "ok",
+          "sources": [
+            "Prospect/华友 2021"
+          ]
+        },
+        {
+          "item": "补充勘探",
+          "adopted": "245 万吨 LCE @1.34%",
+          "verified": "✓ 华友 2025 年报新口径",
+          "status": "ok",
+          "sources": [
+            "华友 2025 年报"
+          ]
+        }
+      ],
+      "smelting": [
+        {
+          "name": "Arcadia 5 万吨硫酸锂厂",
+          "status": "已建成/爬坡",
+          "statusClass": "operating",
+          "capacity": "5 万吨/年",
+          "product": "硫酸锂",
+          "timing": "2026Q1 试产；2026-04 首次出口",
+          "capex": "约 US$4 亿",
+          "progress": "2026-04-27 完成非洲首批硫酸锂出口；年中运行率约 60%，尚未满产。",
+          "risk": "需要跟踪月度产量、良品率、能耗与出口节奏；精矿产量与硫酸锂产量不可重复计入供给。",
+          "sources": [
+            "华友 2025 年报/官网",
+            "Reuters 2025-10 / 2026 进展"
+          ],
+          "fid": "已执行",
+          "include": "按实际硫酸锂产量计入；不得与精矿重复",
+          "asOf": "2026-09",
+          "next": "月度产量、运行率、良品率与出口节奏"
+        }
+      ],
+      "coord": {
+        "lat": -17.77149,
+        "lng": 31.42434,
+        "zoom": 14,
+        "source": "OpenStreetMap「Arcadia Lithium Mine」矿区多边形"
+      },
+      "timeline": [
+        {
+          "date": "2022-04",
+          "text": "华友完成 100% 收购，总对价约 US$4.22 亿"
+        },
+        {
+          "date": "2023-03/07",
+          "text": "试产 / 正式投产"
+        },
+        {
+          "date": "2025",
+          "text": "5 万吨硫酸锂厂建成试产"
+        },
+        {
+          "date": "2026-04-27",
+          "text": "首批硫酸锂出口"
+        }
+      ],
+      "key": "arcadia",
+      "page": "arcadia.html",
+      "sources": [
+        {
+          "text": "华友钴业 2025 年报 /「媒体看华友」（净利润 +47.07%、Arcadia 245 万吨 LCE、5 万吨硫酸锂试产） https://www.huayou.com/news/press-release/698",
+          "url": "https://www.huayou.com/news/press-release/698"
+        },
+        {
+          "text": "华友 2022 年报（2023-03 试产、29.7 万吨锂辉石 + 23 万吨透锂长石）",
+          "url": ""
+        },
+        {
+          "text": "Prospect Resources JORC（2021-10）——7270 万吨资源 @1.06%、4230 万吨储量 @1.19%",
+          "url": ""
+        },
+        {
+          "text": "五矿经研院《资源民族主义视角下的津巴布韦原矿出口禁令》PDF（2026-03）",
+          "url": ""
+        },
+        {
+          "text": "《永安期货-锂矿项目梳理》Excel「非洲」列（Arcadia 行）",
+          "url": ""
+        }
+      ]
+    },
+    "manono": {
+      "name": "Manono（马诺诺锂矿）",
+      "company": "紫金 54.9% / Cominière 35.1% / 刚果政府 10%",
+      "country": "刚果（金）",
+      "grade": "东北矿段 1.63% Li₂O；全矿床 1.61%",
+      "status": "投产爬坡",
+      "statusClass": "operating",
+      "latest": "2026-09",
+      "previous": "2026Q1（建设期）",
+      "report": "紫金矿业 Manono 项目更新 / AVZ JORC / 仲裁公开信息",
+      "official": "https://www.zijinmining.com/global/program-detail-71797.htm",
+      "equity": "现行 JV：紫金 54.9% / Cominière 35.1% / 刚果政府 10%",
+      "resource": "全矿床 AVZ JORC 842 Mt @1.61%=33.4 Mt LCE；紫金东北矿段 131.7 Mt @1.63%=536 万吨 LCE",
+      "capacity": "5 Mtpa 原矿 → 约 100 万吨/年精矿；10.08 万吨/年硫酸锂规划",
+      "product": "SC6 锂辉石精矿 + 规划硫酸锂",
+      "location": "刚果（金）Tanganyika 省 Manono",
+      "existing": [
+        {
+          "name": "东北矿段一期选厂：5 Mtpa → 约 100 万吨/年精矿",
+          "current": "2026-05 投产；6 月首批精矿出口，7-22 自 Mutowa 港首发",
+          "previous": "2026Q1 仍处建设/调试",
+          "compare": "提前于 6 月底目标投产，建设节奏超预期；商业爬坡数据尚少"
+        }
+      ],
+      "planned": [
+        {
+          "name": "选厂达产 + 硫酸锂一体化",
+          "current": "2026 目标 3 万吨 LCE；2028 年末满产目标",
+          "previous": "此前计划 2026Q1/6-30 投产，多次调整后 5 月实际投产",
+          "compare": "选厂已跨过投产节点；硫酸锂仍需独立跟踪"
+        }
+      ],
+      "overall": {
+        "current": "2026-05 选厂投产，6 月首批精矿出口，7 月自 Mutowa 港发运；仍属早期爬坡。",
+        "previous": "2026Q1 项目仍在建设/调试，投产时间曾从 Q1 推迟至 6 月底。",
+        "future": "2027 基准约 50 万吨精矿，2028 年末目标满产约 100 万吨；物流链是制约。",
+        "highlights": [
+          "投产较 6 月底修订目标提前约一个月",
+          "全矿床与紫金矿段资源口径已厘清，不是同一资产范围",
+          "440 km 公路 + 坦噶尼喀湖渡运 + 达累斯萨拉姆，物流周期约 4 个月",
+          "AVZ ICSID 权益争端未裁决实体，法律风险仍在"
+        ]
+      },
+      "history": [
+        {
+          "period": "2023",
+          "production": 0,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "权益/采矿证争端",
+          "est": false
+        },
+        {
+          "period": "2024",
+          "production": 0,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "紫金项目准备/建设",
+          "est": false
+        },
+        {
+          "period": "2025",
+          "production": 0,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "建设期",
+          "est": false
+        },
+        {
+          "period": "2026H1",
+          "production": null,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "5 月投产，首批精矿规模未披露",
+          "est": false
+        },
+        {
+          "period": "2026E",
+          "production": 5,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "投产年保守估算；非公司指引",
+          "est": true
+        }
+      ],
+      "historyUnit": "万吨 SC6（估算；实际披露不足）",
+      "forecast": {
+        "bear": 30,
+        "base": 50,
+        "bull": 70,
+        "unit": "万吨 SC6",
+        "basis": "基准=2026 投产后第二年线性爬坡至 2028 年末 100 万吨目标；悲观计入物流/法律/电力约束。",
+        "assumptions": [
+          "100% 资产口径",
+          "2026 实际规模未披露",
+          "硫酸锂与精矿避免重复计量",
+          "悲观/乐观为本站新增研究情景，非公司指引"
+        ]
+      },
+      "beneficiation": [
+        {
+          "item": "一期选厂",
+          "adopted": "5 Mtpa 原矿 → 约 100 万吨/年 SC6",
+          "verified": "✓ 已于 2026-05 投产；达产尚未验证",
+          "status": "ok",
+          "sources": [
+            "紫金项目更新"
+          ]
+        },
+        {
+          "item": "AVZ 旧 DFS",
+          "adopted": "4.5 Mtpa → 70 万吨/年 SC6",
+          "verified": "历史快照，不代表当前紫金方案",
+          "status": "warn",
+          "sources": [
+            "AVZ DFS"
+          ]
+        },
+        {
+          "item": "首批精矿",
+          "adopted": "2026-06/07 发运",
+          "verified": "✓ 商业链条已启动，吨位 N.D.",
+          "status": "ok",
+          "sources": [
+            "紫金/媒体"
+          ]
+        }
+      ],
+      "mining": [
+        {
+          "item": "紫金东北部矿段",
+          "adopted": "131.7 Mt @1.63%=536 万吨 LCE",
+          "verified": "✓ 紫金官方 2023-10",
+          "status": "ok",
+          "sources": [
+            "紫金官网/证券时报"
+          ]
+        },
+        {
+          "item": "全 Manono 矿床",
+          "adopted": "842 Mt @1.61%=33.4 Mt LCE",
+          "verified": "✓ AVZ JORC，含 Roche Dure",
+          "status": "ok",
+          "sources": [
+            "AVZ 2024-01"
+          ]
+        },
+        {
+          "item": "水电/物流",
+          "adopted": "Mpiana-Mwanga 40MW + 拟扩；Mutowa 港",
+          "verified": "⚠ 基础设施爬坡关键路径",
+          "status": "warn",
+          "sources": [
+            "紫金/项目资料"
+          ]
+        }
+      ],
+      "smelting": [
+        {
+          "name": "Manono 硫酸锂项目",
+          "status": "规划/一体化跟踪",
+          "statusClass": "planned",
+          "capacity": "10.08 万吨/年",
+          "product": "硫酸锂",
+          "timing": "满产路径指向 2028 年后；独立节点未充分披露",
+          "capex": "包含于约 US$10 亿总投资口径",
+          "progress": "当前可确认的是精矿选厂投产；硫酸锂厂的 FID、土建、设备、点火、首批产品需单独核验。",
+          "risk": "若本地转化延误，项目仍以长距离精矿出口为主；精矿与硫酸锂不可重复计量。",
+          "sources": [
+            "紫金项目披露",
+            "公开建设方案"
+          ],
+          "fid": "未披露",
+          "include": "不计入",
+          "asOf": "2026-09",
+          "next": "独立环评/FID、EPC、土建、设备与点火"
+        }
+      ],
+      "coord": {
+        "lat": -7.29812,
+        "lng": 27.39652,
+        "zoom": 13,
+        "source": "OpenStreetMap「Manono」城镇/区域锚点；不是由矿权或钻孔表验证的矿坑中心，精确矿区坐标 N.D.",
+        "isArea": true
+      },
+      "timeline": [
+        {
+          "date": "2023-02",
+          "text": "AVZ 原采矿证被吊销，权益争端升级"
+        },
+        {
+          "date": "2024-09",
+          "text": "紫金/Cominière 新项目获采矿证"
+        },
+        {
+          "date": "2026-05",
+          "text": "选矿厂投产"
+        },
+        {
+          "date": "2026-06/07",
+          "text": "首批精矿出口 / Mutowa 港首发"
+        },
+        {
+          "date": "2028末（目标）",
+          "text": "精矿产能满产目标"
+        }
+      ],
+      "key": "manono",
+      "page": "manono.html",
+      "sources": [
+        {
+          "text": "AVZ ASX 2024-01-31（资源量 842Mt） https://announcements.asx.com.au/asxpdf/20240131/pdf/05zy2s9sjtry80.pdf",
+          "url": "https://announcements.asx.com.au/asxpdf/20240131/pdf/05zy2s9sjtry80.pdf"
+        },
+        {
+          "text": "AVZ DFS 2020-04-21 https://minedocs.com/20/Manono-DFS-04212020.pdf",
+          "url": "https://minedocs.com/20/Manono-DFS-04212020.pdf"
+        },
+        {
+          "text": "紫金官网（Manono 15% 股权来龙去脉） https://www.zijinmining.com/news/news-detail-119324.htm",
+          "url": "https://www.zijinmining.com/news/news-detail-119324.htm"
+        },
+        {
+          "text": "Reuters 2026-07-16（紫金启动出口） https://www.reuters.com/world/africa/zijin-starts-congo-lithium-exports-china-sources-say-2026-07-16",
+          "url": "https://www.reuters.com/world/africa/zijin-starts-congo-lithium-exports-china-sources-say-2026-07-16"
+        },
+        {
+          "text": "bankable.africa 2026-02-13（近 US$10 亿投资/股权/产能） https://bankable.africa/en/mining/1302-2399-zijin-s-manono-lithium-investment-seen-at-nearly-1-billion",
+          "url": "https://bankable.africa/en/mining/1302-2399-zijin-s-manono-lithium-investment-seen-at-nearly-1-billion"
+        },
+        {
+          "text": "bankable.africa 2026-07-25（首批发运 Mutowa） https://bankable.africa/en/mining/2507-3377-manono-s-first-lithium-shipment-departs-mutowa-for-tanzania",
+          "url": "https://bankable.africa/en/mining/2507-3377-manono-s-first-lithium-shipment-departs-mutowa-for-tanzania"
+        },
+        {
+          "text": "Model Diplomat 2026-07-19（China Wins the Lithium Race） https://modeldiplomat.com/story/china-wins-the-lithium-race-at-manono",
+          "url": "https://modeldiplomat.com/story/china-wins-the-lithium-race-at-manono"
+        },
+        {
+          "text": "Ecofin Agency 2026-07-17（100,800t 硫酸锂） https://ecofinagency.com/news-industry/1707-57466-dr-congos-first-lithium-mine-begins-production-ramp-up-at-manono",
+          "url": "https://ecofinagency.com/news-industry/1707-57466-dr-congos-first-lithium-mine-begins-production-ramp-up-at-manono"
+        }
+      ]
+    },
+    "ewoyaa": {
+      "name": "Ewoyaa（埃沃亚锂矿）",
+      "company": "Atlantic Lithium；华友拟收购",
+      "country": "加纳",
+      "grade": "资源 1.24% Li₂O；产品 SC6/SC5.5",
+      "status": "预生产/FID 前",
+      "statusClass": "planned",
+      "latest": "2026H1",
+      "previous": "2025H2",
+      "report": "Atlantic Lithium 项目公告 / 华友 SID / 加纳议会批准",
+      "official": "https://www.atlanticlithium.com.au/projects-ghana",
+      "equity": "华友拟 US$2.1 亿收购 Atlantic 100%；若完成约控制 87%，政府 13% free carry",
+      "resource": "36.8 Mt @1.24%；储量 25.6 Mt @1.22%",
+      "capacity": "2.7 Mtpa 原矿 → 约 35–36.5 万吨/年精矿",
+      "product": "SC6 + SC5.5 约 50:50",
+      "location": "加纳 Central Region，Saltpond 以北；距 Takoradi 港约 110 km",
+      "existing": [
+        {
+          "name": "商业采选产线",
+          "current": "未投产；无商业产量",
+          "previous": "未投产；无商业产量",
+          "compare": "已有产线为 0，不应将试验/许可视为生产"
+        }
+      ],
+      "planned": [
+        {
+          "name": "Ewoyaa 2.7 Mtpa DMS 项目",
+          "current": "2026-03-20 议会批准采矿租约；华友收购待交割；尚未 FID",
+          "previous": "2025H2 推进财政条款修订与许可",
+          "compare": "监管节点前进，但融资/FID/收购交割仍是关键路径"
+        }
+      ],
+      "overall": {
+        "current": "加纳议会已批准采矿租约，华友拟收购 Atlantic；项目仍未 FID、未开工。",
+        "previous": "2025H2 因锂价下行讨论渐进式权利金，融资与开发节奏放缓。",
+        "future": "公司目标 late 2027 首产，但基准情景下 2027 产量仍按 0；仅乐观情景给少量首产。",
+        "highlights": [
+          "加纳首个获议会批准的锂矿租约",
+          "资源 36.8 Mt @1.24%，81% 为 M+I",
+          "CAPEX US$185m，而已承诺资金远低于总额，FID 仍是硬约束",
+          "华友是中方收购方，赣锋与该项目无关"
+        ]
+      },
+      "history": [
+        {
+          "period": "2023",
+          "production": 0,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "DFS 完成、未投产",
+          "est": false
+        },
+        {
+          "period": "2024",
+          "production": 0,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "许可推进、未投产",
+          "est": false
+        },
+        {
+          "period": "2025",
+          "production": 0,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "财政条款/融资调整，未投产",
+          "est": false
+        },
+        {
+          "period": "2026E",
+          "production": 0,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "截至 H1 未 FID/未开工",
+          "est": true
+        }
+      ],
+      "historyUnit": "万吨精矿",
+      "forecast": {
+        "bear": 0,
+        "base": 0,
+        "bull": 5,
+        "unit": "万吨精矿",
+        "basis": "悲观/基准=2027 仍处建设或 late 2027 首产贡献可忽略；乐观=年末首产 5 万吨。",
+        "assumptions": [
+          "华友收购完成",
+          "FID 与融资闭合",
+          "施工周期",
+          "社区搬迁",
+          "悲观/乐观为本站新增研究情景，非公司指引"
+        ]
+      },
+      "beneficiation": [
+        {
+          "item": "DMS 选厂",
+          "adopted": "约 35–36.5 万吨/年",
+          "verified": "⚠ DFS 设计，未建设",
+          "status": "warn",
+          "sources": [
+            "Atlantic DFS 2023"
+          ]
+        },
+        {
+          "item": "产品组合",
+          "adopted": "SC6/SC5.5 约 50:50",
+          "verified": "✓ 试验/DFS 产品方案",
+          "status": "ok",
+          "sources": [
+            "Atlantic DFS"
+          ]
+        },
+        {
+          "item": "CAPEX",
+          "adopted": "US$185m",
+          "verified": "✓ DFS 口径；尚未 FID",
+          "status": "ok",
+          "sources": [
+            "Atlantic DFS"
+          ]
+        }
+      ],
+      "mining": [
+        {
+          "item": "露天矿群",
+          "adopted": "8 个伟晶岩矿体",
+          "verified": "⚠ 储量定义但未开工",
+          "status": "warn",
+          "sources": [
+            "Atlantic MRE/DFS"
+          ]
+        },
+        {
+          "item": "资源/储量",
+          "adopted": "36.8 Mt @1.24%；25.6 Mt @1.22%",
+          "verified": "✓ JORC/DFS",
+          "status": "ok",
+          "sources": [
+            "Atlantic 2024 MRE"
+          ]
+        },
+        {
+          "item": "搬迁/社区",
+          "adopted": "Ewoyaa、Krampa 社区",
+          "verified": "⚠ 开工前 ESG 关键路径",
+          "status": "warn",
+          "sources": [
+            "学术研究/许可文件"
+          ]
+        }
+      ],
+      "smelting": [
+        {
+          "name": "加纳本地锂盐/硫酸锂项目",
+          "status": "无已批准项目",
+          "statusClass": "planned",
+          "capacity": "N.D.",
+          "product": "N.D.",
+          "timing": "无时间表",
+          "capex": "N.D.",
+          "progress": "DFS 仅包含露天矿 + DMS 精矿，不含本地化学转化厂。",
+          "risk": "加纳本地增值政策可能推动远期方案，但不能写成当前项目。",
+          "sources": [
+            "Atlantic DFS",
+            "加纳采矿租约公开条款"
+          ],
+          "fid": "不适用（DFS 无转化厂）",
+          "include": "不计入",
+          "asOf": "2026-09",
+          "next": "采矿租约/华友收购后是否新增本地转化"
+        }
+      ],
+      "coord": {
+        "lat": 5.22285,
+        "lng": -1.04798,
+        "zoom": 13,
+        "source": "OpenStreetMap（Saltpond 以北项目区域参考点）+ Atlantic 位置描述；精确矿权/矿坑中心坐标 N.D.",
+        "isArea": true
+      },
+      "timeline": [
+        {
+          "date": "2023-06",
+          "text": "DFS 完成"
+        },
+        {
+          "date": "2023-10",
+          "text": "采矿租约授予"
+        },
+        {
+          "date": "2024-09/10",
+          "text": "EPA / 运营许可取得"
+        },
+        {
+          "date": "2026-03-20",
+          "text": "加纳议会批准租约"
+        },
+        {
+          "date": "late 2027（目标）",
+          "text": "公司目标首产，尚未 FID"
+        }
+      ],
+      "key": "ewoyaa",
+      "page": "ewoyaa.html",
+      "sources": [
+        {
+          "text": "Atlantic Lithium 官网项目页（36.8Mt/1.24%、分档） https://www.atlanticlithium.com.au/projects-ghana",
+          "url": "https://www.atlanticlithium.com.au/projects-ghana"
+        },
+        {
+          "text": "DFS 公告（2023-06-29，3.6Mt/12yr、US$185m、IRR 105%） https://lse.co.uk/rns/ALL/ewoyaa-definitive-feasibility-study-eqkucqw35m2r0ev.html",
+          "url": "https://lse.co.uk/rns/ALL/ewoyaa-definitive-feasibility-study-eqkucqw35m2r0ev.html"
+        },
+        {
+          "text": "Caixin（2026-05-11）——华友 US$2.1 亿收购 Atlantic https://www.caixinglobal.com/2026-05-11/chinas-huayou-cobalt-to-acquire-atlantic-lithium-for-210-million-as-prices-rebound-102442978.html",
+          "url": "https://www.caixinglobal.com/2026-05-11/chinas-huayou-cobalt-to-acquire-atlantic-lithium-for-210-million-as-prices-rebound-102442978.html"
+        },
+        {
+          "text": "NRGI 财政条款对照（政府 take ≈58%） https://resourcegovernance.org/publications/assessing-fiscal-regime-ghana-lithium-agreement",
+          "url": "https://resourcegovernance.org/publications/assessing-fiscal-regime-ghana-lithium-agreement"
+        },
+        {
+          "text": "Africa Briefing（华友 2026-12 实施、Elevra US$71m） https://africabriefing.com/west-africa-lithium-push-tests-value-capture/",
+          "url": "https://africabriefing.com/west-africa-lithium-push-tests-value-capture/"
+        },
+        {
+          "text": "ScienceDirect 搬迁社区研究（2025） https://www.sciencedirect.com/science/article/pii/S2214790X25001054",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2214790X25001054"
+        }
+      ]
+    },
+    "sandawana": {
+      "name": "Sandawana（桑达瓦纳锂矿）",
+      "company": "Kuvimba / Mutapa（津巴布韦国有）",
+      "country": "津巴布韦",
+      "grade": "规划 SC6；独立资源品位 N.D.",
+      "status": "试产/大型选厂待开工",
+      "statusClass": "building",
+      "latest": "2026YTD",
+      "previous": "2025",
+      "report": "Kuvimba/Mutapa 项目披露 + Reuters/津巴布韦媒体",
+      "official": "https://www.kuvimbamining.com/",
+      "equity": "津巴布韦国有，重组至 Mutapa Energy Minerals",
+      "resource": "公司称约 1 亿吨矿石；未经独立 JORC 核实",
+      "capacity": "300 万吨原矿/年 → 60 万吨精矿/年（规划）",
+      "product": "规划 SC6 锂辉石精矿",
+      "location": "津巴布韦 Mberengwa，Midlands",
+      "existing": [
+        {
+          "name": "试处理/临时加工",
+          "current": "2026YTD 累计试产 8.8 万吨精矿（接近预算 9.1 万吨）",
+          "previous": "2025 商业选厂尚未开工",
+          "compare": "试产证明原料/加工可行，但不能等同 60 万吨商业产能"
+        }
+      ],
+      "planned": [
+        {
+          "name": "大型选厂 BOT：3 Mtpa 原矿 → 60 万吨精矿",
+          "current": "仍待 Cabinet 批准/开工；目标 2027Q1/Q2 调试",
+          "previous": "2025 原计划 Q3 破土，实际延后",
+          "compare": "开工节点延误；2027 投运目标确定性下降"
+        }
+      ],
+      "overall": {
+        "current": "试处理产出 8.8 万吨，但 US$2.7–3.1 亿大型选厂仍待关键审批/破土。",
+        "previous": "2025 宣布 Q3 破土、2027 初投运；后续未按原计划开工。",
+        "future": "2027 基准按爬坡 30 万吨，前提是 2026 内开工并保持约 18 个月工期。",
+        "highlights": [
+          "试产 8.8 万吨接近 9.1 万吨预算",
+          "60 万吨是商业选厂规划，不是当前产量",
+          "公司称“全球第五大”未经 JORC，不能当已核实资源",
+          "BOT、Cabinet 批准和出口禁令共同决定时间表"
+        ]
+      },
+      "history": [
+        {
+          "period": "2023",
+          "production": 0,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "无商业选厂",
+          "est": false
+        },
+        {
+          "period": "2024",
+          "production": 0,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "无商业选厂",
+          "est": false
+        },
+        {
+          "period": "2025",
+          "production": 0,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "计划开工未兑现",
+          "est": false
+        },
+        {
+          "period": "2026YTD",
+          "production": 8.8,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "试处理产量，非商业线",
+          "est": false
+        },
+        {
+          "period": "2026E",
+          "production": 8.8,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "仅计已披露试产，不外推",
+          "est": true
+        }
+      ],
+      "historyUnit": "万吨精矿（2026 为试产）",
+      "forecast": {
+        "bear": 15,
+        "base": 30,
+        "bull": 45,
+        "unit": "万吨精矿",
+        "basis": "基准=2027 年大型选厂投运并爬坡至 50% 铭牌；悲观=审批/开工继续延误；乐观=年中投运后快速爬坡。",
+        "assumptions": [
+          "Cabinet 批准",
+          "BOT 融资与建设",
+          "2027-01 出口限制",
+          "独立资源验证",
+          "悲观/乐观为本站新增研究情景，非公司指引"
+        ]
+      },
+      "beneficiation": [
+        {
+          "item": "试处理",
+          "adopted": "8.8 万吨 YTD",
+          "verified": "✓ 实际试产，但非商业铭牌",
+          "status": "ok",
+          "sources": [
+            "津巴布韦独立报"
+          ]
+        },
+        {
+          "item": "大型选厂",
+          "adopted": "60 万吨/年精矿",
+          "verified": "⚠ 规划；未确认开工",
+          "status": "warn",
+          "sources": [
+            "Reuters/Mining Technology"
+          ]
+        },
+        {
+          "item": "原矿处理",
+          "adopted": "3 Mtpa",
+          "verified": "⚠ BOT 设计口径",
+          "status": "warn",
+          "sources": [
+            "Reuters"
+          ]
+        }
+      ],
+      "mining": [
+        {
+          "item": "Sandawana 露天矿",
+          "adopted": "试采供料",
+          "verified": "✓ 有试产原料；商业采矿规模 N.D.",
+          "status": "ok",
+          "sources": [
+            "Kuvimba/媒体"
+          ]
+        },
+        {
+          "item": "资源量",
+          "adopted": "公司称约 1 亿吨",
+          "verified": "⚠ 未经 JORC/NI43-101 独立核实",
+          "status": "warn",
+          "sources": [
+            "Kuvimba 单方口径"
+          ]
+        },
+        {
+          "item": "Cabinet 批准",
+          "adopted": "大型项目开工前置条件",
+          "verified": "⚠ 待闭合",
+          "status": "warn",
+          "sources": [
+            "津巴布韦媒体"
+          ]
+        }
+      ],
+      "smelting": [
+        {
+          "name": "Sandawana 二期锂化工/硫酸锂",
+          "status": "概念/规划",
+          "statusClass": "planned",
+          "capacity": "N.D.",
+          "product": "锂硫酸盐或锂盐",
+          "timing": "选矿厂之后；无已核实日期",
+          "capex": "N.D.",
+          "progress": "公司提出第二阶段本地化学转化，但没有可核实 FID、规模或施工进度。",
+          "risk": "不应把“二期增值”当作已建硫酸锂厂；需跟踪 Cabinet、合作方、环评与融资。",
+          "sources": [
+            "Kuvimba/Reuters 报道"
+          ],
+          "fid": "未披露",
+          "include": "不计入",
+          "asOf": "2026-09",
+          "next": "Cabinet 批准、合作方、环评、融资与规模"
+        }
+      ],
+      "coord": {
+        "lat": -20.92997,
+        "lng": 29.90906,
+        "zoom": 14,
+        "source": "OpenStreetMap「Sandawana Mine」矿区多边形"
+      },
+      "timeline": [
+        {
+          "date": "2025Q3（原计划）",
+          "text": "大型选厂破土，未按期兑现"
+        },
+        {
+          "date": "2026YTD",
+          "text": "试处理累计 8.8 万吨精矿"
+        },
+        {
+          "date": "2026-06前（后续目标）",
+          "text": "Mutapa 提出开工目标，仍需核实"
+        },
+        {
+          "date": "2027Q1/Q2（目标）",
+          "text": "大型选厂调试"
+        }
+      ],
+      "key": "sandawana",
+      "page": "sandawana.html",
+      "sources": [
+        {
+          "text": "Reuters / Mining Technology——US$310m BOT、3Mt/yr 原矿、60 万吨精矿、18 个月投产 https://www.mining-technology.com/news/kuvimba-310m-lithium",
+          "url": "https://www.mining-technology.com/news/kuvimba-310m-lithium"
+        },
+        {
+          "text": "Metals Wire——US$270m、2027 初调试、SC6、2027-01 出口禁令背景 https://metals-wire.net/regions/asia/kuvimba-bets-270-million-on-new-lithium-concentrator-as-zimbabwe-pushes-local-processing",
+          "url": "https://metals-wire.net/regions/asia/kuvimba-bets-270-million-on-new-lithium-concentrator-as-zimbabwe-pushes-local-processing"
+        },
+        {
+          "text": "Ecofin / Zimbabwe Situation——Q3 2025 破土、2027 投产、60 万吨 https://www.zimbabwesituation.com/news/lithium-output-in-zimbabwe-could-rise-with-sandawana-mine-by-2027",
+          "url": "https://www.zimbabwesituation.com/news/lithium-output-in-zimbabwe-could-rise-with-sandawana-mine-by-2027"
+        },
+        {
+          "text": "Enviro Press（2026-02）——Mutapa 重组、2026-06 前开工 https://enviropresszim.com/mutapa-to-build-us270m-lithium-concentrate-plant-at-sandawana",
+          "url": "https://enviropresszim.com/mutapa-to-build-us270m-lithium-concentrate-plant-at-sandawana"
+        },
+        {
+          "text": "津巴布韦独立报——试产 88,000 吨、Cabinet 批准待决、自称「第五大」 https://www.newsday.co.zw/theindependent/business-digest/article/200048758/kuvimba-hse-awaits-cabinet-approval-for-us270m-lithium-plant",
+          "url": "https://www.newsday.co.zw/theindependent/business-digest/article/200048758/kuvimba-hse-awaits-cabinet-approval-for-us270m-lithium-plant"
+        },
+        {
+          "text": "Mining Zimbabwe——最大选厂、2027 Q1/Q2 调试 https://miningzimbabwe.com/kuvimbas-sandawana-mines-set-to-begin-construction-of-zimbabwes-largest-lithium-concentrator-plant",
+          "url": "https://miningzimbabwe.com/kuvimbas-sandawana-mines-set-to-begin-construction-of-zimbabwes-largest-lithium-concentrator-plant"
+        }
+      ]
+    },
+    "nigeria": {
+      "name": "尼日利亚锂矿项目群（合并页）",
+      "company": "天华新能 / 苏州中材 / 赣锋 / El-Tahdam / Basin 等",
+      "country": "尼日利亚",
+      "grade": "披露零散（约 1.98–2.0% 的个别项目）",
+      "status": "长尾供给：投产/扩张/未建混合",
+      "statusClass": "planned",
+      "latest": "2026",
+      "previous": "2025",
+      "report": "项目公司/尼日利亚媒体 + Excel 非洲列（披露薄弱）",
+      "official": "",
+      "equity": "多个独立项目，不存在统一权益结构",
+      "resource": "无统一 JORC/NI43-101 资源口径",
+      "capacity": "混合口径：精矿、原矿处理量、折 LCE 均有",
+      "product": "锂精矿/原矿/潜在锂盐（口径混杂）",
+      "location": "Kebbi / Nasarawa / Kaduna 多州",
+      "existing": [
+        {
+          "name": "Avatar Ogapa（赣锋）",
+          "current": "据项目披露：2023 矿山投产、2024 选厂投产；实际产量 N.D.",
+          "previous": "2025/2024 无可比公开实际",
+          "compare": "只确认投产节点，不将 100 万吨原矿处理量当精矿产量"
+        },
+        {
+          "name": "苏州中材 3# 矿脉",
+          "current": "据 Excel/项目披露 2024-10 投产；实际产量 N.D.",
+          "previous": "上一期 N.D.",
+          "compare": "披露不足，不能闭合产量"
+        }
+      ],
+      "planned": [
+        {
+          "name": "Kebbi Ngaski（天华 85% / 三冠）",
+          "current": "扩张/投资协议；50 万吨精矿口径待一手核实",
+          "previous": "2025 签 US$2 亿投资协议",
+          "compare": "矿权纠纷与产能口径是关键风险"
+        },
+        {
+          "name": "ML-62680 / Jupiter 等",
+          "current": "投产扩张或未建混合；实际进度 N.D.",
+          "previous": "2025 前后披露零散",
+          "compare": "不纳入基准供给"
+        }
+      ],
+      "overall": {
+        "current": "五个项目披露口径混杂，缺少统一资源、产量和成本数据；不能做可靠行业合计。",
+        "previous": "2025 以投资协议、注资和矿权纠纷为主，商业产量仍未披露。",
+        "future": "2027 基准继续标 N.D.，不纳入非洲确定性供给；仅作为长尾上行风险。",
+        "highlights": [
+          "多数项目没有 JORC/NI43-101 资源报告",
+          "“折碳酸锂 X 万吨”常是设计/理论口径，不是实际产量",
+          "Kebbi ML-62680 存在法律纠纷",
+          "基础设施、非法采矿和州政府介入是系统性风险"
+        ]
+      },
+      "history": [
+        {
+          "period": "2023",
+          "production": null,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "项目分散，N.D.",
+          "est": false
+        },
+        {
+          "period": "2024",
+          "production": null,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "个别投产节点，产量 N.D.",
+          "est": false
+        },
+        {
+          "period": "2025",
+          "production": null,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "投资/注资为主，产量 N.D.",
+          "est": false
+        },
+        {
+          "period": "2026E",
+          "production": null,
+          "sales": null,
+          "price": null,
+          "cost": null,
+          "basis": "无可靠合计",
+          "est": false
+        }
+      ],
+      "historyUnit": "N.D.（项目群不可加总）",
+      "forecast": {
+        "bear": null,
+        "base": null,
+        "bull": null,
+        "unit": "N.D.",
+        "basis": "证据不足，不给 2027 数值情景；不把设计产能或签约量当产量。",
+        "assumptions": [
+          "资源/储量未标准化",
+          "矿权纠纷",
+          "单项目实际产量缺失"
+        ]
+      },
+      "beneficiation": [
+        {
+          "item": "Kebbi Ngaski",
+          "adopted": "50 万吨精矿/年（Excel/协议口径）",
+          "verified": "⚠ 一手设计文件与投产状态待核",
+          "status": "warn",
+          "sources": [
+            "Excel 非洲列/尼日利亚媒体"
+          ]
+        },
+        {
+          "item": "Avatar Ogapa",
+          "adopted": "100 万吨原矿处理/年",
+          "verified": "⚠ 这是原矿处理量，不是精矿产能",
+          "status": "warn",
+          "sources": [
+            "赣锋/项目披露"
+          ]
+        },
+        {
+          "item": "其他项目",
+          "adopted": "N.D.",
+          "verified": "⚠ 缺少可比披露",
+          "status": "warn",
+          "sources": [
+            "项目公司/媒体"
+          ]
+        }
+      ],
+      "mining": [
+        {
+          "item": "Nasarawa/Kebbi/Kaduna 项目群",
+          "adopted": "多个矿权",
+          "verified": "⚠ 缺统一资源报告",
+          "status": "warn",
+          "sources": [
+            "项目公司/媒体"
+          ]
+        },
+        {
+          "item": "ML-62680",
+          "adopted": "矿权争议",
+          "verified": "⚠ 法律风险未闭合",
+          "status": "warn",
+          "sources": [
+            "El-Tahdam/媒体"
+          ]
+        }
+      ],
+      "smelting": [
+        {
+          "name": "尼日利亚本地锂盐/硫酸锂配套",
+          "status": "披露不足",
+          "statusClass": "planned",
+          "capacity": "N.D.",
+          "product": "N.D.",
+          "timing": "N.D.",
+          "capex": "N.D.",
+          "progress": "各项目未形成可核实的统一冶炼产能表；部分“折 LCE”是理论折算而非冶炼厂产能。",
+          "risk": "不得把矿石/精矿折算量误写为已建碳酸锂或硫酸锂工厂。",
+          "sources": [
+            "项目公司/尼日利亚媒体"
+          ],
+          "fid": "未披露",
+          "include": "不计入",
+          "asOf": "2026-09",
+          "next": "逐项目核实工厂名称、产品、规模、许可与投产"
+        }
+      ],
+      "coord": {
+        "lat": 9.082,
+        "lng": 8.6753,
+        "zoom": 5,
+        "source": "尼日利亚项目群横跨 Kebbi / Nasarawa / Kaduna；此点仅为全国区域参考中心，不是任何矿址或矿权边界",
+        "isArea": true
+      },
+      "timeline": [
+        {
+          "date": "2023–2024",
+          "text": "Avatar/Ogapa 等项目陆续披露投产节点"
+        },
+        {
+          "date": "2025",
+          "text": "Kebbi 大额投资协议与 ML-62680 纠纷并存"
+        },
+        {
+          "date": "2026",
+          "text": "实际产量、资源与冶炼能力仍缺可靠统一披露"
+        }
+      ],
+      "key": "nigeria",
+      "page": "nigeria.html",
+      "sources": [
+        {
+          "text": "《永安期货-锂矿项目梳理》Excel「非洲」列（尼日利亚各行原始标注）",
+          "url": ""
+        },
+        {
+          "text": "El-Tahdam 官网 / Nigerian Mining——Kebbi 州项目与 ML-62680 纠纷 https://eltahdamexploration.com/about-us/ · https://nigerianmining.com/kebbi-to-become-africas-lithium-hub-with-landmark-mining-deal/",
+          "url": "https://eltahdamexploration.com/about-us/"
+        },
+        {
+          "text": "The Podium Media——El-Tahdam 指控三冠/天华违抗法院判决 https://thepodiummedia.com/mining-el-tahdam-exploration-accuses-three-crowns-canmax-of-defying-court-judgment/",
+          "url": "https://thepodiummedia.com/mining-el-tahdam-exploration-accuses-three-crowns-canmax-of-defying-court-judgment/"
+        },
+        {
+          "text": "赣锋锂业官网（Avatar/Ogapa） https://www.ganfenglithium.com/",
+          "url": "https://www.ganfenglithium.com/"
+        }
+      ]
+    }
+  }
+}

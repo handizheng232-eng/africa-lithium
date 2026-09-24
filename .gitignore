@@ -2,3 +2,5 @@
 Thumbs.db
 .DS_Store
 assets/intro.mp4
+__pycache__/
+*.pyc

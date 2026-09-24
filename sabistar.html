@@ -3,133 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sabi Star 锂钽矿 ｜ 全球非澳洲锂矿供应梳理</title>
-<style>
-  :root { --bg:#0f1420; --panel:#171e2e; --panel2:#1d2638; --line:#2a3550; --text:#dbe4f3; --muted:#8b98b4; --acc:#4da3ff; --acc2:#ffb454; --up:#4cd97b; --down:#ff6b6b; }
-  * { box-sizing:border-box; margin:0; padding:0; }
-  body { background:var(--bg); color:var(--text); font-family:"Segoe UI","Microsoft YaHei",sans-serif; line-height:1.65; }
-  .wrap { max-width:1320px; margin:0 auto; padding:26px 20px 60px; }
-  a { color:var(--acc); text-decoration:none; } a:hover { text-decoration:underline; }
-  header { border-bottom:1px solid var(--line); padding-bottom:16px; margin-bottom:22px; }
-  header h1 { font-size:23px; font-weight:700; } header .sub { color:var(--muted); font-size:13px; margin-top:6px; }
-  .tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
-  .tag { font-size:12px; padding:3px 10px; border-radius:20px; border:1px solid var(--line); color:var(--muted); } .tag.hl { color:var(--acc); border-color:var(--acc); }
-  .mine-block { border:1px solid var(--line); border-radius:12px; overflow:hidden; margin-bottom:26px; }
-  .mine-head { background:var(--panel2); padding:14px 18px; display:flex; flex-wrap:wrap; gap:10px; align-items:baseline; }
-  .mine-head h2 { font-size:18px; } .mine-head .src { font-size:12px; color:var(--muted); margin-left:auto; }
-  .cat { padding:14px 18px; border-top:1px solid var(--line); }
-  .kv-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:10px; }
-  .kv { border:1px solid var(--line); border-radius:8px; background:var(--panel); padding:10px 12px; }
-  .kv .k { font-size:11.5px; color:var(--muted); margin-bottom:3px; } .kv .v { font-size:14px; font-weight:600; line-height:1.45; } .kv .v small { font-weight:400; color:var(--muted); font-size:12px; }
-  .desc { font-size:13px; background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:10px 13px; margin-bottom:10px; line-height:1.7; }
-  .note { font-size:12.5px; color:var(--muted); margin:8px 0; line-height:1.6; } .note b { color:var(--acc2); }
-  table { border-collapse:collapse; width:100%; font-size:12.5px; }
-  th,td { padding:8px 12px; border:1px solid var(--line); text-align:left; vertical-align:top; }
-  th { background:var(--panel2); color:var(--muted); font-weight:600; white-space:nowrap; }
-  td.line { color:var(--acc); font-weight:600; min-width:180px; }
-  .cv-ok { color:var(--up); font-weight:600; } .cv-warn { color:var(--acc2); font-weight:600; }
-  .cv-src { font-size:12px; color:var(--text); margin-bottom:4px; line-height:1.5; }
-  .cv-srcname { display:inline-block; background:var(--panel2); border:1px solid var(--line); border-radius:4px; padding:0 6px; margin-right:6px; font-size:11px; color:var(--acc); white-space:nowrap; }
-  .sat-grid { display:grid; grid-template-columns:1fr; gap:14px; margin-top:12px; }
-  .sat-gm .img-wrap { min-height:320px; height:320px; } .sat-gm iframe { width:100%; height:100%; border:0; }
-  .sat-links { display:flex; gap:10px; flex-wrap:wrap; margin-top:12px; }
-  .sat-btn { display:inline-block; padding:8px 16px; border-radius:8px; font-size:12.5px; font-weight:700; color:#fff; background:linear-gradient(135deg,#2e6de0,#1b4fa0); border:1px solid rgba(255,255,255,0.12); }
-  .sat-btn:hover { filter:brightness(1.15); } .sat-btn + .sat-btn { background:linear-gradient(135deg,#0f9d58,#0b7a44); }
-  .src-list { font-size:12.5px; line-height:1.7; } .src-list li { margin-bottom:4px; } .src-list .u { color:var(--muted); font-size:11.5px; word-break:break-all; }
-  .coord-line { font-size:12.8px; background:rgba(77,163,255,.08); border:1px solid rgba(77,163,255,.28); border-radius:8px; padding:9px 13px; margin-bottom:12px; }
-  .coord-line b { color:var(--acc); font-family:Consolas,monospace; }
-  .img-wrap { border:1px solid var(--line); border-radius:10px; overflow:hidden; background:#0b0f18; }
-  .img-cap { font-size:12px; color:var(--muted); padding:8px 2px 2px; }
-  .sat-btn { color:#fff !important; text-decoration:none !important; }
-</style>
+<meta name="description" content="Sabi Star（萨比星锂钽矿）：运行状况、历史数据、2027预测、采选产能核实、卫星定位与配套冶炼项目跟踪">
+<title>Sabi Star（萨比星锂钽矿） ｜ 全球非澳洲锂矿供应梳理</title>
+<link rel="stylesheet" href="mine-page.css">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
 </head>
-<body>
-<div class="wrap">
-
-  <header>
-    <h1>Sabi Star 锂钽矿（津巴布韦）</h1>
-    <div class="sub"><a href="overview.html">← 返回非洲锂矿总览</a> ｜ 全球非澳洲锂矿供应梳理 · 非洲 · 津巴布韦东马绍纳兰省 ｜ 盛新锂能（002240.SZ）51%（Max Mind）</div>
-    <div class="tags">
-      <span class="tag hl">建成投产（2023-09）</span>
-      <span class="tag">锂辉石 + 钽铌</span>
-      <span class="tag">露天 + 三段两闭路浮选</span>
-      <span class="tag">30 万吨精矿（设计）</span>
-      <span class="tag">原矿品位 1.98%</span>
-    </div>
-  </header>
-
-  <div class="mine-block">
-    <div class="mine-head"><h2>矿山概览</h2><span class="src">盛新锂能 2021-11 公告 / 人民网</span></div>
-    <div class="cat">
-      <div class="kv-grid">
-        <div class="kv"><div class="k">运营商 / 权益</div><div class="v">盛新锂能（002240.SZ）51%<small>· 7650 万美元收购 Max Mind 51%（盛熠国际）</small></div></div>
-        <div class="kv"><div class="k">位置</div><div class="v">东马绍纳兰省（Manicaland）萨比星矿区<small>· 距哈拉雷 180 km</small></div></div>
-        <div class="kv"><div class="k">矿种</div><div class="v">锂辉石 + 钽铌（锂钽混合浮选 + 磁重选分离）</div></div>
-        <div class="kv"><div class="k">原矿产能</div><div class="v">90–100 万吨/年</div></div>
-        <div class="kv"><div class="k">精矿产能</div><div class="v">约 30 万吨锂精矿（+ 钽铌精矿）</div></div>
-        <div class="kv"><div class="k">原矿品位</div><div class="v">1.98% Li₂O（主矿种资源量 8.85 万吨 Li₂O）</div></div>
-        <div class="kv"><div class="k">状态</div><div class="v">投产（2023-05）<small>· 2025 年产精矿约 29.98 万吨（全公司口径）</small></div></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="mine-block">
-    <div class="mine-head"><h2>产能与资源核实</h2><span class="src">多来源交叉印证 · 核实时间 2026-09-14</span></div>
-    <div class="cat">
-      <table>
-        <thead><tr><th style="width:200px">项目</th><th style="width:240px">核实结果</th><th>多来源交叉印证</th></tr></thead>
-        <tbody>
-          <tr><td class="line">股权收购</td><td class="cell cv-ok">7650 万美元 → Max Mind 51%</td><td class="cell"><div class="cv-src"><span class="cv-srcname">盛新 2021-11-03 公告</span>盛熠国际 7650 万美元收购 Max Mind 香港 51%（首次 1500 万 10% + 6150 万 41%）</div></td></tr>
-          <tr><td class="line">精矿产能</td><td class="cell cv-ok">约 30 万吨（原矿 90–100 万吨）</td><td class="cell"><div class="cv-src"><span class="cv-srcname">Excel 非洲列</span>Z16=100 万吨原矿、AD16=30 万吨精矿（三段两闭路 + 球磨 + 浮选 + 磁重选）</div></td></tr>
-          <tr><td class="line">资源/品位</td><td class="cell cv-ok">5 矿权 Li₂O 8.85 万吨 @1.98%</td><td class="cell"><div class="cv-src"><span class="cv-srcname">Excel 非洲列</span>5 个矿权主矿种 Li₂O 资源量 8.85 万吨，品位 1.98%</div></td></tr>
-          <tr><td class="line">投产</td><td class="cell cv-ok">2023-05-07 投产</td><td class="cell"><div class="cv-src"><span class="cv-srcname">盛新 2025 年报</span>「2023 年 5 月投产，原矿 99 万吨/年，精矿约 29 万吨/年」（设计宣示 100 万→30 万）</div></td></tr>
-          <tr><td class="line">2025 产量</td><td class="cell cv-ok">约 29.98 万吨（全公司）</td><td class="cell"><div class="cv-src"><span class="cv-srcname">国信证券 2026-03-31</span>盛新 2025 年锂精矿产量 29.98 万吨（同比 +4.82%，含萨比星大头 + 业隆沟）</div></td></tr>
-        </tbody>
-      </table>
-      <p class="note">⚠️ Sabi Star 是盛新锂能（原威华股份转型锂业）在非洲的首个自有矿，锂钽共生（钽铌为高价值副产）。精矿经莫桑比克贝拉港（直线约 300 km）出口。最新年度产量待盛新锂能年报核实。</p>
-    </div>
-  </div>
-
-  <div class="mine-block">
-    <div class="mine-head"><h2>🛰️ 卫星影像与地图定位</h2><span class="src">坐标已精确定位</span></div>
-    <div class="cat">
-      <div class="coord-line">📍 矿区坐标 <b>-19.19828, 31.96575</b> ｜ 来源：OpenStreetMap「Sabi Star Mine」(Buhera)</div>
-      <div class="sat-grid">
-        <div class="sat-gm"><div class="img-wrap"><iframe src="https://www.google.com/maps?q=-19.19828,31.96575&z=14&output=embed" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Sabi Star 锂钽矿 卫星影像"></iframe></div><div class="img-cap"><b>Sabi Star 锂钽矿</b> · Google Maps 卫星影像（z=14）</div></div>
-      </div>
-      <div class="sat-links">
-        <a class="sat-btn" href="https://yandex.com/maps/?ll=31.96575,-19.19828&z=14" target="_blank" rel="noopener">Yandex 卫星图</a>
-        <a class="sat-btn" href="https://www.google.com/maps?q=-19.19828,31.96575&z=14" target="_blank" rel="noopener">Google Maps</a>
-        <a class="sat-btn" href="https://www.openstreetmap.org/?mlat=-19.19828&mlon=31.96575#map=14/-19.19828/31.96575" target="_blank" rel="noopener">OpenStreetMap</a>
-        <a class="sat-btn" target="_blank" rel="noopener" href="https://www.google.com/maps?q=Sabi%20Star%20mine%20Zimbabwe&z=11">📍 Google Maps</a>
-      </div>
-      <div class="note">坐标来源：OpenStreetMap「Sabi Star Mine」(Buhera) ｜ 底图为公开卫星/航拍影像，非本报拍摄；矿区范围以矿权证载明为准。</div>
-    </div>
-  </div>
-
-  <div class="mine-block">
-    <div class="mine-head"><h2>来源（Sources）</h2></div>
-    <div class="cat">
-      <ol class="src-list">
-        <li>盛新锂能 2021-11-03 公告（7650 万美元收购 Max Mind 51%）</li>
-        <li>人民网《盛新锂能跨界转型有多大胜算？》（2021-11-08） <span class="u">http://paper.people.com.cn/zgnyb/</span></li>
-        <li>《永安期货-锂矿项目梳理》Excel「非洲」列（Sabi Star 行，含产能/品位/物流明细）</li>
-        <li>盛新锂能 2025 半年报（巨潮资讯，2025-08-23） <span class="u">http://static.cninfo.com.cn/finalpage/2025-08-23/1224558311.PDF</span></li>
-      </ol>
-    </div>
-  </div>
-
-  <div class="mine-block">
-    <div class="mine-head"><h2>口径与说明</h2></div>
-    <div class="cat">
-      <p class="note" style="margin:0">
-        · 原矿品位 1.98% Li₂O（主矿种资源量口径），精矿约 30 万吨/年（设计）。<br>
-        · 最新年度产量、精矿品位待盛新锂能年报核实。<br>
-        · 数据来自盛新锂能公告、人民网及 Excel，仅供研究参考，不构成投资建议。
-      </p>
-    </div>
-  </div>
-
-</div>
+<body data-mine="sabistar">
+<main class="wrap" id="app">
+  <div class="mine-block"><div class="cat">正在加载 Sabi Star（萨比星锂钽矿） 研究页…</div></div>
+</main>
+<script src="mine-page.js"></script>
 </body>
 </html>

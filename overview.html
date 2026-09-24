@@ -200,7 +200,7 @@
   <div class="table-wrap">
     <table class="tbl" id="q_tbl"></table>
   </div>
-  <div class="chart-panel" style="margin-top:14px"><div class="cp-title">全项目年度精矿产量合计与同比（2023-2028E · 万吨 · 披露口径直接相加近似，跨品位不可加总）</div><div class="chart" id="yr_bar" style="height:360px"></div></div>
+  <div class="chart-panel" style="margin-top:14px"><div class="cp-title">已披露 / 已建模项目年度精矿产量近似合计（2023-2028E · 万吨 · 覆盖数逐年标注 · 跨品位不可加总）</div><div class="chart" id="yr_bar" style="height:360px"></div></div>
   <div class="note" id="q_note"></div>
 
   <!-- ② 未来产量预测汇总 -->
@@ -270,7 +270,7 @@ const AFRICA_DATA = {
       id:'goulamina', name:'Goulamina 一期', country:'马里', page:'goulamina.html',
       company:'赣锋锂业 65% / 马里政府 35%', status:'投产', statusCls:'up',
       capacity:50.6, capUnit:'SC6', grade:'1.37%', lce:'—',
-      prod:{2023:0, 2024:0, 2025:33.66, 2026:46.8, 2027:50.6, 2028:50.6},
+      prod:{2023:0, 2024:null, 2025:33.66, 2026:46.8, 2027:50.6, 2028:50.6},
       est:{2026:true, 2027:true, 2028:true},
       hl:'2026 H1 产 23.38 万吨（年化利用率 92.4%）',
       basis:'2026E = 上半年实际 23.38 万吨 ×2 年化；2027E/2028E = 一期满产 50.6 万吨（二期 49.4 万吨已完可研但无 FID，不计入基准）',
@@ -310,20 +310,20 @@ const AFRICA_DATA = {
       id:'sabistar', name:'Sabi Star 锂钽矿', country:'津巴布韦', page:'sabistar.html',
       company:'盛新锂能 51%（Max Mind）', status:'投产', statusCls:'up',
       capacity:30, capUnit:'锂精矿', grade:'1.98%', lce:'—',
-      prod:{2023:0, 2024:28.5, 2025:29.98, 2026:30, 2027:30, 2028:30},
+      prod:{2023:null, 2024:null, 2025:29.98, 2026:30, 2027:30, 2028:30},
       est:{2025:true, 2026:true, 2027:true, 2028:true},
       hl:'品位 1.98%，津巴布韦在产品位最高矿山',
-      basis:'2025 = 盛新锂能全公司锂精矿产量 29.98 万吨（萨比星为主，含业隆沟）；2024 为推算（投产次年年化）；2026E-2028E = 设计产能 30 万吨满产',
+      basis:'2023/2024 单矿实际 N.D.；2025 = 盛新锂能全公司锂精矿产量 29.98 万吨（萨比星为主，含业隆沟，E 标识）；2026E-2028E = 设计产能 30 万吨满产',
       assume:['公司口径含国内业隆沟矿，单矿拆分未披露','拟建 7.5 万吨硫酸锂项目以对冲 2027-01 精矿出口禁令']
     },
     {
       id:'kamativi', name:'Kamativi 多金属矿', country:'津巴布韦', page:'kamativi.html',
-      company:'雅化集团（KMC 60%）', status:'投产·爬产', statusCls:'warn',
+      company:'雅化集团（普得持 KMC 68%，雅化穿透约 54.4%）', status:'投产·爬产', statusCls:'warn',
       capacity:35, capUnit:'锂精矿', grade:'1.25%', lce:'75 万吨',
-      prod:{2023:0, 2024:6, 2025:28, 2026:35, 2027:35, 2028:35},
-      est:{2024:true, 2025:true, 2026:true, 2027:true, 2028:true},
+      prod:{2023:null, 2024:null, 2025:28, 2026:35, 2027:35, 2028:35},
+      est:{2025:true, 2026:true, 2027:true, 2028:true},
       hl:'一期 2024-04-12 投产、二期 2024-11-14 投产',
-      basis:'2025 = 公司口径预计 28 万吨；2026E-2028E = 一+二期合计满产 35 万吨（一期 5 + 二期 30）',
+      basis:'2023/2024 全年单矿实际 N.D.；2025 = 公司口径预计 28 万吨（E）；2026E-2028E = 一+二期合计满产 35 万吨（一期 5 + 二期 30）',
       assume:['资源 24.2 Mt @1.25% ≈ 75 万吨 LCE（2024-05）','拟建 7.5 万吨/年硫酸锂项目（US$2 亿，2027-07）']
     },
     {
@@ -340,20 +340,20 @@ const AFRICA_DATA = {
       id:'bikita', name:'Bikita 锂矿', country:'津巴布韦', page:'bikita.html',
       company:'中矿资源 100%', status:'投产', statusCls:'up',
       capacity:60, capUnit:'锂辉石+透锂长石', grade:'1.03%', lce:'288 万吨',
-      prod:{2023:0, 2024:20, 2025:25.6, 2026:60, 2027:60, 2028:60},
-      est:{2024:true, 2025:true, 2026:true, 2027:true, 2028:true},
+      prod:{2023:null, 2024:null, 2025:null, 2026:60, 2027:60, 2028:60},
+      est:{2026:true, 2027:true, 2028:true},
       hl:'2025 前三季度锂辉石精矿 25.6 万吨（Q3 单季 8.1 万吨）',
-      basis:'2025 = 前三季度锂辉石精矿 25.6 万吨（全年数待年报）；2026E-2028E = 两条产线满产合计 60 万吨（锂辉石 30 + 透锂长石 30）',
+      basis:'2023/2024 全年分产品实际 N.D.；2025 仅披露前三季度锂辉石 25.6 万吨，全年数 N.D.；2026E-2028E = 两条产线满产合计 60 万吨（锂辉石 30 + 透锂长石 30）',
       assume:['资源 1.13 亿吨 @1.03% = 288.47 万吨 LCE（三次增储）','在建 10 万吨/年硫酸锂（一期 6 万吨，2027 Q2）']
     },
     {
       id:'arcadia', name:'Arcadia 锂矿', country:'津巴布韦', page:'arcadia.html',
       company:'华友钴业（PLZ 87%→100%）', status:'投产·扩产', statusCls:'up',
       capacity:52.7, capUnit:'锂辉石+透锂长石', grade:'1.06%', lce:'190 万吨',
-      prod:{2023:10, 2024:40, 2025:40, 2026:45, 2027:52.7, 2028:52.7},
-      est:{2023:true, 2024:true, 2025:true, 2026:true, 2027:true, 2028:true},
+      prod:{2023:10, 2024:40, 2025:null, 2026:45, 2027:52.7, 2028:52.7},
+      est:{2023:true, 2024:true, 2026:true, 2027:true, 2028:true},
       hl:'2026-04-27 非洲首次出口硫酸锂（5 万吨/年产线）',
-      basis:'2023 = 投产年爬坡推算；2024 = 发货约 40 万吨（+41%）；2025 = 按满负荷估算；2026E-2028E = 设计产能 52.7 万吨（23 万吨透锂长石 + 29.7 万吨锂辉石，华友官方口径）',
+      basis:'2023 = 投产年爬坡推算；2024 = 发货约 40 万吨（E）；2025 单矿实际 N.D.；2026E-2028E = 设计产能 52.7 万吨（23 万吨透锂长石 + 29.7 万吨锂辉石，华友官方口径）',
       assume:['原矿处理 450 万吨/年（投产报道口径）；华友 2021-12 可研为 240 万吨/年','资源 JORC 7270 万吨 @1.06% = 190 万吨 LCE（储量 4230 万吨 @1.19% = 124 万吨 LCE）；华友补充勘探后 245 万吨 LCE','产能核实（2026-09）：52.7 万吨为华友官方设计口径（23 透锂长石 + 29.7 锂辉石），媒体「约 40 万吨」为约数——Excel 原值正确']
     },
     {
@@ -364,7 +364,7 @@ const AFRICA_DATA = {
       est:{2026:true, 2027:true, 2028:true},
       hl:'2026-05 提前投产、6 月首出口、7-22 自 Mutowa 港首发',
       basis:'2026E = 投产年（5 月投产、6 月首出口，2026 目标 3 万吨 LCE）；2027E = 爬坡中约 50 万吨；2028E = 满产约 100 万吨（公司目标 2028 年末满产）',
-      assume:['资源 AVZ JORC 842 Mt @1.61%（含 13.52 Mt Li₂O）；紫金/Cominière 口径 6.47 Mt LCE（疑仅东北矿段，待核）','物流 440 km 公路 + 坦噶尼喀湖渡运 + 达累斯萨拉姆，全程约 4 个月','AVZ 权益纠纷未决（ICSID ARB/23/20 进行中）']
+      assume:['资源范围分开：AVZ 全矿床 842 Mt @1.61%；紫金东北矿段 131.7 Mt @1.63%，约 536 万吨 LCE，二者不可直接替换','物流 440 km 公路 + 坦噶尼喀湖渡运 + 达累斯萨拉姆，全程约 4 个月','AVZ 权益纠纷未决（ICSID ARB/23/20 进行中）']
     },
     {
       id:'ewoyaa', name:'Ewoyaa 锂矿', country:'加纳', page:'ewoyaa.html',
@@ -389,11 +389,11 @@ const AFRICA_DATA = {
     {
       id:'nigeria', name:'尼日利亚 5 小矿（合并）', country:'尼日利亚', page:'nigeria.html',
       company:'天华新能 / 苏州中材 / 赣锋 / El-Tahdam / Basin 等', status:'投产-未建（混合）', statusCls:'blue',
-      capacity:80, capUnit:'混合（含原矿处理量）', grade:'1.98–2.0%', lce:'—',
-      prod:{2023:0, 2024:0, 2025:0, 2026:0, 2027:0, 2028:0},
+      capacity:null, capUnit:'混合口径，不可加总', grade:'个别项目 1.98–2.0%', lce:'—',
+      prod:{2023:null, 2024:null, 2025:null, 2026:null, 2027:null, 2028:null},
       est:{2026:true, 2027:true, 2028:true},
       hl:'披露薄弱，产能口径混杂，未计入合计',
-      basis:'0：披露极薄弱（Kebbi Ngaski 50 万吨精矿、苏州中材 3# 矿脉、Avatar Ogapa 年处理 100 万吨、Kebbi ML-62680、Jupiter 未建设），产能与产量口径混杂且未经核实，基准情形不计入行业合计',
+      basis:'N.D.：披露极薄弱（Kebbi Ngaski 50 万吨精矿、苏州中材 3# 矿脉、Avatar Ogapa 年处理 100 万吨、Kebbi ML-62680、Jupiter 未建设），产能与产量口径混杂且未经核实，基准情形不计入行业合计',
       assume:['天华新能 Kebbi 州 85% 权益、US$2 亿投资、折碳酸锂 6 万吨','赣锋 Avatar Ogapa 年处理 100 万吨、品位 2.0%','多项标注「待核实」，不建议用于供给测算']
     }
   ]
@@ -430,17 +430,19 @@ const yoy = (cur, prev) => {
   const cls = d >= 0 ? 'up' : 'down';
   return `<span class="yoy ${cls}">${d >= 0 ? '+' : ''}${d.toFixed(1)}（${r >= 0 ? '+' : ''}${r.toFixed(1)}%）</span>`;
 };
-const sumY = y => P.reduce((s, p) => s + (val(p, y) || 0), 0);
+const aggY = (arr, y) => { const values = arr.map(p => val(p, y)).filter(v => v != null); return { sum: values.reduce((a,b) => a+b, 0), count: values.length, total: arr.length }; };
+const sumY = y => aggY(P, y);
+const yoyComparable = (cur, prev) => cur.count === prev.count ? yoy(cur.sum, prev.sum) : '<span class="yoy d">覆盖项目不同，不计算同比</span>';
 
 /* ---------- KPI ---------- */
 (function kpi(){
-  const s25 = sumY(2025), s26 = sumY(2026), s28 = sumY(2028);
+  const a25 = sumY(2025), a26 = sumY(2026), a28 = sumY(2028);
   const running = P.filter(p => /投产/.test(p.status)).length;
   const totalCap = P.filter(p => !/二期|群矿/.test(p.name)).reduce((s,p)=>s+p.capacity,0);
   document.getElementById('kpi_row').innerHTML = `
-    <div class="kpi"><div class="k">2025 全非洲精矿产量（披露口径）</div><div class="v">${s25.toFixed(1)} <small style="font-size:12px">万吨</small></div><div class="d">津巴布韦在产矿山为主</div></div>
-    <div class="kpi"><div class="k">2026E 产量（H1 年化 + 指引）</div><div class="v">${s26.toFixed(1)} <small style="font-size:12px">万吨</small></div><div class="d up">${yoy(s26, s25)}</div></div>
-    <div class="kpi"><div class="k">2028E 预测合计（基准）</div><div class="v">${s28.toFixed(0)} <small style="font-size:12px">万吨</small></div><div class="d up">Manono + Goulamina 主导增量</div></div>
+    <div class="kpi"><div class="k">2025 已披露 / 估算项目合计</div><div class="v">${a25.sum.toFixed(1)} <small style="font-size:12px">万吨</small></div><div class="d">${a25.count}/${a25.total} 个项目/产线有值 · 非全非洲总量</div></div>
+    <div class="kpi"><div class="k">2026E 已建模项目合计</div><div class="v">${a26.sum.toFixed(1)} <small style="font-size:12px">万吨</small></div><div class="d">${a26.count}/${a26.total} 个项目/产线有值 · ${yoyComparable(a26,a25)}</div></div>
+    <div class="kpi"><div class="k">2028E 已建模项目合计（基准）</div><div class="v">${a28.sum.toFixed(0)} <small style="font-size:12px">万吨</small></div><div class="d up">${a28.count}/${a28.total} 个项目/产线 · Manono + Goulamina 主导增量</div></div>
     <div class="kpi"><div class="k">在产 / 在推进项目</div><div class="v">${running} <small style="font-size:12px">/ ${P.length} 项</small></div><div class="d">设计产能合计约 ${totalCap.toFixed(0)} 万吨/年</div></div>
   `;
 })();
@@ -458,7 +460,7 @@ const sumY = y => P.reduce((s, p) => s + (val(p, y) || 0), 0);
       `<td style="font-size:11px;color:var(--muted)">${p.country}</td>` +
       `<td style="font-size:11px">${p.company}</td>` +
       `<td style="font-size:10.5px;color:var(--muted)">${p.capUnit}</td>` +
-      `<td class="num strong">${p.capacity}</td>`;
+      `<td class="num strong">${p.capacity == null ? 'N.D.' : p.capacity}</td>`;
     YEARS.forEach(y => {
       const v = val(p, y);
       const cls = `num y${y}` + (v == null ? '' : (isEst(p, y) ? ' acc' : ''));
@@ -469,19 +471,21 @@ const sumY = y => P.reduce((s, p) => s + (val(p, y) || 0), 0);
 
   // 合计行（排除口径混杂的尼日利亚与未投产的规划项）
   const inSum = P.filter(p => p.id !== 'nigeria');
-  const sumOf = y => inSum.reduce((s, p) => s + (val(p, y) || 0), 0);
-  html += `<tr class="tot"><td class="sticky">合计（已核实项）</td><td>5 国</td><td>披露口径直接相加</td><td>混合口径</td><td class="num">—</td>`;
-  YEARS.forEach(y => { html += `<td class="num">${sumOf(y).toFixed(0)}</td>`; });
-  html += `<td style="padding:9px 8px"><div style="font-size:9.5px;color:var(--acc2);line-height:2.0;max-width:245px;white-space:normal">合计 = 除尼日利亚 5 小矿（披露薄弱、口径混杂）外各项目之和；跨产品/品位相加仅供总量参考，<b>非行业供给口径</b>——不可直接与澳矿 SC6 口径相加</div></td></tr></tbody>`;
+  const aggOf = y => aggY(inSum, y);
+  const annualAgg = YEARS.map(aggOf);
+  html += `<tr class="tot"><td class="sticky">合计（已披露 / 已建模项）</td><td>5 国</td><td>仅加总有值项目</td><td>混合口径</td><td class="num">—</td>`;
+  annualAgg.forEach(a => { html += `<td class="num">${a.sum.toFixed(0)}<small style="display:block;color:var(--muted);font-size:9px">覆盖 ${a.count}/${a.total}</small></td>`; });
+  html += `<td style="padding:9px 8px"><div style="font-size:9.5px;color:var(--acc2);line-height:2.0;max-width:245px;white-space:normal">合计 = 除尼日利亚 5 小矿外，仅加总当年有值的项目/产线；每年覆盖数不同，缺失值不按 0 处理；跨产品/品位相加仅供总量参考，<b>非行业供给口径</b>——不可直接与澳矿 SC6 口径相加</div></td></tr></tbody>`;
   document.getElementById('q_tbl').innerHTML = html;
 
   /* 年度柱状图 */
   if (window.echarts) {
-    const totals = YEARS.map(sumOf);
-    const yo = totals.map((v, i) => (i === 0 || totals[i-1] <= 0) ? null : +((v - totals[i-1]) / totals[i-1] * 100).toFixed(1));
+    const totals = annualAgg.map(a => a.sum);
+    const coverage = annualAgg.map(a => a.count);
+    const yo = totals.map((v, i) => (i === 0 || totals[i-1] <= 0 || coverage[i] !== coverage[i-1]) ? null : +((v - totals[i-1]) / totals[i-1] * 100).toFixed(1));
     echarts.init(document.getElementById('yr_bar'), 'dark').setOption({
       backgroundColor: 'transparent',
-      tooltip: { trigger: 'axis', formatter: ps => { const h = [ps[0].name]; ps.forEach(p => { h.push(p.seriesType === 'bar' ? `产量 ${p.value} 万吨` : `同比 ${p.value == null ? 'N.D.' : p.value + '%'}`); }); return h.join('<br>'); } },
+      tooltip: { trigger: 'axis', formatter: ps => { const i=ps[0].dataIndex; const h = [ps[0].name, `覆盖 ${coverage[i]}/${inSum.length} 个项目/产线`]; ps.forEach(p => { h.push(p.seriesType === 'bar' ? `近似合计 ${p.value} 万吨` : `同比 ${p.value == null ? 'N.D.（覆盖不同）' : p.value + '%'}`); }); return h.join('<br>'); } },
       legend: { data: ['年度产量', '同比'], textStyle: { color: '#8b98b4', fontSize: 10 }, top: 0, right: 10 },
       grid: { left: 48, right: 52, top: 34, bottom: 40 },
       xAxis: { type: 'category', data: YEARS.map(y => y + (y >= 2026 ? 'E' : '')), axisLabel: { color: '#8b98b4', fontSize: 11 } },
@@ -502,7 +506,7 @@ const sumY = y => P.reduce((s, p) => s + (val(p, y) || 0), 0);
   }
 
   document.getElementById('q_note').innerHTML =
-    '· <b>年度口径</b>：非洲矿山披露粒度多为年度/半年度（仅 Bougouni 为季度 RNS），故本表以年度整理；2023-2025 为实际、2026E-2028E 为预估（E 标记）。<br>' +
+    '· <b>年度口径</b>：非洲矿山披露粒度多为年度/半年度（仅 Bougouni 为季度 RNS），故本表以年度整理；2023-2025 以实际为主（推算项仍标 E）、2026E-2028E 为预估（E 标记）；N.D. 不按 0 进入合计。<br>' +
     '· <b>2026E 取值</b>：优先公司指引/口径；无指引则用上半年实际×2 年化（如 Goulamina 23.38×2=46.8、Bougouni 5.32×2=10.6）。<br>' +
     '· <b>2027E/2028E 取值</b>：按各矿公开产能目标线性推算（投产年→满产年），具体依据见各行「预估依据」列。<br>' +
     '· <b>口径警告</b>：产品含 SC6 / SC5.5 / 透锂长石 / 混合精矿，<b>跨品位直接相加仅供总量参考</b>；未投产规划项（Goulamina 二期、Bougouni 二期）基准计入 0。';
@@ -523,20 +527,21 @@ const SCEN = {
   manono:{bear:60,      base:100,  bull:100},
   ewoyaa:{bear:0,       base:8,    bull:15},
   sandawana:{bear:30,   base:60,   bull:60},
-  nigeria:{bear:0,      base:0,    bull:0}
+  nigeria:{bear:null,   base:null, bull:null}
 };
 (function fcSummary(){
   const inSum = P.filter(p => p.id !== 'nigeria');
   let bear=0, base=0, bull=0;
   inSum.forEach(p => { const s = SCEN[p.id]; if(!s) return; bear+=s.bear; base+=s.base; bull+=s.bull; });
-  const s26 = sumY(2026);
+  const a26 = sumY(2026);
+  const s26 = a26.sum;
   const chg = v => { const d=(v-s26)/s26*100; return `<span class="yoy ${d>=0?'up':'down'}" style="margin-left:6px">vs 2026E ${d>=0?'+':''}${d.toFixed(0)}%</span>`; };
   document.getElementById('fc_summary').innerHTML = `
     <div class="fc-card bear"><div class="k">行业悲观 <span class="lbl">悲观</span></div><div class="v">${bear.toFixed(0)} <small style="font-size:12px">万吨</small>${chg(bear)}</div><div class="d">FID 延后 / 出口禁令扰动 / 爬坡受阻 / 锂价回落</div></div>
     <div class="fc-card base"><div class="k">行业基准 <span class="lbl">基准</span></div><div class="v">${base.toFixed(0)} <small style="font-size:12px">万吨</small>${chg(base)}</div><div class="d">各项目满产目标线性推算（不含尼日利亚、不含未 FID 二期）</div></div>
     <div class="fc-card bull"><div class="k">行业乐观 <span class="lbl">乐观</span></div><div class="v">${bull.toFixed(0)} <small style="font-size:12px">万吨</small>${chg(bull)}</div><div class="d">二期提前 / 满产加速 / Manono 与 Sandawana 顺利爬坡</div></div>`;
   document.getElementById('fc_note').innerHTML =
-    `· 2028E 为研究性判断（日历年度 · 100% 资产口径 · 线性推算），基准合计 ${base.toFixed(0)} 万吨；同比基数 2026E ${s26.toFixed(0)} 万吨。<br>` +
+    `· 2028E 为研究性判断（日历年度 · 100% 资产口径 · 线性推算），基准合计 ${base.toFixed(0)} 万吨；对比基数为 2026E 已建模项目近似合计 ${s26.toFixed(0)} 万吨（覆盖 ${a26.count}/${a26.total}，跨品位不可加总）。<br>` +
     `· 增量主要由 <b>Manono（0→100 万吨，紫金）</b> 与 <b>Goulamina 一期（→50.6 万吨）</b> 贡献；津巴布韦群矿趋于满产、增量有限。<br>` +
     `· 悲观情景计入津巴布韦 <b>2027-01 精矿出口禁令</b> 与马里安全局势对物流的扰动；乐观情景计入 Goulamina 二期、Bougouni 二期与 Ewoyaa 提前投产。`;
 
@@ -612,8 +617,8 @@ const C2 = ['#9d7bff','#4da3ff','#ff7b54','#7fa8e8','#e8b64c','#9d7bff','#4cd97b
       <div class="mc-stats">
         <div class="mc-stat"><div class="k">2025 实际（万吨）</div><div class="v">${v25 != null ? v25.toFixed(1) : '<span style="color:var(--muted);font-size:13px">—</span>'} <small>${p.capUnit.split('+')[0]}</small></div><div class="c">${p.country}</div></div>
         <div class="mc-stat"><div class="k">2026E（万吨）</div><div class="v">${v26 != null && v26 > 0 ? v26.toFixed(1) : '<span style="color:var(--muted);font-size:13px">—</span>'} <small>${isEst(p, 2026) && v26 ? 'E' : ''}</small></div><div class="c ${v26 > v25 ? 'up' : 'd'}">${v25 != null && v26 != null && v25 > 0 ? (v26 >= v25 ? '+' + ((v26-v25)/v25*100).toFixed(0) + '%' : ((v26-v25)/v25*100).toFixed(0) + '%') : 'N.D.'}</div></div>
-        <div class="mc-stat"><div class="k">设计产能</div><div class="v" style="font-size:15px">${p.capacity} <small>万吨/年</small></div><div class="c d">${p.capUnit}</div></div>
-        <div class="mc-stat"><div class="k">2028E 基准</div><div class="v" style="font-size:15px">${(SCEN[p.id]?.base ?? 0)} <small>万吨</small></div><div class="c d">${p.grade !== '—' ? '品位 ' + p.grade : '品位 N.D.'}</div></div>
+        <div class="mc-stat"><div class="k">设计产能</div><div class="v" style="font-size:15px">${p.capacity == null ? 'N.D.' : p.capacity} <small>${p.capacity == null ? '' : '万吨/年'}</small></div><div class="c d">${p.capUnit}</div></div>
+        <div class="mc-stat"><div class="k">2028E 基准</div><div class="v" style="font-size:15px">${SCEN[p.id]?.base == null ? 'N.D.' : SCEN[p.id].base} <small>${SCEN[p.id]?.base == null ? '' : '万吨'}</small></div><div class="c d">${p.grade !== '—' ? '品位 ' + p.grade : '品位 N.D.'}</div></div>
       </div>
       ${p.hl ? `<div class="mc-hl"><b>⚡</b> ${p.hl}</div>` : ''}
       <a class="mc-go" href="${p.page}">查看详情 →</a>
@@ -670,7 +675,7 @@ const CAPEX = [
       <td style="font-size:11px;color:var(--muted)">${p.country}</td>
       <td style="font-size:11px">${p.company}</td>
       <td><span class="mc-status ${p.statusCls}" style="margin:0">${p.status}</span></td>
-      <td class="num strong">${p.capacity}</td>
+      <td class="num strong">${p.capacity == null ? 'N.D.' : p.capacity}</td>
       <td style="font-size:10.5px;color:var(--muted)">${p.capUnit}</td>
       <td class="num">${p.grade}</td>
       <td class="num">${p.lce}</td>

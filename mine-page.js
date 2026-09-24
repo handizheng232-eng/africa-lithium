@@ -1,0 +1,100 @@
+(() => {
+  const KEY = document.body.dataset.mine;
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const md = s => esc(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
+  const num = v => v == null ? 'N.D.' : Number(v).toLocaleString('zh-CN',{maximumFractionDigits:3});
+  const status = (txt, cls='planned') => `<span class="status ${cls}">${esc(txt)}</span>`;
+  const sourceRows = srcs => (srcs || []).map(s => `<div class="cv-src"><span class="cv-srcname">${esc(s)}</span></div>`).join('');
+
+  function tableRows(rows, mode='op') {
+    if (!rows || !rows.length) return `<tr><td colspan="4" class="nd">N.D.</td></tr>`;
+    if (mode === 'op') return rows.map(r => `<tr><td class="line">${md(r.name)}</td><td>${md(r.current)}</td><td class="prev">${md(r.previous)}</td><td>${md(r.compare)}</td></tr>`).join('');
+    return rows.map(r => {
+      const cls = r.status === 'ok' ? 'cv-ok' : 'cv-warn';
+      return `<tr><td class="line">${md(r.item)}</td><td>${md(r.adopted)}</td><td class="${cls}">${md(r.verified)}</td><td>${sourceRows(r.sources)}</td></tr>`;
+    }).join('');
+  }
+
+  function forecastCards(f) {
+    const cards=[['bear','悲观'],['base','基准'],['bull','乐观']].map(([k,l]) => {
+      const v=f[k];
+      return `<div class="fc-card ${k}"><div class="fc-label">${l}</div><div class="fc-val">${v==null?'N.D.':num(v)} <small>${esc(f.unit)}</small></div><div class="fc-note">${k==='bear'?'不利条件兑现':k==='base'?'当前公开进度线性外推':'进度与利用率超预期'}</div></div>`;
+    }).join('');
+    return `<div class="fc-grid">${cards}</div><p class="desc" style="margin-top:10px"><b>预测依据：</b>${md(f.basis)}</p><div class="note"><b>关键假设：</b>${(f.assumptions||[]).map(md).join('；')}。研究性判断，不构成投资建议。</div>`;
+  }
+
+  function historyTable(m) {
+    const rows=m.history||[];
+    return `<div class="table-wrap"><table class="hist-table"><thead><tr><th>期间</th><th>精矿产量</th><th>销量</th><th>均价</th><th>成本</th><th>性质 / 依据</th></tr></thead><tbody>${rows.map(r=>`<tr><td class="line">${esc(r.period)}</td><td class="num ${r.est?'est':r.production==null?'nd':''}">${r.production==null?'N.D.':num(r.production)+(r.est?'E':'')}</td><td class="num ${r.sales==null?'nd':''}">${r.sales==null?'N.D.':num(r.sales)}</td><td class="num ${r.price==null?'nd':''}">${r.price==null?'N.D.':num(r.price)}</td><td class="num ${r.cost==null?'nd':''}">${r.cost==null?'N.D.':num(r.cost)}</td><td>${md(r.basis)}</td></tr>`).join('')}</tbody></table></div>`;
+  }
+
+  function timeline(items) {
+    return `<div class="timeline">${(items||[]).map(x=>`<div class="tl"><div class="date">${esc(x.date)}</div><div class="text">${md(x.text)}</div></div>`).join('')}</div>`;
+  }
+
+  function smelting(cards) {
+    return (cards||[]).map(s => `<div class="smelt-card"><h4>${esc(s.name)} ${status(s.status,s.statusClass)}</h4><div class="smelt-meta"><span class="tag">产能：${esc(s.capacity==='N.D.'?'未披露':s.capacity)}</span><span class="tag">产品：${esc(s.product==='N.D.'?'尚未确定':s.product)}</span><span class="tag">时间：${esc(s.timing==='N.D.'?'未披露':s.timing)}</span><span class="tag">投资：${esc(s.capex==='N.D.'?'未披露':s.capex)}</span></div><div class="overview-grid smelt-track"><div class="kv"><div class="k">FID / 决策状态</div><div class="v">${esc(s.fid||'未披露')}</div></div><div class="kv"><div class="k">是否计入供应</div><div class="v">${esc(s.include||'不计入')}</div></div><div class="kv"><div class="k">最近核验</div><div class="v">${esc(s.asOf||'2026-09')}</div></div></div><p class="desc"><b>最新进展：</b>${md(s.progress)}</p><p class="desc"><b>研究判断 / 风险：</b>${md(s.risk)}</p><p class="desc"><b>下一观察点：</b>${md(s.next||'等待项目公司进一步披露')}</p><div class="note"><b>跟踪来源：</b>${(s.sources||[]).map(md).join('；')}。可点击来源见页末 Sources。</div></div>`).join('');
+  }
+
+  function navHtml(all,key){ return all.map(x=>`<a class="${x.key===key?'active':''}" href="${esc(x.file)}">${esc(x.label)}</a>`).join(''); }
+
+  function render(m, all) {
+    document.title=`${m.name} ｜ 全球非澳洲锂矿供应梳理`;
+    document.getElementById('app').innerHTML=`
+      <header class="hero">
+        <h1>${esc(m.name)}</h1>
+        <div class="sub"><a href="overview.html">← 返回非洲锂矿总览</a> ｜ ${esc(m.company)} ｜ 最新披露：${esc(m.report)}</div>
+        <div class="tags"><span class="tag hl">${esc(m.status)}</span><span class="tag">${esc(m.country)}</span><span class="tag">${esc(m.grade)}</span><span class="tag">${esc(m.product)}</span></div>
+        <div class="nav">${navHtml(all,m.key)}</div>
+      </header>
+
+      <section class="mine-block"><div class="mine-head"><h2>项目概览</h2><span class="src">100% 资产口径优先；权益另列</span></div><div class="cat"><div class="overview-grid">
+        <div class="kv"><div class="k">公司 / 权益</div><div class="v">${esc(m.equity)}</div></div>
+        <div class="kv"><div class="k">资源 / 品位</div><div class="v">${esc(m.resource)}</div></div>
+        <div class="kv"><div class="k">采选产能</div><div class="v">${esc(m.capacity)}</div></div>
+        <div class="kv"><div class="k">产品</div><div class="v">${esc(m.product)}</div></div>
+        <div class="kv"><div class="k">位置</div><div class="v">${esc(m.location)}</div></div>
+        <div class="kv"><div class="k">当前状态</div><div class="v">${status(m.status,m.statusClass)}</div></div>
+      </div>${timeline(m.timeline)}</div></section>
+
+      <section class="mine-block" id="s1"><div class="mine-head"><h2>① 已有产线运行状况表述</h2><span class="q">${esc(m.latest)} vs ${esc(m.previous)}</span></div><div class="cat"><div class="table-wrap"><table><thead><tr><th>产线 / 项目</th><th>最新披露期（${esc(m.latest)}）</th><th>上一可比期（${esc(m.previous)}）</th><th>对比 · 超预期</th></tr></thead><tbody>${tableRows(m.existing)}</tbody></table></div></div></section>
+
+      <section class="mine-block" id="s2"><div class="mine-head"><h2>② 在建 / 规划中产线运行状况表述</h2><span class="q">严格区分可研 / FID / 开工 / 投产</span></div><div class="cat"><div class="table-wrap"><table><thead><tr><th>项目</th><th>最新披露期</th><th>上一可比期</th><th>进度判断 · 超预期</th></tr></thead><tbody>${tableRows(m.planned)}</tbody></table></div>${timeline(m.timeline)}</div></section>
+
+      <section class="mine-block" id="s3"><div class="mine-head"><h2>③ 整体运行状况表述</h2><span class="q">${esc(m.latest)} vs ${esc(m.previous)}</span></div><div class="cat"><div class="cmp-grid"><p class="desc"><b>最新披露期：</b>${md(m.overall.current)}</p><p class="desc"><b>上一可比期：</b>${md(m.overall.previous)}</p></div><p class="desc"><b>未来产量预期：</b>${md(m.overall.future)}</p><div class="hl-box"><h4>⚡ 超预期 / 意外要点</h4><ul>${(m.overall.highlights||[]).map(x=>`<li>${md(x)}</li>`).join('')}</ul></div></div></section>
+
+      <section class="mine-block" id="s4"><div class="mine-head"><h2>④ 历史数据情况</h2><span class="q">按真实披露频率；不制造季度数据</span></div><div class="cat"><div class="note" style="margin-bottom:10px">产量单位：${esc(m.historyUnit)}。带 E 后缀及描边柱为估算或公司目标；N.D. = 官方未披露。均价/成本仅在项目公司披露时填列。</div><div class="hist-grid"><div class="panel"><h4>精矿产量历史</h4><div class="chart" id="hist_chart"></div></div><div class="panel"><h4>披露完整性</h4><div class="overview-grid"><div class="kv"><div class="k">披露期数</div><div class="v">${(m.history||[]).length}</div></div><div class="kv"><div class="k">有实际/明确值</div><div class="v">${(m.history||[]).filter(r=>r.production!=null&&!r.est).length}</div></div><div class="kv"><div class="k">估算 / 目标</div><div class="v">${(m.history||[]).filter(r=>r.est).length}</div></div></div><div class="desc" style="margin-top:10px">非洲项目多按年度/半年度披露。本页保留原始周期，不将年度值均分到季度。</div><div class="desc"><b>产品口径：</b>${esc(m.product)}</div><div class="desc"><b>数据源：</b>${esc(m.report)}</div></div></div>${historyTable(m)}</div></section>
+
+      <section class="mine-block" id="s5"><div class="mine-head"><h2>⑤ 2027 年产量预测</h2><span class="q">研究性判断 · 日历年度 · 100% 资产口径</span></div><div class="cat">${forecastCards(m.forecast)}</div></section>
+
+      <section class="mine-block" id="s6"><div class="mine-head"><h2>⑥ 选矿产能核实</h2><span class="q">多来源交叉印证 · 设计 ≠ 实际</span></div><div class="cat"><p class="desc"><b>核实方法：</b>优先使用运营商年报、交易所公告、DFS/RNS；媒体约数仅作交叉验证。</p><div class="table-wrap"><table><thead><tr><th>产线 / 项目</th><th>页面采用</th><th>核实结果</th><th>来源 / 证据</th></tr></thead><tbody>${tableRows(m.beneficiation,'verify')}</tbody></table></div></div></section>
+
+      <section class="mine-block" id="s7"><div class="mine-head"><h2>⑦ 原矿产能核实</h2><span class="q">矿坑 / 矿体 / 基础设施</span></div><div class="cat"><p class="desc"><b>核实方法：</b>区分资源量、储量、原矿处理能力和精矿产品能力；不同范围/日期并列呈现。</p><div class="table-wrap"><table><thead><tr><th>矿坑 / 设施</th><th>页面采用</th><th>建成与规划状态</th><th>来源 / 证据</th></tr></thead><tbody>${tableRows(m.mining,'verify')}</tbody></table></div>
+        <h3 style="margin:22px 0 10px">${m.coord.isArea ? '🗺️ 项目群区域范围（非矿址）' : '🛰️ 卫星影像与地图定位'}</h3><div class="coord">${m.coord.isArea ? '📌 区域参考中心（非矿址）' : '📍 矿区坐标'} <b>${Number(m.coord.lat).toFixed(5)}, ${Number(m.coord.lng).toFixed(5)}</b> ｜ ${esc(m.coord.source)}</div><div class="sat-grid"><iframe src="https://www.google.com/maps?q=${m.coord.lat},${m.coord.lng}&z=${m.coord.zoom||14}&output=embed" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="${esc(m.name)} ${m.coord.isArea ? '区域参考图' : '卫星视图'}"></iframe></div><div class="sat-links"><a class="sat-btn" target="_blank" rel="noopener" href="https://yandex.com/maps/?ll=${m.coord.lng},${m.coord.lat}&z=${m.coord.zoom||14}">Yandex ${m.coord.isArea ? '区域图' : '卫星图'}</a><a class="sat-btn" target="_blank" rel="noopener" href="https://www.google.com/maps?q=${m.coord.lat},${m.coord.lng}&z=${m.coord.zoom||14}">Google Maps</a><a class="sat-btn" target="_blank" rel="noopener" href="https://www.openstreetmap.org/?mlat=${m.coord.lat}&mlon=${m.coord.lng}#map=${m.coord.zoom||14}/${m.coord.lat}/${m.coord.lng}">OpenStreetMap</a></div><div class="note">${m.coord.isArea ? '本页为多州项目群，未披露的单项目矿址不得由此中心点替代；许可证编号也不等同于空间边界。' : '底图为公开卫星/航拍影像；矿区边界以许可证/矿权证为准。'}</div>
+      </div></section>
+
+      <section class="mine-block" id="s8"><div class="mine-head"><h2>⑧ 配套冶炼 / 转化项目解析与跟踪</h2><span class="q">硫酸锂 / 锂盐 · 避免与精矿重复计量</span></div><div class="cat">${smelting(m.smelting)}</div></section>
+
+      <section class="mine-block"><div class="mine-head"><h2>来源（Sources）</h2><span class="src">旧页证据链完整保留</span></div><div class="cat"><ol class="sources">${(m.sources||[]).map(s=>`<li>${s.url?`<a target="_blank" rel="noopener" href="${esc(s.url)}">${esc(s.text)}</a>`:esc(s.text)}</li>`).join('')}</ol></div></section>
+      <section class="mine-block"><div class="mine-head"><h2>口径与说明</h2></div><div class="cat"><div class="note">· 历史数据按公司真实披露频率展示；没有季度数据时不进行年度均分。<br>· 产量、销量、品位、价格和成本口径不统一，跨矿比较须回到本页行标签。<br>· 设计产能、目标、试产、首发运和商业达产严格区分。<br>· 冶炼/转化项目单独跟踪，精矿与转化产品不可重复计入供应。<br>· 数据整理至 2026-09，仅供研究参考，不构成投资建议。</div></div></section>
+      <div class="footer">全球非澳洲锂矿供应梳理 · ${esc(m.name)}</div>`;
+    renderChart(m);
+    if (location.hash) {
+      setTimeout(() => document.querySelector(location.hash)?.scrollIntoView({block:'start'}), 80);
+    }
+  }
+
+  function renderChart(m){
+    const el=document.getElementById('hist_chart');
+    if(!el||typeof echarts==='undefined') return;
+    const rows=m.history||[];
+    const chart=echarts.init(el,null,{renderer:'canvas'});
+    const data=rows.map(r=>r.production==null?null:(r.est?{value:r.production,itemStyle:{color:'rgba(77,163,255,.32)',borderColor:'#4da3ff',borderWidth:1.5}}:r.production));
+    chart.setOption({backgroundColor:'transparent',tooltip:{trigger:'axis'},grid:{left:48,right:12,top:28,bottom:45},xAxis:{type:'category',data:rows.map(r=>r.period),axisLabel:{color:'#a9b6cf',fontSize:11,rotate:0},axisLine:{lineStyle:{color:'#2a3550'}}},yAxis:{type:'value',name:m.historyUnit,axisLabel:{color:'#a9b6cf',fontSize:11},nameTextStyle:{color:'#a9b6cf'},splitLine:{lineStyle:{color:'#232f49'}}},series:[{name:'精矿产量',type:'bar',data,itemStyle:{color:'#4da3ff'},label:{show:true,position:'top',color:'#dbe4f3',fontSize:10,formatter:p=>p.value==null?'':p.value+(rows[p.dataIndex]?.est?'E':'')}}]});
+    addEventListener('resize',()=>chart.resize());
+  }
+
+  fetch('data/mines_v2.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(`data HTTP ${r.status}`);return r.json();}).then(d=>{
+    const m=d.mines[KEY]; if(!m) throw new Error(`unknown mine key: ${KEY}`); render(m,d.nav);
+  }).catch(err=>{document.getElementById('app').innerHTML=`<div class="mine-block"><div class="cat"><h2>页面数据加载失败</h2><p class="note">${esc(err.message)}。请通过 HTTP 服务访问，不要用 file:// 双击。</p></div></div>`;console.error(err);});
+})();

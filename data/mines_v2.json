@@ -870,7 +870,8 @@
               "date": "2026-08-24",
               "event": "盛新锂能第九届董事会第三次会议通过《关于在津巴布韦投资建设硫酸锂项目的议案》，2026-08-25 公告：7.5 万吨/年、2.4353 亿美元、19 个月",
               "src": "盛新锂能公告 2026-08-25",
-              "url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=002240&id=12525435"
+              "url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=002240&id=12525435",
+              "key": true
             },
             {
               "date": "2026-09-11",
@@ -938,7 +939,20 @@
               "date": "2025-09",
               "note": "社区农业帮扶口径"
             }
-          ]
+          ],
+          "plantLocation": {
+            "site": "**Sabi Star 锂钽矿区内**（Max Mind Investments 矿权范围内，尚未开工）",
+            "region": "Manicaland Province，Buhera District",
+            "address": "Max Mind Investments (Zimbabwe) (Private) Limited，Buhera, Manicaland, Zimbabwe",
+            "lat": -19.19828,
+            "lng": 31.96575,
+            "zoom": 12,
+            "coordNote": "上述坐标为 Sabi Star **矿区**点位（OSM「Sabi Star Mine」）；项目尚未开工，无独立厂区坐标。",
+            "distance": "矿区持 **40 个矿权、合计约 2,637 公顷**；至莫桑比克**贝拉港约 360 km** 公路",
+            "processes": "公司公告仅披露建设地点为「**马尼卡兰省布赫拉区**」与年产 7.5 万吨硫酸锂，**未披露工艺路线**；不得套用一般锂辉石硫酸法或 Arcadia 流程",
+            "utilities": "矿区已建成 **15 MW 燃煤自备电厂**（中铁十局承建，2025-09 投运，约 2,500 万美元），官方表述服务「矿选设备供电及周边生活用电」，**无证据表明可供应新建硫酸锂厂**",
+            "source": "盛新锂能公告 2026-08-25（建设地点）；中铁十局官网 2025-09（电厂）；Zimbabwe Situation 2026-05（五家企业联合材料）"
+          }
         }
       ],
       "coord": {
@@ -1202,7 +1216,8 @@
               "date": "2026-02-26",
               "event": "雅化在深交所平台宣布硫酸锂厂开工建设，为津巴布韦第三个硫酸锂项目",
               "src": "Business Insider Africa / Bloomberg 2026-02-27",
-              "url": "https://africa.businessinsider.com/local/markets/zimbabwes-processing-for-white-gold-deepens-with-another-sulphate-plant/rhczhhc"
+              "url": "https://africa.businessinsider.com/local/markets/zimbabwes-processing-for-white-gold-deepens-with-another-sulphate-plant/rhczhhc",
+              "key": true
             },
             {
               "date": "2026-06-30",
@@ -1275,7 +1290,20 @@
               "date": "2026",
               "note": "7.5 万吨/年、2027-07 投产、处理 35 万吨精矿"
             }
-          ]
+          ],
+          "plantLocation": {
+            "site": "**Kamativi 矿区原地建设**（原 Kamativi 锡矿，Kamativi Tin Mining Lease No. 12），含冶炼厂与硫酸厂",
+            "region": "Matabeleland North Province，Hwange District",
+            "address": "Kamativi Mining Company (Private) Limited，Kamativi, Binga Road, Hwange, Matabeleland North, Zimbabwe（公司官网公布矿部地址）",
+            "lat": -18.31563,
+            "lng": 27.05729,
+            "zoom": 13,
+            "coordNote": "坐标为 Kamativi 矿点位（China Africa Presence / latlong 均为 -18.3156, 27.0573，Wikipedia 记 -18.3281, 27.0667，相差约 1.5 km）；官方未单独公布硫酸锂厂与硫酸厂坐标。",
+            "distance": "距 Bulawayo–Victoria Falls 公路（A8）约 **28–29 km**，沿 Binga Road 北行到达；或自 Hwange 沿 A8 东南行约 84 km，于 A8–Dete–Kamativi 路口转东北约 30 km",
+            "processes": "官方表述为「**冶炼厂 + 硫酸厂**」（smelter + sulphuric acid plant），设计年处理锂精矿能力 **35 万吨**，年产硫酸锂 **7.5 万吨**；同步建设锡-铌-钽分离系统",
+            "utilities": "一期选厂初期由 **Hwange 33 kV** 线路供电，远期规划 **88 kV**；公司自建水坝保障供水",
+            "source": "KMC 官网矿部地址；China Africa Presence 项目页；NI 43-101 Technical Report（2018-11）交通与租约；energyandpowerinsider 2026-06-30"
+          }
         }
       ],
       "coord": {
@@ -1555,7 +1583,20 @@
               "date": "2026-02-18",
               "note": "资金用途明确不含冶炼"
             }
-          ]
+          ],
+          "plantLocation": {
+            "site": "Zulu 矿（Fort Rixon，**无冶炼配套**）",
+            "region": "Matabeleland South Province，Fort Rixon 一带",
+            "address": "Premier African Minerals — Zulu Lithium Project，Fort Rixon, Matabeleland South, Zimbabwe",
+            "lat": -20.04238,
+            "lng": 29.39167,
+            "zoom": 12,
+            "coordNote": "坐标为 Zulu 矿点位（OSM「Zulu Mine」），仅作矿场锚点，不代表矿权边界；本项目无冶炼装置。",
+            "distance": "Fort Rixon 附近 14 个矿权，合计约 3.5 km²；精矿经公路运至贝拉港出口",
+            "processes": "**无任何已披露的本地硫酸锂/锂盐转化项目**；现场仅有浮选厂（Xinhai 设计，120 tph）",
+            "utilities": "N.D.",
+            "source": "Premier African Minerals RNS / 公司公告；Canmax 包销协议披露；本页第⑧节负面证据链"
+          }
         }
       ],
       "coord": {
@@ -1897,13 +1938,15 @@
               "date": "2026-07-12（开工仪式）",
               "event": "浮选厂预先抛废技改项目开工（津巴布韦马斯温戈省 Bikita 矿区）。配合现有 **200 万吨/年**锂辉石浮选系统，采用「**重介质分选 + XRT 智能分选**」联合工艺，在矿石进入磨浮系统前分离废石：预计提前抛出产率约 **60%** 的贫矿与夹石，入选 Li₂O 品位由平均 **1.07% 富集至 2.0% 以上**，**年处理能力提升至 330 万吨**",
               "src": "中矿资源官网 2026-07-15",
-              "url": "https://www.sinomine.cn/xwdti/408.html"
+              "url": "https://www.sinomine.cn/xwdti/408.html",
+              "key": true
             },
             {
               "date": "2026-08-12",
               "event": "取得 EMA 签发的 EIA 证书，由前期准备**全面转入工程建设**；土建中铁九局、安装山东大地进场",
               "src": "中矿资源公告 / SMM 2026-08-12",
-              "url": "https://news.metal.com/newscontent/104056332-zimbabwe-project-of-cmoc-to-produce-100000-tons-of-lithium-sulfate-per-year-fully-launches-construction"
+              "url": "https://news.metal.com/newscontent/104056332-zimbabwe-project-of-cmoc-to-produce-100000-tons-of-lithium-sulfate-per-year-fully-launches-construction",
+              "key": true
             },
             {
               "date": "2026-08-25",
@@ -1975,7 +2018,20 @@
               "date": "2026",
               "note": "BILD 就泥浆坝项目请愿 EMA"
             }
-          ]
+          ],
+          "plantLocation": {
+            "site": "**Bikita 矿区内采选冶一体化**（公司法定口径；2024 年「Masvingo City、邻近 Lake Mutirikwi」为早期选址沟通，已被取代）",
+            "region": "Masvingo Province，Bikita District",
+            "address": "Bikita Minerals (Private) Limited，Bikita, Masvingo Province, Zimbabwe",
+            "lat": -19.96387,
+            "lng": 31.42703,
+            "zoom": 12,
+            "coordNote": "坐标为 Bikita 矿区点位（OSM「Bikita Minerals Mine」）；硫酸锂装置位于同一矿区内，官方未单独公布装置坐标。",
+            "distance": "位于哈拉雷**东南约 325 km**、Masvingo 镇**东北约 80 km**；矿区采矿租约 **1,528 公顷（15.3 km²）**，处 Masvingo 绿岩带",
+            "processes": "官方仅披露「硫酸锂生产装置及配套辅助设施」，**未公开流程包**（焙烧炉型、酸耗、水合形态、回收率均 N.D.）；厂址与现有 400 万吨/年选厂、中资承包商营地相邻",
+            "utilities": "现场已有 **132 kV Tokwe–Bikita 输电线**及配套供电设施；承包商营地已建成（土建中铁九局、安装山东大地）",
+            "source": "中矿资源官网 Bikita 项目页；Sinomine 英文站项目页（采矿租约 1,528 公顷）；financialafrik 2026-07-11（132 kV Tokwe–Bikita 输电线）；中矿资源定增预案"
+          }
         }
       ],
       "coord": {
@@ -2276,7 +2332,8 @@
               "date": "2025-10-01",
               "event": "火法产线转型窑烘炉顺利点火，由工程建设转入**局部调试**（浸出、浓缩系统仍在推进）",
               "src": "华友钴业官网 2025-10-01",
-              "url": "https://www.huayou.com/news/corporate-news/553"
+              "url": "https://www.huayou.com/news/corporate-news/553",
+              "key": true
             },
             {
               "date": "2025-12（设备调试）",
@@ -2294,7 +2351,8 @@
               "date": "2026-04-25",
               "event": "首批产品发运仪式，由建设调试全面转入稳定生产；首批**吨位未披露**",
               "src": "华友钴业官网 2026-04-26",
-              "url": "https://www.huayou.com/news/corporate-news/702.html"
+              "url": "https://www.huayou.com/news/corporate-news/702.html",
+              "key": true
             },
             {
               "date": "2026-06-30（半年报期末）",
@@ -2312,7 +2370,8 @@
               "date": "2026-07-20",
               "event": "正式宣布工业投产（industrial commissioning）",
               "src": "Capmad 2026-07-21",
-              "url": "https://www.capmad.com/post/arcadia-commissions-zimbabwes-first-lithium-sulphate-plant-in-a-400-million-usd-investment"
+              "url": "https://www.capmad.com/post/arcadia-commissions-zimbabwes-first-lithium-sulphate-plant-in-a-400-million-usd-investment",
+              "key": true
             },
             {
               "date": "2026-08（月内）",
@@ -2440,7 +2499,20 @@
               "date": "2025-10-17",
               "note": "Q1 2026 投产、产能超 5 万吨、或超 6 万吨"
             }
-          ]
+          ],
+          "plantLocation": {
+            "site": "Goromonzi 区，**紧邻 Arcadia 矿、同属一个采选冶基地**（非独立工业园）",
+            "region": "Mashonaland East Province，Goromonzi District",
+            "address": "Arcadia Technology Zimbabwe (ATZ) 厂区，紧邻 Prospect Lithium Zimbabwe (PLZ) Arcadia 锂矿，津巴布韦 Mashonaland East 省 Goromonzi 区",
+            "lat": -17.77149,
+            "lng": 31.42434,
+            "zoom": 13,
+            "coordNote": "上述坐标为 Arcadia **矿区**点位（OSM「Arcadia Lithium Mine」）；官方未单独公布硫酸锂厂区坐标，厂区位于同一矿权基地内，故以矿区点位代表。",
+            "distance": "距首都哈拉雷约 **50 km 以东**；位于通往莫桑比克的 **A2 公路**旁，出口物流可经贝拉港",
+            "processes": "厂内分两段：**Pyrometallurgy Section（火法）**——α→β 锂辉石转型焙烧；**Hydrometallurgy Section（湿法）**——浸出、CCD、过滤、蒸发浓缩，得固态硫酸锂",
+            "utilities": "三条产线，政府口径**每条设计进料 50 万吨/年精矿**；公司另称已投入约 3 亿美元建选厂、4 亿美元建硫酸锂厂，并出资修建周边道路",
+            "source": "津巴布韦信息部与地方政府视察报道（2026-02 起）；Business Daily 2026「Zimbabwe enters global battery chemicals market」；capmad 2026-07-20；GBG 2026-02-03"
+          }
         }
       ],
       "coord": {
@@ -3193,7 +3265,8 @@
               "date": "2026-02-18",
               "event": "Mutapa Energy Minerals 宣布最迟 2026 年 6 月开工 US$2.7 亿选矿厂，年处理原矿 60 万吨，BOT 模式与华友钴业、青山控股合作；CEO 称硫酸锂还需时间",
               "src": "EnviroPress Zim 2026-02-18",
-              "url": "http://enviropresszim.com/mutapa-to-build-us270m-lithium-concentrate-plant-at-sandawana"
+              "url": "http://enviropresszim.com/mutapa-to-build-us270m-lithium-concentrate-plant-at-sandawana",
+              "key": true
             },
             {
               "date": "2026-09（月内）",
@@ -3250,7 +3323,20 @@
               "date": "2026",
               "note": "国有平台融资进展"
             }
-          ]
+          ],
+          "plantLocation": {
+            "site": "**Sandawana 矿区内**（一期为选矿厂；硫酸锂/锂化工项目尚未立项）",
+            "region": "Midlands Province，Mberengwa District",
+            "address": "Sandawana Mine，Mberengwa, Midlands Province, Zimbabwe（Mutapa Investment Fund 旗下 Kuvimba Mining House）",
+            "lat": -20.92997,
+            "lng": 29.90906,
+            "zoom": 12,
+            "coordNote": "坐标为 Sandawana 矿区点位（OSM「Sandawana Mine」）；甲方仅披露选矿厂方案，未披露化工装置选址。",
+            "distance": "位于 Midlands 省 Mberengwa 一带；官方未公布至港口距离",
+            "processes": "一期为**选矿厂（BOT 模式，中国伙伴建设运营 ≥5 年）**；硫酸锂/锂化工产能与工艺公司明确表示「**还需要一些时间**」，未立项",
+            "utilities": "N.D.（官方未披露选厂与远期化工的供电供水方案）",
+            "source": "Herald 2026-09（穆塔帕能源资源部，选厂 2027-11 投运）；enviropresszim 2026-02-18（US$270M/60 万吨口径与「硫酸锂仍需时间」表态）"
+          }
         }
       ],
       "coord": {

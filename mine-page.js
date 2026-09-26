@@ -78,11 +78,14 @@
   }
 
   const UBOX_CFG = {
-    forecast: { title:'我的统计 / 测算（2027 年产量预测）', cols:[['item','指标','例：我的平衡表假设 / 机构一致预期 / 可售天数'],['value','数值',''],['unit','单位','万吨 / 美元/吨 / %'],['basis','口径 / 来源','我的模型 / 公司公告'],['date','日期','2026-09-25']] },
-    smelting: { title:'我的统计 / 测算（配套冶炼 / 转化项目）', cols:[['item','指标','例：设计产能 / 投产时点 / 爬坡率'],['value','数值',''],['unit','单位','万吨 / 亿美元'],['basis','口径 / 来源',''],['date','日期','']] },
-    survey:   { title:'我的调研纪要', cols:[['date','日期','2026-09-25'],['title','标题 / 对象','例：与 XX 的电话会'],['source','来源 / 链接',''],['points','要点','']] }
+    forecast: { title:'我的统计 / 测算（2027 年产量预测）', hint:'记录你自己的口径与判断，逐条按日期留痕。' },
+    smelting: { title:'我的统计 / 测算（配套冶炼 / 转化项目）', hint:'记录产能、投产时点、爬坡等自填口径。' },
+    survey:   { title:'我的调研纪要', hint:'记录调研、访谈、电话会要点。' }
   };
-  const UBOX_LS='africaLithium.ubox.v1.';
+  const UBOX_LS='africaLithium.ubox.v2.';
+  const UBOX_PUB='data/user_notes.json';
+  const UBOX_SLOTS=['forecast','smelting','survey'];
+  let PUB={mines:{},loaded:false};
   function uLoad(slot,key){
     try{ const raw=localStorage.getItem(UBOX_LS+slot+'.'+key); if(!raw) return {rows:[],note:'',updated:''};
       const o=JSON.parse(raw); return {rows:Array.isArray(o.rows)?o.rows:[],note:String(o.note==null?'':o.note),updated:String(o.updated==null?'':o.updated)};
@@ -90,29 +93,47 @@
   }
   function uSave(slot,key,st){ st.updated=new Date().toLocaleString('zh-CN',{hour12:false}); try{ localStorage.setItem(UBOX_LS+slot+'.'+key,JSON.stringify(st)); }catch(e){} }
   function uDl(name,text,type){ const b=new Blob([text],{type:type||'text/plain;charset=utf-8'}); const a=document.createElement('a'); a.href=URL.createObjectURL(b); a.download=name; document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},600); }
+  function uRows(rows,edit){
+    if(!rows.length) return edit?'':'<tr><td colspan="3" class="ubox-empty-row">（暂无）</td></tr>';
+    return rows.map((r,i)=>`<tr><td class="line">${edit?`<input data-ubrow="${i}" data-ubcol="date" value="${esc(r.date==null?'':r.date)}" placeholder="2026-09-25">`:esc(r.date==null?'':r.date)}</td><td>${edit?`<input data-ubrow="${i}" data-ubcol="note" value="${esc(r.note==null?'':r.note)}" placeholder="备注 / 要点">`:md(r.note==null?'':r.note)}</td>${edit?`<td class="ubox-del"><button data-ub="del" data-ubidx="${i}" type="button" title="删除此行">✕</button></td>`:''}</tr>`).join('');
+  }
   function uboxHTML(slot,key){
     const cfg=UBOX_CFG[slot], st=uLoad(slot,key);
-    const rows=st.rows.map((r,i)=>`<tr>${cfg.cols.map(c=>`<td><input data-ubrow="${i}" data-ubcol="${esc(c[0])}" value="${esc(r[c[0]]==null?'':r[c[0]])}" placeholder="${esc(c[2]||'')}"></td>`).join('')}<td class="ubox-del"><button data-ub="del" data-ubidx="${i}" type="button" title="删除此行">✕</button></td></tr>`).join('');
-    return `<div class="ubox-head"><h5>${esc(cfg.title)}</h5><div class="ubox-tools"><button data-ub="add" type="button">＋ 添加一行</button><button data-ub="mj" type="button">导出 Markdown</button><button data-ub="js" type="button">导出 JSON</button><label class="ubox-file">导入 JSON<input type="file" accept="application/json,.json" data-ub="imp"></label><button data-ub="clr" type="button">清空</button></div></div>
-      <div class="ubox-badge">🔒 此框由我自己填写 · 仅存本机浏览器（localStorage）· <b>不属于公开来源数据，不进入本研究口径与合计</b></div>
-      <div class="ubox-tip">点“＋ 添加一行”后直接输入，内容自动保存。换设备或清理浏览器数据前，请先用“导出 JSON”备份。</div>
-      <div class="table-wrap"><table class="ubox-table"><thead><tr>${cfg.cols.map(c=>`<th>${esc(c[1])}</th>`).join('')}<th></th></tr></thead><tbody>${rows}</tbody></table></div>
-      ${st.rows.length?'':'<div class="ubox-empty">还没有内容，点“＋ 添加一行”开始。</div>'}
-      <label class="ubox-notelab">备注（自由文本）</label><textarea class="ubox-note" data-ubnote rows="3" placeholder="补充假设、数据来源链接、待核实点…">${esc(st.note)}</textarea>
-      <div class="ubox-meta">最后保存：<span data-ubmeta>${esc(st.updated||'—')}</span></div>`;
+    return `<div class="ubox-bar"><h5>${esc(cfg.title)}</h5><span class="ubox-draft">✎ 本机草稿</span></div>
+      <div class="ubox-tools"><button data-ub="add" type="button">＋ 添加一行</button><button data-ub="pub" type="button" class="ubox-pub-btn">🌐 发布到站点</button><button data-ub="mj" type="button">导出 Markdown</button><button data-ub="js" type="button">导出 JSON</button><label class="ubox-file">导入 JSON<input type="file" accept="application/json,.json" data-ub="imp"></label><button data-ub="clr" type="button">清空</button></div>
+      <div class="ubox-tip">${esc(cfg.hint)} 点「＋ 添加一行」后直接输入，内容自动存到本机浏览器（localStorage）；换设备或清缓存前请先导出 JSON 备份。<b>「发布到站点」会把本机内容合并进公开文件 data/user_notes.json，提交推送后所有人可见。</b></div>
+      <div class="table-wrap"><table class="ubox-table"><thead><tr><th>日期</th><th>备注</th><th></th></tr></thead><tbody>${uRows(st.rows,true)}</tbody></table></div>
+      <label class="ubox-notelab">补充说明（可选，整段自由文本）</label><textarea class="ubox-note" data-ubnote rows="3" placeholder="补充假设、来源链接、待核实点…">${esc(st.note)}</textarea>
+      <div class="ubox-meta">本机草稿最后保存：<span data-ubmeta>${esc(st.updated||'—')}</span></div>`;
   }
-  function uPaint(host,slot,key){ host.innerHTML=uboxHTML(slot,key); }
+  function uPaint(host,slot,key){ host.innerHTML=`<div class="ubox">${uboxHTML(slot,key)}</div><div class="pub-wrap" data-pub="${esc(slot)}"></div>`; uPaintPub(host,slot,key); }
+  function uPaintPub(host,slot,key){
+    const box=host.querySelector('[data-pub="'+slot+'"]'); if(!box) return;
+    const p=(PUB.mines&&PUB.mines[key]&&PUB.mines[key][slot])||null;
+    const rows=(p&&Array.isArray(p.rows))?p.rows:[];
+    const note=(p&&p.note)?p.note:'';
+    if(!PUB.loaded){ box.innerHTML=''; return; }
+    if(!rows.length && !note){ box.innerHTML='<div class="pub-empty">🌐 已发布内容：暂无（点上方「发布到站点」生成公开文件）</div>'; return; }
+    box.innerHTML=`<div class="pub-block"><div class="pub-head"><span>🌐 已发布到站点 · 公开可见</span><span class="pub-time">${esc(p.updated||'')}</span></div>
+      <div class="table-wrap"><table class="ubox-table pub-table"><thead><tr><th>日期</th><th>备注</th></tr></thead><tbody>${uRows(rows,false)}</tbody></table></div>
+      ${note?`<div class="pub-note">${md(note)}</div>`:''}</div>`;
+  }
   function uBoxMd(slot,key,mname){
     const cfg=UBOX_CFG[slot], st=uLoad(slot,key);
-    if(!st.rows.length && !st.note) return '# '+mname+' · '+cfg.title+'\n\n（暂无自填内容）\n';
     let out='# '+mname+' · '+cfg.title+'\n\n> 自填内容（非公开来源数据，不进入本研究口径）· 导出时间 '+new Date().toLocaleString('zh-CN',{hour12:false})+'\n\n';
-    out+='| '+cfg.cols.map(c=>c[1]).join(' | ')+' |\n|'+cfg.cols.map(()=>'---').join('|')+'|\n';
-    st.rows.forEach(r=>{ out+='| '+cfg.cols.map(c=>String(r[c[0]]==null?'':r[c[0]]).replace(/\|/g,'\\|').replace(/\n/g,' ')).join(' | ')+' |\n'; });
-    if(st.note) out+='\n## 备注\n\n'+st.note+'\n';
+    out+=(st.rows.length?'| 日期 | 备注 |\n|---|---|\n'+st.rows.map(r=>'| '+String(r.date==null?'':r.date).replace(/\|/g,'\\|')+' | '+String(r.note==null?'':r.note).replace(/\|/g,'\\|').replace(/\n/g,' ')+' |').join('\n')+'\n':'（暂无表格行）\n');
+    if(st.note) out+='\n## 补充说明\n\n'+st.note+'\n';
     return out;
   }
-  function mountUboxes(key,mname){
-    ['forecast','smelting','survey'].forEach(slot=>{
+  function uBuildPublish(key,slot){
+    const out={version:1, updated:new Date().toISOString(), mines:JSON.parse(JSON.stringify(PUB.mines||{}))};
+    out.mines[key]=out.mines[key]||{};
+    const st=uLoad(slot,key);
+    out.mines[key][slot]={rows:st.rows.map(r=>({date:r.date||'',note:r.note||''})), note:st.note||'', updated:new Date().toLocaleString('zh-CN',{hour12:false})};
+    return out;
+  }
+  function mountUboxes(key){
+    UBOX_SLOTS.forEach(slot=>{
       const host=document.getElementById('ubox-'+slot); if(!host) return;
       if(!host.dataset.bound){
         host.dataset.bound='1';
@@ -123,19 +144,36 @@
         });
         host.addEventListener('click',e=>{
           const b=e.target.closest('[data-ub]'); if(!b) return; const act=b.dataset.ub;
-          if(act==='add'){ const st=uLoad(slot,key); st.rows.push({}); uSave(slot,key,st); uPaint(host,slot,key); }
+          if(act==='add'){ const st=uLoad(slot,key); st.rows.push({date:'',note:''}); uSave(slot,key,st); uPaint(host,slot,key); }
           else if(act==='del'){ const st=uLoad(slot,key); st.rows.splice(+b.dataset.ubidx,1); uSave(slot,key,st); uPaint(host,slot,key); }
-          else if(act==='clr'){ if(confirm('清空这个框里的全部自填内容？（不影响站点公开数据）')){ uSave(slot,key,{rows:[],note:'',updated:''}); uPaint(host,slot,key); } }
+          else if(act==='clr'){ if(confirm('清空这个框的本机草稿？（不影响已发布内容与站点公开数据）')){ uSave(slot,key,{rows:[],note:'',updated:''}); uPaint(host,slot,key); } }
           else if(act==='js'){ const st=uLoad(slot,key); uDl('自填_'+key+'_'+slot+'.json', JSON.stringify({mine:key,slot:slot,exportedAt:new Date().toISOString(),state:st},null,2), 'application/json'); }
-          else if(act==='mj'){ uDl('自填_'+key+'_'+slot+'.md', uBoxMd(slot,key,mname), 'text/markdown;charset=utf-8'); }
+          else if(act==='mj'){ uDl('自填_'+key+'_'+slot+'.md', uBoxMd(slot,key,key), 'text/markdown;charset=utf-8'); }
+          else if(act==='pub'){
+            const payload=uBuildPublish(key,slot);
+            uDl('user_notes.json', JSON.stringify(payload,null,2), 'application/json');
+            const box=host.querySelector('.ubox');
+            const old=box.querySelector('.ubox-pubmsg'); if(old) old.remove();
+            const n=Object.keys(payload.mines).length;
+            const div=document.createElement('div'); div.className='ubox-pubmsg';
+            div.innerHTML='✅ 已生成 <b>user_notes.json</b>（含 '+n+' 个矿山）。两种提交方式：<br>① 把该文件放到站点 <code>data/</code> 目录覆盖同名文件 → <code>git add data/user_notes.json &amp;&amp; git commit -m "更新我的调研与测算" &amp;&amp; git push</code>，推送后公开可见（Pages 约 1 分钟重建）。<br>② 直接把文件发我，我来提交。';
+            box.appendChild(div);
+          }
         });
         host.addEventListener('change',e=>{
           if(!e.target.matches('[data-ub="imp"]')) return;
           const f=e.target.files&&e.target.files[0]; if(!f) return;
           const fr=new FileReader();
-          fr.onload=()=>{ try{ const o=JSON.parse(fr.result); const src=(o&&o.state&&Array.isArray(o.state.rows))?o.state:(o&&Array.isArray(o.rows)?o:null);
-            if(!src){ alert('导入失败：文件里没有 rows 数组'); return; }
-            const st=uLoad(slot,key); st.rows=Array.isArray(src.rows)?src.rows:[]; if(typeof src.note==='string') st.note=src.note; uSave(slot,key,st); uPaint(host,slot,key);
+          fr.onload=()=>{ try{ const o=JSON.parse(fr.result);
+            let src=null;
+            if(o&&o.state&&Array.isArray(o.state.rows)) src=o.state;
+            else if(o&&Array.isArray(o.rows)) src=o;
+            else if(o&&o.mines&&o.mines[key]&&o.mines[key][slot]) src=o.mines[key][slot];
+            if(!src){ alert('导入失败：文件里没有可识别的 rows（支持 自填导出JSON 或 user_notes.json）'); return; }
+            if(o&&o.mines){ PUB.mines=o.mines; PUB.loaded=true; }
+            const st=uLoad(slot,key); st.rows=Array.isArray(src.rows)?src.rows:[]; if(typeof src.note==='string') st.note=src.note; uSave(slot,key,st);
+            uPaint(host,slot,key);
+            if(o&&o.mines){ UBOX_SLOTS.forEach(s2=>{ const h2=document.getElementById('ubox-'+s2); if(h2&&s2!==slot) uPaintPub(h2,s2,key); }); }
           }catch(err){ alert('导入失败：JSON 解析错误'); } };
           fr.readAsText(f);
         });
@@ -143,7 +181,14 @@
       uPaint(host,slot,key);
     });
   }
-
+  function loadPublished(){
+    fetch(UBOX_PUB,{cache:'no-store'}).then(r=>r.ok?r.json():null).then(o=>{
+      PUB.mines=(o&&o.mines)?o.mines:{}; PUB.updated=(o&&o.updated)||''; PUB.loaded=true;
+    }).catch(()=>{ PUB.mines={}; PUB.loaded=true; }).then(()=>{
+      const host=document.querySelector('.ubox-host'); const key=host&&host.dataset.minekey;
+      UBOX_SLOTS.forEach(slot=>{ const h=document.getElementById('ubox-'+slot); if(h) uPaintPub(h,slot,key); });
+    });
+  }
   function zwPanel(m, Z){
     if(!Z || !/津巴布韦/.test(m.country||'')) return '';
     return `<div class="zw-panel"><h4>🇿🇼 津巴布韦硫酸锂产能格局 · 本国横向对照</h4>
@@ -190,7 +235,7 @@
 
       <section class="mine-block" id="s4"><div class="mine-head"><h2>④ 历史数据情况</h2><span class="q">按真实披露频率；不制造季度数据</span></div><div class="cat"><div class="note" style="margin-bottom:10px">产量单位：${esc(m.historyUnit)}。带 E 后缀及描边柱为估算或公司目标；N.D. = 官方未披露。均价/成本仅在项目公司披露时填列。</div><div class="hist-grid"><div class="panel"><h4>精矿产量历史</h4><div class="chart" id="hist_chart"></div></div><div class="panel"><h4>披露完整性</h4><div class="overview-grid"><div class="kv"><div class="k">披露期数</div><div class="v">${(m.history||[]).length}</div></div><div class="kv"><div class="k">有实际/明确值</div><div class="v">${(m.history||[]).filter(r=>r.production!=null&&!r.est).length}</div></div><div class="kv"><div class="k">估算 / 目标</div><div class="v">${(m.history||[]).filter(r=>r.est).length}</div></div></div><div class="desc" style="margin-top:10px">非洲项目多按年度/半年度披露。本页保留原始周期，不将年度值均分到季度。</div><div class="desc"><b>产品口径：</b>${esc(m.product)}</div><div class="desc"><b>数据源：</b>${esc(m.report)}</div></div></div>${historyTable(m)}</div></section>
 
-      <section class="mine-block" id="s5"><div class="mine-head"><h2>⑤ 2027 年产量预测</h2><span class="q">研究性判断 · 日历年度 · 100% 资产口径</span></div><div class="cat">${forecastCards(m.forecast)}<div id="ubox-forecast" class="ubox"></div></div></section>
+      <section class="mine-block" id="s5"><div class="mine-head"><h2>⑤ 2027 年产量预测</h2><span class="q">研究性判断 · 日历年度 · 100% 资产口径</span></div><div class="cat">${forecastCards(m.forecast)}<div id="ubox-forecast" class="ubox-host" data-minekey="${esc(m.key)}"></div></div></section>
 
       <section class="mine-block" id="s6"><div class="mine-head"><h2>⑥ 选矿产能核实</h2><span class="q">多来源交叉印证 · 设计 ≠ 实际</span></div><div class="cat"><p class="desc"><b>核实方法：</b>优先使用运营商年报、交易所公告、DFS/RNS；媒体约数仅作交叉验证。</p><div class="table-wrap"><table><thead><tr><th>产线 / 项目</th><th>页面采用</th><th>核实结果</th><th>来源 / 证据</th></tr></thead><tbody>${tableRows(m.beneficiation,'verify')}</tbody></table></div></div></section>
 
@@ -198,15 +243,16 @@
         <h3 style="margin:22px 0 10px">${m.coord.isArea ? '🗺️ 项目群区域范围（非矿址）' : '🛰️ 卫星影像与地图定位'}</h3><div class="coord">${m.coord.isArea ? '📌 区域参考中心（非矿址）' : '📍 矿区坐标'} <b>${Number(m.coord.lat).toFixed(5)}, ${Number(m.coord.lng).toFixed(5)}</b> ｜ ${esc(m.coord.source)}</div><div class="sat-grid"><iframe src="https://www.google.com/maps?q=${m.coord.lat},${m.coord.lng}&z=${m.coord.zoom||14}&output=embed" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="${esc(m.name)} ${m.coord.isArea ? '区域参考图' : '卫星视图'}"></iframe></div><div class="sat-links"><a class="sat-btn" target="_blank" rel="noopener" href="https://yandex.com/maps/?ll=${m.coord.lng},${m.coord.lat}&z=${m.coord.zoom||14}">Yandex ${m.coord.isArea ? '区域图' : '卫星图'}</a><a class="sat-btn" target="_blank" rel="noopener" href="https://www.google.com/maps?q=${m.coord.lat},${m.coord.lng}&z=${m.coord.zoom||14}">Google Maps</a><a class="sat-btn" target="_blank" rel="noopener" href="https://www.openstreetmap.org/?mlat=${m.coord.lat}&mlon=${m.coord.lng}#map=${m.coord.zoom||14}/${m.coord.lat}/${m.coord.lng}">OpenStreetMap</a></div><div class="note">${m.coord.isArea ? '本页为多州项目群，未披露的单项目矿址不得由此中心点替代；许可证编号也不等同于空间边界。' : '底图为公开卫星/航拍影像；矿区边界以许可证/矿权证为准。'}</div>
       </div></section>
 
-      <section class="mine-block" id="s8"><div class="mine-head"><h2>⑧ 配套冶炼 / 转化项目解析与跟踪</h2><span class="q">硫酸锂 / 锂盐 · 避免与精矿重复计量</span></div><div class="cat">${zwPanel(m,D.zimbabweSulphate)}${smelting(m.smelting)}<div id="ubox-smelting" class="ubox"></div></div></section>
+      <section class="mine-block" id="s8"><div class="mine-head"><h2>⑧ 配套冶炼 / 转化项目解析与跟踪</h2><span class="q">硫酸锂 / 锂盐 · 避免与精矿重复计量</span></div><div class="cat">${zwPanel(m,D.zimbabweSulphate)}${smelting(m.smelting)}<div id="ubox-smelting" class="ubox-host" data-minekey="${esc(m.key)}"></div></div></section>
 
-      <section class="mine-block" id="s9"><div class="mine-head"><h2>⑨ 调研信息</h2><span class="q">我的调研纪要 · 自填 · 不进入研究口径</span></div><div class="cat"><div class="note" style="margin-bottom:12px">本栏用于沉淀我自己的调研/访谈/电话会纪要。内容保存在本机浏览器，<b>不随站点更新，也不属于公开来源证据</b>；如需长期留存或跨设备使用，请导出 JSON 备份。</div><div id="ubox-survey" class="ubox"></div></div></section>
+      <section class="mine-block" id="s9"><div class="mine-head"><h2>⑨ 调研信息</h2><span class="q">我的调研纪要 · 自填 · 不进入研究口径</span></div><div class="cat"><div class="note" style="margin-bottom:12px">本栏用于沉淀我自己的调研/访谈/电话会纪要。分两条轨道：<b>✎ 本机草稿</b>存在本机浏览器（仅自己可见，不随站点更新）；点「🌐 发布到站点」会把本机内容合并进公开文件 <b>data/user_notes.json</b>，提交推送后成为<b>公开可见</b>内容。两轨均<b>不属于公开来源证据，也不进入本研究口径与合计</b>。</div><div id="ubox-survey" class="ubox-host" data-minekey="${esc(m.key)}"></div></div></section>
 
       <section class="mine-block"><div class="mine-head"><h2>来源（Sources）</h2><span class="src">旧页证据链完整保留</span></div><div class="cat"><ol class="sources">${(m.sources||[]).map(s=>`<li>${s.url?`<a target="_blank" rel="noopener" href="${esc(safeUrl(s.url))}">${esc(s.text)}</a>`:esc(s.text)}</li>`).join('')}</ol></div></section>
       <section class="mine-block"><div class="mine-head"><h2>口径与说明</h2></div><div class="cat"><div class="note">· 历史数据按公司真实披露频率展示；没有季度数据时不进行年度均分。<br>· 产量、销量、品位、价格和成本口径不统一，跨矿比较须回到本页行标签。<br>· 设计产能、目标、试产、首发运和商业达产严格区分。<br>· 冶炼/转化项目单独跟踪，精矿与转化产品不可重复计入供应。<br>· 数据整理至 2026-09，仅供研究参考，不构成投资建议。</div></div></section>
       <div class="footer">全球非澳洲锂矿供应梳理 · ${esc(m.name)}</div>`;
     renderChart(m);
-    mountUboxes(m.key, m.name);
+    mountUboxes(m.key);
+    loadPublished();
     if (location.hash) {
       setTimeout(() => document.querySelector(location.hash)?.scrollIntoView({block:'start'}), 80);
     }

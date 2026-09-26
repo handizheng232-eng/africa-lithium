@@ -108,3 +108,23 @@ Kodal Minerals RNS / Premier African Minerals / 紫金矿业 / Atlantic Lithium 
 
 **存储与口径**：自填内容存于浏览器 `localStorage`（键 `africaLithium.ubox.v1.<slot>.<mineKey>`），**按矿 × 板块独立**；不上传服务器、不随站点更新、**不进入任何合计与研究口径**，页面内以橙色警示条明示。
 换设备或清理浏览器数据前请先「导出 JSON」备份——`localStorage` 不会跨浏览器/设备同步。
+
+### 交互框 v2（日期 + 备注 · 双轨）
+行字段精简为 **日期 + 备注** 两列（原指标/数值/单位/口径列已移除），另保留一段「补充说明」自由文本。
+
+两条轨道：
+| 轨道 | 位置 | 可见性 |
+|---|---|---|
+| ✎ 本机草稿 | 浏览器 `localStorage`，键 `africaLithium.ubox.v2.<slot>.<mineKey>` | 仅自己，不上传 |
+| 🌐 已发布 | 仓库 `data/user_notes.json` | **公开可见**（Pages 重建后所有人可见） |
+
+**发布流程**：点「🌐 发布到站点」→ 生成 `user_notes.json`（自动读取并合并线上已有公开内容，不会覆盖其他矿山）→ 覆盖站点 `data/user_notes.json` → 提交推送：
+```
+git add data/user_notes.json && git commit -m "更新我的调研与测算" && git push
+```
+约 1 分钟后线上显示在对应板块下方的「🌐 已发布到站点 · 公开可见」区块。
+
+注意事项：
+- `localStorage` 按 **origin** 隔离（协议+域名+端口）：正式站固定域名下稳定，本地预览换端口会读不到旧草稿。
+- 换设备/清缓存前先「导出 JSON」备份。
+- 公开文件与公开来源数据严格分离，页面用颜色区分，公开内容同样不计入合计。
